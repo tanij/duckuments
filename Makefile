@@ -409,6 +409,9 @@ fall2017-split:
 duckuments-bot:
 	python misc/slack_message.py
 
+clean-tmp:
+	find /mnt/tmp/mcdp_tmp_dir-duckietown -type d -ctime +10 -exec rm -rf {} \;
+
 fall2017: checks update-mcdp update-software
 	$(MAKE) fall2017-prepare
 	$(MAKE) fall2017-compose
