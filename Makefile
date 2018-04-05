@@ -1,3 +1,4 @@
+
 duckuments-branch=master
 dist_dir=duckuments-dist/$(duckuments-branch)
 
@@ -307,6 +308,8 @@ master-html:
 		--output_file out/master/data/1.html \
 		-c "config echo 1; config colorize 1; rparmake n=8"
 
+	compmake out/master/html/compmake -c "gantt filename=out/master/html/compmake/gantt.html"
+
 	mkdir -p duckuments-dist/master
 	python add_stylesheet.py out/master/data/1.html $(duckietown_css)
 
@@ -322,11 +325,12 @@ SPLIT_COMMAND="rparmake n=2"
 
 master-split:
 	# rm -f $(dist_dir)/duckiebook/*html
-	 mcdp-split \
+	 DISABLE_CONTRACTS=1 \
+	 	mcdp-split \
 		--filename out/master/data/duckiebook.html \
 		--output_dir duckuments-dist/master/duckiebook \
 		-o out/master/split \
-		-c ' config echo 1; config colorize 1; rparmake n=2' \
+		-c ' config echo 1; config colorize 1; rparmake' \
 		--mathjax \
 		--preamble $(tex-symbols)
 
