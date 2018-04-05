@@ -162,6 +162,8 @@ automatic-compile-fall2017-pdf:
 	echo "Done." >> $(log-fall2017-pdf)
 
 upload:
+	echo Not uploading
+_upload:
 	#git -C duckuments-dist pull -X ours
 	echo ignoring errors
 
@@ -410,6 +412,9 @@ fall2017-split:
 
 duckuments-bot:
 	python misc/slack_message.py
+
+clean-tmp:
+	find /mnt/tmp/mcdp_tmp_dir-duckietown -type d -ctime +10 -exec rm -rf {} \;
 
 fall2017: checks update-mcdp update-software
 	$(MAKE) fall2017-prepare
