@@ -143,6 +143,14 @@ At this point, please make sure that you have these two `.git` folders:
 
 </div> -->
 
+Also make sure that you have downloaded the duckietown software and linked it to the documentation by typing:
+    
+    $ cd ~
+    $ git clone https://github.com/duckietown/Software.git
+    $ mv Software duckietown
+    $ cd ~/duckuments
+    $ ln -s ~/duckietown duckietown
+
 To compile the master versions of the docs, run:
 
     $ make master-clean master
