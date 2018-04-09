@@ -310,7 +310,7 @@ master-html:
 		--output_file out/master/data/1.html \
 		-c "config echo 1; config colorize 1; rparmake n=8"
 
-	compmake out/master/html/compmake -c "gantt filename=out/master/html/compmake/gantt.html"
+	# compmake out/master/html/compmake -c "gantt filename=out/master/html/compmake/gantt.html"
 
 	mkdir -p duckuments-dist/master
 	python add_stylesheet.py out/master/data/1.html $(duckietown_css)
