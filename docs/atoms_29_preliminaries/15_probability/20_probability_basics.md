@@ -12,12 +12,12 @@ The key underlying concept in probabilistic theory is that of an *event*, which 
 A  (either discrete or continuous) variable that can take on any value that corresponds to the feasible output of a random trial.
 \end{definition}
 
-<div style='display:none'>$$
+$$
 \newcommand{\state}{x}
-\newcommand{\aset}[1]{\mathcal{#1}}
-\newcommand{\heads}{\text{heads}}
-\newcommand{\tails}{\text{tails}}
-$$</div>
+  \newcommand{\aset}[1]{\mathcal{#1}}
+  \newcommand{\heads}{\textsf{HEADS}}
+  \newcommand{\tails}{\textsf{TAILS}}
+$$
 
 For example, we could model the event of flipping a fair coin with the random variable $X$. We write the probability that $X$ takes $\heads$ as $p(X=\heads)$. The set of all possible values for the variable $X$ is its *domain*, $\aset{X}$. 
 
@@ -49,8 +49,9 @@ Here are some very important properties of $p(x)$:
 
 In the case of a continuous random variable, we will call this function $f(x)$ and call it a *probability density function*, or pdf.
 
+In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zero since $\aset{X}$ is infinite. To deal with this, we also define another important function, the *cumulative density function*, which is given by $F(x) \triangleq p(X\leq x)$, and now we can define $f(x) \triangleq \frac{d}{dx}F(x)$. 
 
-In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zero since $\aset{X}$ is infinite. To deal with this, we also define another important function, the *cumulative density function*, which is given by $F(x) \triangleq p(X\leq x)$, and now we can define $f(x) \triangleq \frac{d}{dx}F(x)$. A pdf and corresponding cdf are shown in [](#fig:pdf_cdf) (This happens to be a Gaussian distribution, defined more precisely in [](#gaussian).).
+A pdf and corresponding cdf are shown in [](#fig:pdf_cdf). This happens to be a Gaussian distribution, defined more precisely in [](#gaussian).
 
 <div figure-id="fig:pdf_cdf" figure-caption="The continuous pdf and cdf">
   <img src="pdf_cdf.svg" style='width: 30em'/>
@@ -58,7 +59,13 @@ In the case of continuous RVs, technically the $p(X=x)$ for any value $x$ is zer
 
 ### Joint Probabilities {#joint}
 
-If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \aset{X}$ and $y \in \mathcal{Y}$ both happening, which we will denote as following: $p(X=x \; \text{AND} \; Y=y) = p(x,y)$. The function $p(x,y)$ is called *joint distribution*.
+If we have two different RVs representing two different events $X$ and $Y$, then we represent the probability of two distinct events $x \in \aset{X}$ and $y \in \mathcal{Y}$ both happening, which we will denote as follows: 
+
+$$
+p(X=x \; \text{AND} \; Y=y) = p(x,y)
+$$
+
+The function $p(x,y)$ is called *joint distribution*.
 
 ### Conditional Probabilities {#conditional}
 
@@ -73,7 +80,7 @@ $$
 <div class="check" markdown="1">
 Write down the conditional pmf for the scenario just described assuming an oracle tells you that the die roll is even. In other words, what is $p(x|\text{EVEN})$?
 
-(Warning: if you think this is very easy that's good, but don't get over-confident.)
+If you think this is very easy that's good, but don't get over-confident.
 </div>
 
 
@@ -82,7 +89,7 @@ $$
 p(x,y) = p(x|y)p(y)
 \label{eq:joint}
 $$
-and similarly, the following could be considered a definition of the conditional distribution:
+and, similarly, the following could be considered a definition of the conditional distribution:
 $$
 p(x|y) = \frac{p(x,y)}{p(y)} \; \text{if} \; p(y) > 0
 \label{eq:condition}
@@ -171,6 +178,12 @@ The 1st moment is the *mean*, $\mu_X=E[X]$.
 The $n$-th central moment of an RV, $X$ is given by $E[(X-\mu_X)^n]$. 
 
 The second central moment is called the *covariance*, $\sigma^2_X=E[(X-\mu_X)^2]$.
+
+Another equation:
+$$
+p(x|y) = \aset{X}
+$$
+
 
 
 ### Entropy {#entropy}
