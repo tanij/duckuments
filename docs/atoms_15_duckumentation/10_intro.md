@@ -1,6 +1,6 @@
 # Overview {status=ready} 
 
-TODO for Andrea: write more about the design principles
+TODO: write more about the design principles
 
 ## Where the documentation is
 
