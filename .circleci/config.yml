@@ -2,50 +2,43 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:18
+        - image: andreacensi/duckietown-xenial-kinetic:19
+          environment:
+              COLUMNS: 160
+              NODE_PATH: /root/project/node_modules
+              MPLBACKEND: agg
+
+        resource_class: large
+
         steps:
         - checkout
-
-# - run:
-#     name: deps
-#     command: |
-#         export DEBIAN_FRONTEND=noninteractive
-#         apt install -y gnupg ghostscript
-#
-#         pip install -U decorator>=4.1.0
-#
-#         # pip install  numpy lxml matplotlib pillow junit_xml
-#
-#         apt install -y software-properties-common
-#         echo adding repository
-#         add-apt-repository -y ppa:git-core/ppa
-#         echo adding git lfs
-#         curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
-#         echo
-#         apt-key  --version || :
-#         echo APT update
-#         apt update
-#         echo
-#         echo APT install
-#         apt install -y git-lfs
+        - run:
+            name: NPM
+            command: |
+                curl -sL https://deb.nodesource.com/setup_6.x | bash
+                apt install -y nodejs node-less
+                npm install MathJax-node jsdom@9.3 less
 
         - run:
-            name: check out duckuments-dist
+            name: fonts
             command: |
-                mkdir -p duckuments-dist
-        - run:
-            name: checkout MCDP
-            command: |
-                git lfs clone -b duckuments --depth 1 git@github.com:AndreaCensi/mcdp
+                cp -R fonts /usr/share/fonts/my-fonts
+                fc-cache -f -v
+
         - run:
             name: setup MCDP
             command: |
-                cd mcdp && python setup.py develop
+                make install
+                #git submodule sync --recursive
+                #git submodule update --init --recursive
+                #pip install -r mcdp/requirements.txt
+                #cd mcdp && python setup.py develop
+
         - run:
             name: Check Programs
             command: |
-                apt install -y node-less
                 make check-programs
+
         - run:
             name: checkout duckietown repository
             command: |
@@ -53,52 +46,40 @@ jobs:
                 ln -s /tmp/git_repos/duckietown/Software/master/ duckietown
 
         - run:
-            name: Compile HTML version
+            name: Compile all books
             command: |
-                make circle
+                echo "config colorize 0" > .compmake.rc
+                ONLY_FOR_REFS=1 make -j4 code_docs books
+
+        - run:
+            name: Compile all books again to get cross references again
+            command: |
+                make -j4 code_docs books
+
+        - run:
+            name: create index
+            command: |
+              make summaries
 
         - store_artifacts:
               path: duckuments-dist
               destination: duckuments-dist
 
-# - run:
-#     name: NPM
-#     command: |
-#         echo "Before installing NPM"
-#         nodejs --version || echo "No nodejs installed"
-#         gpg --version
-#         curl -sL https://deb.nodesource.com/setup_6.x |  bash -E
+        - run:
+            name: Package artifacts
+            command:  |
+                bash package-art.sh out/package.tgz
 #
-#         apt-get update
+#        - run:
+#            name: Collecting job failure results
+#            when: always
+#            command: |
+#                mkdir -p out/comptests/junit
+#                comptests-to-junit out/comptests/compmake >  out/comptests/junit/junit.xml
 #
-#         apt-get -qq -y install build-essential nodejs
-#
-#         /usr/bin/npm config set loglevel warn
-#
-#         /usr/bin/npm --loglevel=silent install -g MathJax-node jsdom@9.3 less
-#
-#         nodejs --version
-#
-#         #add-apt-repository -y ppa:lyx-devel/release
-#         #apt-get install lyx
-#         #lyx --version
-# - run:
-#     name: NPM
-#     command: |
-#         npm install MathJax-node jsdom@9.3 less
-# - run:
-#     name: install fonts
-#     command:  |
-#         cp -R fonts /usr/share/fonts/duckuments-fonts
-#         fc-cache -f -v
-#         # XXX: failure
-#         #fc-list | grep STIX
-#         #fc-list | grep Symbola
-# - run:
-#     name: Compile PDF version
-#     command: |
-#         make compile-pdf
-#
-# - store_artifacts:
-#     path: duckuments-dist
-#     destination: duckuments-dist
+#        - test-results-store:
+#            path: out/comptests/junit
+
+        - store_artifacts:
+              path: out/package.tgz
+              destination: out/package.tgz

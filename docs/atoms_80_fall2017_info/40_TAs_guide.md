@@ -60,7 +60,7 @@ See: [](#setup-laptop)
 
 Install the Duckuments system, so you can edit these instructions.
 
-See: [](#part:contribute).
+See: [](#book:contribute).
 
 Point of Contact: Andrea
 
