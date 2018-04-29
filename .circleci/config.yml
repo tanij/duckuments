@@ -28,11 +28,7 @@ jobs:
         - run:
             name: setup MCDP
             command: |
-                make install
-                #git submodule sync --recursive
-                #git submodule update --init --recursive
-                #pip install -r mcdp/requirements.txt
-                #cd mcdp && python setup.py develop
+                make install-ubuntu16 
 
         - run:
             name: Check Programs
