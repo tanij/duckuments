@@ -20,7 +20,21 @@ realclean: clean
 
 .PHONY: builds install update-software
 
-install:
+dependencies-ubuntu16:
+	sudo apt install -y \
+		libxml2-dev \
+		libxslt1-dev \
+		libffi6\
+		libffi-dev\
+		python-dev\
+		python-numpy\
+		python-matplotlib\
+		virtualenv\
+		bibtex2html\
+		pdftk\
+		imagemagick
+
+install-ubuntu16:
 	virtualenv --system-site-packages --no-site-packages deploy
 	$(MAKE) update-software
 
