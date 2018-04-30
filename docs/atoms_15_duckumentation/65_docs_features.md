@@ -1,16 +1,15 @@
 # Documentation format {#part:documentation-format status=ready}
- 
+
 # Basic Markduck guide {#documentation-manual status=ready}
 
-The Duckiebook is written in Markduck, a Markdown dialect.
+The Duckiebooks are written in Markduck, a Markdown dialect.
 
-It supports many features that make it possible to create
-publication-worthy materials.
+It supports many features that make it possible to create publication-worthy materials.
 
 
 ## Markdown
 
-The Duckiebook is written in a Markdown dialect.
+The Duckiebook are written in a Markdown dialect.
 
 See: [A tutorial on Markdown][tutorial].
 
@@ -128,7 +127,7 @@ Alternatively, you can put anywhere an element `figcaption` with ID `![figure id
     <element figure-id="fig:![figure ID]">
         ![figure content]
     </element>
-
+    
     <figcaption id='fig:![figure ID]:caption'>
         This the caption figure.
     </figcaption>
@@ -166,7 +165,7 @@ This is the result:
     <div figure-id="subfig:first" figure-caption="Caption 1">
         <p style='width:5em;height:5em;background-color:#eef'>first subfig</p>
     </div>
-
+    
     <div figure-id="subfig:second" figure-caption="Caption 2">
         <p style='width:5em;height:5em;background-color:#fee'>second subfig</p>
     </div>
@@ -182,7 +181,7 @@ To make them flow horizontally, add `figure-class="flow-subfigures"` to the exte
     <div figure-id="subfig:first2" figure-caption="Caption 1">
         <p style='width:5em;height:5em;background-color:#eef'>first subfig</p>
     </div>
-
+    
     <div figure-id="subfig:second2" figure-caption="Caption 2">
         <p style='width:5em;height:5em;background-color:#fee'>second subfig</p>
     </div>

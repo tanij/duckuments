@@ -20,7 +20,21 @@ realclean: clean
 
 .PHONY: builds install update-software
 
-install:
+dependencies-ubuntu16:
+	sudo apt install -y \
+		libxml2-dev \
+		libxslt1-dev \
+		libffi6\
+		libffi-dev\
+		python-dev\
+		python-numpy\
+		python-matplotlib\
+		virtualenv\
+		bibtex2html\
+		pdftk\
+		imagemagick
+
+install-ubuntu16:
 	virtualenv --system-site-packages --no-site-packages deploy
 	$(MAKE) update-software
 
@@ -99,13 +113,7 @@ process-svg:
 	@which  pdfcrop >/dev/null || (echo "You need to install pdfcrop."; exit 1)
 	@which  pdflatex >/dev/null || (echo "You need to install pdflatex."; exit 1)
 
-
 	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
-
-
-#update-software: checks
-	# -git -C $(duckietown-software) pull
-
 
 
 books: \
@@ -123,13 +131,17 @@ books: \
 	drafts \
 	guide_for_instructors \
 	deprecated \
-	preliminaries
+	preliminaries \
+	AI_driving_olympics
 
 guide_for_instructors: checks 
 	. deploy/bin/activate && ./run-book $@ docs/atoms_12_guide_for_instructors
 
 deprecated: checks 
 	./run-book $@ docs/atoms_98_deprecated
+
+AI_driving_olympics:
+	./run-book $@ docs/atoms_16_driving_olympics
 
 code_docs: check-duckietown-software checks 
 	./run-book $@ duckietown/catkin_ws/src/

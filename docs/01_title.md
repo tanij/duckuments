@@ -19,12 +19,8 @@
     </a>
 </p>
 <p>
-    For searching, see
-    <a href="http://book.duckietown.org/master/duckiebook.html">the one-page version</a>.
+    For searching, see  <a href="http://book.duckietown.org/master/duckiebook.html">the one-page version</a>.
 </p>
-
-
-<!-- <p><a href="https://cse.google.com/cse/publicurl?cx=018116447518115691871:hktcjzptrty">Google search the documentation</a> (with some delay, for Google to index the pages)</p> -->
 
 <h1 notoc="1" nonumber="1" id='toc-heading'>Table of contents</h1>
 
