@@ -32,7 +32,9 @@ dependencies-ubuntu16:
 		virtualenv\
 		bibtex2html\
 		pdftk\
-		imagemagick
+		imagemagick\
+		python-dev\
+		libmysqlclient-dev
 
 install-ubuntu16:
 	virtualenv --system-site-packages --no-site-packages deploy
@@ -41,7 +43,8 @@ install-ubuntu16:
 update-software:
 	git submodule sync --recursive
 	git submodule update --init --recursive
-	. deploy/bin/activate && pip install -r mcdp/requirements.txt && pip install numpy matplotlib
+	. deploy/bin/activate && pip install -r mcdp/requirements.txt && pip install numpy matplotlib MySQL-python
+
 	. deploy/bin/activate && cd mcdp && python setup.py develop
 
 builds:
@@ -50,6 +53,8 @@ builds:
 
 
 checks: check-programs
+	. deploy/bin/activate && python download_wordpress.py > db.related.yaml
+	cat db.related.yaml
 
 check-programs-pdf:
 	@which  pdftk >/dev/null || ( \
@@ -134,55 +139,55 @@ books: \
 	preliminaries \
 	AI_driving_olympics
 
-guide_for_instructors: checks 
+guide_for_instructors: checks
 	. deploy/bin/activate && ./run-book $@ docs/atoms_12_guide_for_instructors
 
-deprecated: checks 
+deprecated: checks
 	./run-book $@ docs/atoms_98_deprecated
 
 AI_driving_olympics:
 	./run-book $@ docs/atoms_16_driving_olympics
 
-code_docs: check-duckietown-software checks 
+code_docs: check-duckietown-software checks
 	./run-book $@ duckietown/catkin_ws/src/
 
-class_fall2017: checks 
+class_fall2017: checks
 	./run-book $@ docs/atoms_80_fall2017_info
 
-drafts: checks 
+drafts: checks
 	./run-book $@ docs/atoms_99_drafts
 
-preliminaries: checks 
+preliminaries: checks
 	./run-book $@ docs/atoms_29_preliminaries
 
-learning_materials: checks 
+learning_materials: checks
 	./run-book $@ docs/atoms_30_learning_materials
 
-exercises: checks 
+exercises: checks
 	./run-book $@ docs/atoms_40_exercises
 
-duckumentation: checks 
+duckumentation: checks
 	./run-book $@ docs/atoms_15_duckumentation
 
-the_duckietown_project: checks 
+the_duckietown_project: checks
 	./run-book $@ docs/atoms_10_the_duckietown_project
 
 opmanual_duckiebot: checks
 	./run-book $@ docs/atoms_17_opmanual_duckiebot
 
-opmanual_duckietown: checks 
+opmanual_duckietown: checks
 	./run-book $@ docs/atoms_18_setup_duckietown
 
-software_carpentry: checks 
+software_carpentry: checks
 	./run-book $@ docs/atoms_60_software_reference
 
-software_devel: checks 
+software_devel: checks
 	./run-book $@ docs/atoms_70_software_devel_guide
 
-software_architecture: checks 
+software_architecture: checks
 	./run-book $@ docs/atoms_80_duckietown_software
 
-class_fall2017_projects: checks 
+class_fall2017_projects: checks
 	./run-book $@ docs/atoms_85_fall2017_projects
 
 clean:
