@@ -53,7 +53,8 @@ builds:
 
 
 checks: check-programs
-	python download_wordpress.py > db.related.yaml
+	. deploy/bin/activate && python download_wordpress.py > db.related.yaml
+	cat db.related.yaml
 
 check-programs-pdf:
 	@which  pdftk >/dev/null || ( \
