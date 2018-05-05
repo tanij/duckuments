@@ -9,16 +9,16 @@ db = MySQLdb.connect("frankfurt.co-design.science",
 # prepare a cursor object using cursor() method
 
 cursor = db.cursor()
-cmd = 'SELECT ID, user_login, display_name, user_email FROM wp_users;';
+cmd = 'SELECT ID, user_login, display_name, user_url FROM wp_users;';
 # execute SQL query using execute() method.
 cursor.execute(cmd)
 n = cursor.rowcount
 
 users = {}
 id2user = {}
-for ID, user_login, display_name, user_email in cursor.fetchall():
+for ID, user_login, display_name, user_url in cursor.fetchall():
     id2user[ID] = user_login
-    users[user_login] = dict(name=display_name, email=user_email)
+    users[user_login] = dict(name=display_name, user_url=user_url)
 #
 # print yaml.dump(id2user)
 # print yaml.dump(users)
@@ -47,7 +47,7 @@ for data in cursor.fetchall():
 
 
 id2term = {}
-cmd = 'SELECT term_id, name, slug FROM `wp_terms`;'
+cmd =  'SELECT term_id, name, slug FROM `wp_terms`;'
 cursor.execute(cmd)
 for term_id, name, slug in cursor.fetchall():
     term_id = int(term_id)
