@@ -2,52 +2,83 @@
 
 ## Assumptions
 
+* You have a Github account with username `![usernqme]`.
+
 ## Workflow
 
-#### Fork the repo on the Github site
+### Fork the repo on the Github site
 
-#### Sign up on Circle
+For the `duckuments` repo on the Github site ([](#fork-duckuments)). 
 
-Activate the building on:
+<img src="fork-duckuments.png" style='width: 80%' figure-id="fig:fork-duckuments"/>
+
+This will create a new repo on your account that is linked to the original one.
+
+### Sign up on Circle
+
+Sign up on the Circle CI service, at the link [circleci.com](http://circleci.com).
+
+### Activate your build on Circle
+
+Activate the building at the link:
 
 ```
 https://circleci.com/setup-project/gh/![username]/duckuments
 ```
 
+where `![username]` is your Github username.
+
 Click "start building".
 
-#### Checkout your fork locally
+### Checkout your fork locally
 
-Add upstream reference:
+Check out the forked repository as you would do normally.
 
-```
-$ git remote add upstream  git@github.com:duckietown/duckuments.git
-```
+### Do your edits
 
-See: [Github docs on forking](https://help.github.com/articles/syncing-a-fork/) 
+Do your edits on your 
 
-#### Do your edits
+### Compile
 
-#### Compile 
-
-#### Commit
-
-#### Merge master again
+Compile using:
 
 ```
-$ git fetch upstream
-$ git merge upstream/master
+$ make all
 ```
 
-#### Push and Make sure everything compiles
+You can also compile a single book using:
+
+```
+$ make book-![book name]
+```
+
+Type TAB after `book-` to see the list of books.
+
+### Commit and push
+
+Commit and push as you would do normally.
+
+####  Make sure everything compiles
+
+Go to the URL:
 
 ```
 https://circleci.com/gh/![username]/duckuments
 ```
 
-#### Make a pull request
+to see the status of your build.
 
-Create a pull request from the command-line using [`hub`](#hub):
+### Make a pull request
+
+Create a pull request to the original
+
+#### From the website
+
+Github offers a nice interface to create a pull request.
+
+#### From the command line
+
+ from the command-line using [`hub`](#hub):
 
 ```
 $ hub pull-request

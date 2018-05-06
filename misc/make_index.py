@@ -290,7 +290,6 @@ def get_junit_xml(res):
 
     return TestSuite.to_xml_string([ts])
 
-
 def flatten_ascii(s):
     if s is None:
         return None
@@ -308,7 +307,9 @@ def junit_test_case_from_note(i, note):
     #     message = cache.exception
     #     output = cache.exception + "\n" + cache.backtrace
     output = ''
-    tc.add_failure_info(flatten_ascii(str(note)), flatten_ascii(output))
+    ns = flatten_ascii(str(note))
+    ns = ns.replace('\n', '<br/>')
+    tc.add_failure_info(ns, flatten_ascii(output))
     return tc
 
 
