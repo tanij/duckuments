@@ -295,7 +295,7 @@ for id_group, group in groups.items():
         divgroup.append(div)
     divgroups.append(divgroup)
 
-fnres = 'errors_and_warnings.pickle'
+fnres = 'errors_and_warnings.pickleg'
 write_data_to_file(pickle.dumps(res), fnres, quiet=False)
 
 extra = get_extra_content(AugmentedResult())
