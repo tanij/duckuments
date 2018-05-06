@@ -69,7 +69,7 @@ check-programs-pdf:
 		exit 1)
 
 check-programs:
-	(\
+	@(\
 	. deploy/bin/activate; \
 	\
 	which  bibtex2html >/dev/null || ( \

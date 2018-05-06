@@ -35,9 +35,10 @@ mkdir -p ${dist}
 
 org=`git config --get remote.origin.url | cut -f2 -d":"  | cut -f1 -d/ | tr '[:upper:]' '[:lower:]'`
 
-base=http://docs-branches.duckietown.org/${org}/duckuments/branch
-cross=${base}/${branch}/all_crossref.html
-permalink_prefix=${base}/${branch}/${short}/out
+base=http://docs-branches.duckietown.org/${org}/duckuments/branch/${branch}
+cross=${base}/all_crossref.html
+permalink_prefix=${base}/${short}/out
+extra_crossrefs=${base}/all_crossref.html
 
 NP=${PWD}/node_modules:${NODE_PATH}
 
@@ -49,7 +50,7 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --stylesheet v_manual_split \
     --symbols docs/symbols.tex \
     --wordpress_integration \
-    --extra_crossrefs http://docs.duckietown.org/all_crossref.html \
+    --extra_crossrefs ${extra_crossrefs} \
     --output_crossref ${dist}/${short}/crossref.html \
     --likebtn 5ae54e0d6fd08bb24f3a7fa1 \
     -o out/${short} \
