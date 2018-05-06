@@ -37,6 +37,7 @@ org=duckietown
 
 base=http://docs-branches.duckietown.org/${org}/duckuments/branch/
 cross=${base}/${branch}/all_crossref.html
+permalink_prefix=${base}/${branch}/${short}/out
 
 NP=${PWD}/node_modules:${NODE_PATH}
 
@@ -52,6 +53,6 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --output_crossref ${dist}/${short}/crossref.html \
     --likebtn 5ae54e0d6fd08bb24f3a7fa1 \
     -o out/${short} \
-    --permalink_prefix ${base}/${branch}/${short}/out/link.html\# \
+    --permalink_prefix ${permalink_prefix} \
     ${options} \
     -c "config echo 1; ${cmd}"

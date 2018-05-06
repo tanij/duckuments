@@ -129,73 +129,73 @@ process-svg:
 
 
 books: \
-	duckumentation \
-	the_duckietown_project \
-	opmanual_duckiebot \
-	opmanual_duckietown \
-	software_carpentry \
-	software_devel \
-	software_architecture \
-	class_fall2017 \
-	class_fall2017_projects \
-	learning_materials \
-	exercises \
-	drafts \
-	guide_for_instructors \
-	deprecated \
-	preliminaries \
-	AI_driving_olympics
+	book-duckumentation \
+	book-the_duckietown_project \
+	book-opmanual_duckiebot \
+	book-opmanual_duckietown \
+	book-software_carpentry \
+	book-software_devel \
+	book-software_architecture \
+	book-class_fall2017 \
+	book-class_fall2017_projects \
+	book-learning_materials \
+	book-exercises \
+	book-drafts \
+	book-guide_for_instructors \
+	book-deprecated \
+	book-preliminaries \
+	book-AI_driving_olympics
 
-guide_for_instructors: checks
-	. deploy/bin/activate && $(RUNBOOK) $@ docs/atoms_12_guide_for_instructors
+book-guide_for_instructors: checks
+	. deploy/bin/activate && $(RUNBOOK) guide_for_instructors docs/atoms_12_guide_for_instructors
 
-deprecated: checks
-	$(RUNBOOK) $@ docs/atoms_98_deprecated
+book-deprecated: checks
+	$(RUNBOOK) deprecated docs/atoms_98_deprecated
 
-AI_driving_olympics:
-	$(RUNBOOK) $@ docs/atoms_16_driving_olympics
+book-AI_driving_olympics:
+	$(RUNBOOK) AI_driving_olympics docs/atoms_16_driving_olympics
 
-code_docs: check-duckietown-software checks
-	$(RUNBOOK) $@ duckietown/catkin_ws/src/
+book-code_docs: check-duckietown-software checks
+	$(RUNBOOK) code_docs duckietown/catkin_ws/src/
 
-class_fall2017: checks
-	$(RUNBOOK) $@ docs/atoms_80_fall2017_info
+book-class_fall2017: checks
+	$(RUNBOOK) class_fall2017 docs/atoms_80_fall2017_info
 
-drafts: checks
-	$(RUNBOOK) $@ docs/atoms_99_drafts
+book-drafts: checks
+	$(RUNBOOK) drafts docs/atoms_99_drafts
 
-preliminaries: checks
-	$(RUNBOOK) $@ docs/atoms_29_preliminaries
+book-preliminaries: checks
+	$(RUNBOOK) preliminaries docs/atoms_29_preliminaries
 
-learning_materials: checks
-	$(RUNBOOK) $@ docs/atoms_30_learning_materials
+book-learning_materials: checks
+	$(RUNBOOK) learning_materials docs/atoms_30_learning_materials
 
-exercises: checks
-	$(RUNBOOK) $@ docs/atoms_40_exercises
+book-exercises: checks
+	$(RUNBOOK) exercises docs/atoms_40_exercises
 
-duckumentation: checks
-	$(RUNBOOK) $@ docs/atoms_15_duckumentation
+book-duckumentation: checks
+	$(RUNBOOK) duckumentation docs/atoms_15_duckumentation
 
-the_duckietown_project: checks
-	$(RUNBOOK) $@ docs/atoms_10_the_duckietown_project
+book-the_duckietown_project: checks
+	$(RUNBOOK) the_duckietown_project docs/atoms_10_the_duckietown_project
 
-opmanual_duckiebot: checks
-	$(RUNBOOK) $@ docs/atoms_17_opmanual_duckiebot
+book-opmanual_duckiebot: checks
+	$(RUNBOOK) opmanual_duckiebot docs/atoms_17_opmanual_duckiebot
 
-opmanual_duckietown: checks
-	$(RUNBOOK) $@ docs/atoms_18_setup_duckietown
+book-opmanual_duckietown: checks
+	$(RUNBOOK) opmanual_duckietown docs/atoms_18_setup_duckietown
 
-software_carpentry: checks
-	$(RUNBOOK) $@ docs/atoms_60_software_reference
+book-software_carpentry: checks
+	$(RUNBOOK) software_carpentry docs/atoms_60_software_reference
 
-software_devel: checks
-	$(RUNBOOK) $@ docs/atoms_70_software_devel_guide
+book-software_devel: checks
+	$(RUNBOOK) software_devel docs/atoms_70_software_devel_guide
 
-software_architecture: checks
-	$(RUNBOOK) $@ docs/atoms_80_duckietown_software
+book-software_architecture: checks
+	$(RUNBOOK) $software_architecture docs/atoms_80_duckietown_software
 
-class_fall2017_projects: checks
-	$(RUNBOOK) $@ docs/atoms_85_fall2017_projects
+book-class_fall2017_projects: checks
+	$(RUNBOOK) class_fall2017_projects docs/atoms_85_fall2017_projects
 
 clean:
 	rm -rf out
