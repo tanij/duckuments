@@ -110,7 +110,7 @@ Duckiebots need to have all the dependencies installed. Use the fleet level comm
 
  Run on the taxi central your laptop:
 
-     roslaunch fleet_planning master_laptop.sh messaging_iface:=![wlan_interface] messaging_config:=![config_file
+     roslaunch fleet_planning master_laptop.sh messaging_iface:=![wlan_interface] messaging_config:=![config_file]
 
  Where `wlan_interface` is the interface you use to connect to the common network with all Duckiebots (probably `wlan0`) and `config_file` is the file needed to setup the communication. The file is provided as part of the fleet messaging package under the following path `catkin_ws/src/30-localization-and-planning/fleet_messaging/config/config_laptop.yaml`.
 
