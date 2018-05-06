@@ -1,4 +1,5 @@
 import pickle
+import shutil
 import sys
 from collections import OrderedDict
 
@@ -9,10 +10,10 @@ from mcdp_docs import logger
 from mcdp_docs.embed_css import embed_css_files
 from mcdp_docs.manual_constants import MCDPManualConstants
 from mcdp_docs.mcdp_render_manual import get_extra_content, CROSSREF_CSS, CROSSREF_SCRIPT
-from mcdp_docs.sync_from_circle import get_artefacts, get_links2
+from mcdp_docs.sync_from_circle import get_artefacts, get_links2, locate_files
 from mcdp_report.html import get_css_filename
 from mcdp_utils_misc import write_data_to_file, AugmentedResult
-from mcdp_utils_xml import bs, gettext
+from mcdp_utils_xml import bs, gettext, bs_entire_document, to_html_entire_document
 
 BOOKS = """
 !!omap
@@ -167,7 +168,11 @@ def go():
         books = OrderedDict(books)
         for id_book, book in books.items():
             d = os.path.join(dist, id_book)
+            change_frame(d, '../../')
+
             d0 = dist
+
+
 
             errors_and_warnings = os.path.join(d, 'out', 'errors_and_warnings.pickle')
             if os.path.exists(errors_and_warnings):
@@ -329,6 +334,102 @@ def junit_test_case_from_note(i, note):
     return tc
 
 
+import os
+
+def change_frame(d0, rel):
+
+    for f in locate_files(d0, '*.html'):
+        if os.path.basename(f) == 'out.html':
+            continue
+        print(f)
+        do_it(f, rel)
+
+
+def do_it(f, rel):
+    f2 = f + '.old'
+    if not os.path.exists(f2):
+        shutil.copy(f, f2)
+    orig = open(f2).read()
+
+    soup = bs_entire_document(orig)
+    soup2 = make_changes(soup, f, rel)
+    data = to_html_entire_document(soup2)
+    write_data_to_file(data, f)
+
+
+def make_changes(soup, f, rel):
+    s = bs(SPAN_BOOKS)
+
+    for option in s.select('option[value]'):
+        # noinspection PyAugmentAssignment
+        option.attrs['value'] = rel + option.attrs['value']
+
+    for a in s.select('a[href]'):
+        # noinspection PyAugmentAssignment
+        a.attrs['href'] = rel + a.attrs['href']
+
+    tocdiv = soup.select_one('#tocdiv')
+    if tocdiv is not None:
+        tocdiv.insert(0, s)
+
+    return soup
+
+
+# language=html
+SPAN_BOOKS = '''
+
+<script>
+
+function changed(e) {
+    loc = e.value;
+    window.location = loc;
+}
+
+</script>
+
+            <span id="books">
+            <a target='frame' href="index.html">Home</a>
+
+        <select onchange="changed(this)">
+    <option
+            value="summary.html">Summary</option>
+    <option
+            value="the_duckietown_project/out/index.html">The Duckietown Project</option>
+    <option
+            value="guide_for_instructors/out/index.html">Guide for instructors</option>
+
+    <option
+            value="duckumentation/out/index.html">Contributing to the documentation</option>
+
+    <option id="opmanual_duckiebot"
+            value="opmanual_duckiebot/out/index.html">Duckiebot operation manual </option>
+    <option id="opmanual_duckietown" onclick="activate(this)" value="opmanual_duckietown/out/index.html">Duckietown operation manual</option>
+    <option id="software_carpentry" onclick="activate(this)" value="software_carpentry/out/index.html">Software carpentry</option>
+
+
+    <option target='frame' id="software_architecture" onclick="activate(this)"
+            value="software_architecture/out/index.html">SW Architecture</option>
+    <option target='frame' id="software_devel" onclick="activate(this)"
+            value="software_devel/out/index.html">SW Development</option>
+
+    <option target='frame' id="learning_materials" onclick="activate(this)" value="learning_materials/out/index.html">Learning materials</option>
+
+    <option target='frame' id="exercises" onclick="activate(this)" value="exercises/out/index.html">Exercises</option>
+    <option target='frame' id="preliminaries" onclick="activate(this)" value="preliminaries/out/index.html">Preliminaries</option>
+
+    <option target='frame' id="class_fall2017" onclick="activate(this)" value="class_fall2017/out/index.html">Fall 2017
+        class</option>
+    <option target='frame' id="class_fall2017_projects" onclick="activate(this)"
+            href="class_fall2017_projects/out/index.html">Fall 2017 projects</option>
+
+    <option target='frame' id="deprecated" onclick="activate(this)" value="deprecated/out/index.html">Deprecated material</option>
+    <option target='frame' id="drafts" onclick="activate(this)" value="drafts/out/index.html">Drafts</option>
+<!--<option value="http://docs.duckietown.org/duckuments.html">Builds</option>-->
+
+    </select>
+    </span>
+
+'''
 # language=css
 CSS = """
     body {
