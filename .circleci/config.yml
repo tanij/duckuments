@@ -52,7 +52,7 @@ jobs:
                 ONLY_FOR_REFS=1 make -j4 code_docs books
 
         - run:
-            name: Compile all books again to get cross references again
+            name: Compile all books again to get cross references
             command: |
                 make -j4 code_docs books
 
