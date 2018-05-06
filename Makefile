@@ -195,7 +195,7 @@ book-software_devel: checks
 	$(RUNBOOK) software_devel docs/atoms_70_software_devel_guide
 
 book-software_architecture: checks
-	$(RUNBOOK) $software_architecture docs/atoms_80_duckietown_software
+	$(RUNBOOK) software_architecture docs/atoms_80_duckietown_software
 
 book-class_fall2017_projects: checks
 	$(RUNBOOK) class_fall2017_projects docs/atoms_85_fall2017_projects
