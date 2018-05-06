@@ -18,68 +18,68 @@ BOOKS = """
 !!omap
 - base:
     title: Information about the project
-    
+
     abstract: |
         This is general information about the project
         and how to contribute to it.
-    
+
     books: !!omap
-    
+
         - the_duckietown_project:
             title: The Duckietown Project
             abstract: |
                 Learn about the history and current status.
-                    
+
         - guide_for_instructors:
             title: Guide for instructors
 
-        - duckumentation: 
+        - duckumentation:
             title: Contributing to the documentation
-             
-     
+
+
 - tech:
     title: Operation manuals
-    
+
     abstract: |
-    
+
         These are the operation manuals.
-    
+
     books: !!omap
-            
+
         - opmanual_duckiebot:
             title: Duckiebot manual
-        
+
         - opmanual_duckietown:
             title: Duckietown manual
-             
+
         - software_carpentry:
             title: Reference for useful commands
-             
+
 - SW:
     title: Software development
-    
+
     books: !!omap
         - software_architecture:
             title: Duckietown software architecture
 
         - software_devel:
             title: Software development in Duckietown
-             
+
         - code_docs:
             title: Packages documentation
-             
-     
+
+
 - theory:
     title: Class materials
-     
+
     books: !!omap
-            
+
         - learning_materials:
             title: Learning materials
-             
+
         - exercises:
-            title: Exercises     
-        
+            title: Exercises
+
         - preliminaries:
             title: Preliminaries
 
@@ -87,26 +87,26 @@ BOOKS = """
 - fall2017:
     title: Past editions
     books: !!omap
-            
+
         - class_fall2017:
             title: Fall 2017
-             
+
         - class_fall2017_projects:
             title: Fall 2017 projects
-            
+
 - misc:
     title: Miscellanea
-    
+
     abstract: |
         Other content
-    
+
     books: !!omap
         - drafts:
             title: Drafts
-            
+
         - deprecated:
             title: Deprecated
-    
+
 """
 
 
@@ -340,11 +340,11 @@ CSS = """
         font-weight: bold;
         font-size: smaller;
         color: darkblue;
-    } 
+    }
     a.EWT {
         text-decoration: none;
         font-family: arial;
-    } 
+    }
     .show_todos .EWT {
         display: inline;
     }
@@ -401,7 +401,7 @@ CSS = """
     list-style: none;
     }
     #extra .notes-panel {
-    display: none; 
+    display: none;
     }
     .toc_ul-depth-3 {
     display: none;
