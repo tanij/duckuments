@@ -12,7 +12,7 @@ all:
 
 summaries:
 	cp misc/frames.html duckuments-dist/index.html
-	. deploy/bin/activate && python make_index.py duckuments-dist/summary.html duckuments-dist/all_crossref.html
+	. deploy/bin/activate && python misc/make_index.py duckuments-dist/summary.html duckuments-dist/all_crossref.html
 
 realclean: clean
 	rm -rf duckuments-dist
