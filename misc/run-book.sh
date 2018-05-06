@@ -33,9 +33,9 @@ fi
 
 mkdir -p ${dist}
 
-org=duckietown
+org=`git config --get remote.origin.url | cut -f2 -d":"  | cut -f1 -d/ | tr '[:upper:]' '[:lower:]'`
 
-base=http://docs-branches.duckietown.org/${org}/duckuments/branch/
+base=http://docs-branches.duckietown.org/${org}/duckuments/branch
 cross=${base}/${branch}/all_crossref.html
 permalink_prefix=${base}/${branch}/${short}/out
 
