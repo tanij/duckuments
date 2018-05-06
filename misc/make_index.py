@@ -426,7 +426,7 @@ function changed(e) {
     <option target='frame' id="class_fall2017" onclick="activate(this)" value="class_fall2017/out/index.html">Fall 2017
         class</option>
     <option target='frame' id="class_fall2017_projects" onclick="activate(this)"
-            href="class_fall2017_projects/out/index.html">Fall 2017 projects</option>
+            value="class_fall2017_projects/out/index.html">Fall 2017 projects</option>
 
     <option target='frame' id="deprecated" onclick="activate(this)" value="deprecated/out/index.html">Deprecated material</option>
     <option target='frame' id="drafts" onclick="activate(this)" value="drafts/out/index.html">Drafts</option>
