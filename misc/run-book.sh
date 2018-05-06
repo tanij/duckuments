@@ -11,10 +11,12 @@ then
    echo "Not on Circle, using parallel compilation."
    cmd=rparmake
    branch=`git rev-parse --abbrev-ref HEAD`
+   options1="--extra_crossrefs ${extra_crossrefs}"
 else
    echo "On Circle, not using parallel compilation to avoid running out of memory."
    cmd=rmake
    branch=${CIRCLE_BRANCH}
+   options1=""
 fi
 
 
@@ -22,13 +24,12 @@ dist=duckuments-dist
 
 if [ "$ONLY_FOR_REFS" = "" ]
 then
-   options="--pdf ${dist}/${short}/out.pdf --output_file ${dist}/${short}/out.html --split ${dist}/${short}/out/ "
+   options2="--pdf ${dist}/${short}/out.pdf --output_file ${dist}/${short}/out.html --split ${dist}/${short}/out/ "
 
 else
    echo "Skipping polish, ONLY_FOR_REFS"
-   options="--ignore_ref_errors"
+   options2="--ignore_ref_errors"
 fi
-
 
 
 mkdir -p ${dist}
@@ -50,10 +51,10 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --stylesheet v_manual_split \
     --symbols docs/symbols.tex \
     --wordpress_integration \
-    --extra_crossrefs ${extra_crossrefs} \
     --output_crossref ${dist}/${short}/crossref.html \
     --likebtn 5ae54e0d6fd08bb24f3a7fa1 \
     -o out/${short} \
     --permalink_prefix ${permalink_prefix} \
-    ${options} \
+    ${options1} \
+    ${options2} \
     -c "config echo 1; ${cmd}"
