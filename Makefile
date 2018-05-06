@@ -207,4 +207,4 @@ clean-tmp:
 	find /mnt/tmp/mcdp_tmp_dir-duckietown -type d -ctime +10 -exec rm -rf {} \;
 
 package-artifacts:
-	bash package-art.sh out/package.tgz
+	bash misc/package-art.sh out/package.tgz
