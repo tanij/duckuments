@@ -7,6 +7,15 @@ short=$1
 src=$2
 
 
+
+if [ "$CI" = "" ]
+then
+   branch=`git rev-parse --abbrev-ref HEAD`
+else
+   branch=${CIRCLE_BRANCH}
+fi
+
+
 org=`git config --get remote.origin.url | cut -f2 -d":"  | cut -f1 -d/ | tr '[:upper:]' '[:lower:]'`
 
 base=http://docs-branches.duckietown.org/${org}/duckuments/branch/${branch}
@@ -15,19 +24,17 @@ permalink_prefix=${base}/${short}/out
 extra_crossrefs=${base}/all_crossref.html
 
 
-
 if [ "$CI" = "" ]
 then
    echo "Not on Circle, using parallel compilation."
    cmd=rparmake
-   branch=`git rev-parse --abbrev-ref HEAD`
    options1="--extra_crossrefs ${extra_crossrefs}"
 else
    echo "On Circle, not using parallel compilation to avoid running out of memory."
    cmd=rmake
-   branch=${CIRCLE_BRANCH}
    options1=""
 fi
+
 
 
 dist=duckuments-dist
