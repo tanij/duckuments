@@ -216,7 +216,9 @@ def go():
             crossrefs = os.path.join(d, 'crossref.html')
             if os.path.exists(crossrefs):
                 x = bs(open(crossrefs).read())
-                all_crossrefs.append(x.__copy__())
+                for e in x.select('[url]'):
+                    all_crossrefs.append('\n\n')
+                    all_crossrefs.append(e.__copy__())
             else:
                 logger.error('File does not exist %s' % crossrefs)
 
@@ -270,7 +272,17 @@ def go():
 
     script = Tag(name='script')
     script.append(CROSSREF_SCRIPT)
-    body.append(all_crossrefs)
+
+    container = Tag(name='div')
+    container.attrs['id'] = 'container'
+    body.append(container)
+
+    details = Tag(name='details')
+    summary = Tag(name='summary')
+    summary.append('See all references')
+    details.append(summary)
+    details.append(all_crossrefs)
+    body.append(details)
     body.append(script)
     html.append(body)
 
@@ -278,7 +290,7 @@ def go():
 
     if nerrors > 0:
         sys.exit(nerrors)
-        
+
 def get_junit_xml(res):
     # notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING)
     notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_ERROR)
