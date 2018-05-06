@@ -79,7 +79,7 @@ jobs:
 #                comptests-to-junit out/comptests/compmake >  out/comptests/junit/junit.xml
 #
         - test-results-store:
-            path: duckuments-dist/junit.xml
+            path: duckuments-dist/junit
 
         - store_artifacts:
               path: out/package.tgz

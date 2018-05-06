@@ -236,7 +236,7 @@ def go():
     from mcdp_docs.mcdp_render_manual import write_errors_and_warnings_files
     write_errors_and_warnings_files(res, os.path.dirname(out_pickle))
 
-    out_junit  = os.path.join(os.path.dirname(out_pickle), 'junit.xml')
+    out_junit  = os.path.join(os.path.dirname(out_pickle), 'junit', 'notes', 'junit.xml')
     s = get_junit_xml(res)
     write_data_to_file(s.encode('utf8'), out_junit)
 
