@@ -68,6 +68,10 @@ https://circleci.com/gh/![username]/duckuments
 
 to see the status of your build.
 
+You can also preview the results by clicking the "artifacts" tab and selecting `index.html` from the list.
+
+<img src='ci-artifacts.png' style='width:90%' figure-id="fig:ci-artifacts"/> 
+
 ### Make a pull request
 
 Create a pull request to the original
