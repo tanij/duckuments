@@ -11,6 +11,7 @@ from mcdp_docs.sync_from_circle import get_artefacts, get_links2
 from mcdp_report.html import get_css_filename
 from mcdp_utils_misc import write_data_to_file, AugmentedResult
 from mcdp_utils_xml import bs, gettext
+from mcdp_docs.manual_constants import MCDPManualConstants
 
 BOOKS = """
 !!omap
@@ -223,7 +224,7 @@ def go():
 
 
     out_pickle = sys.argv[3]
-    from mcdp_docs.manual_constants import MCDPManualConstants
+
 
     nwarnings = len(res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING))
     ntasks = len(res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_TASK))
@@ -234,6 +235,10 @@ def go():
 
     from mcdp_docs.mcdp_render_manual import write_errors_and_warnings_files
     write_errors_and_warnings_files(res, os.path.dirname(out_pickle))
+
+    out_junit  = os.path.join(os.path.dirname(out_pickle), 'junit.xml')
+    s = get_junit_xml(res)
+    write_data_to_file(s, out_junit)
 
     # write_data_to_file(pickle.dumps(res), out_pickle, quiet=False)
 
@@ -272,6 +277,40 @@ def go():
 
     write_data_to_file(str(html), out_crossrefs)
 
+
+
+def get_junit_xml(res):
+    notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING)
+
+    test_cases = []
+    for i, note in enumerate(notes):
+        tc = junit_test_case_from_note(i, note)
+        test_cases.append(tc)
+
+    ts = TestSuite("notes", notes)
+
+    return TestSuite.to_xml_string([ts])
+
+
+def flatten_ascii(s):
+    if s is None:
+        return None
+    s = unicode(s, encoding='utf8', errors='replace')
+    s = s.encode('ascii', errors='ignore')
+    return s
+
+
+def junit_test_case_from_note(i, note):
+    # stderr = str(note)
+    # stdout = ''
+    tc = TestCase(name=job_id)
+
+    # if cache.state == Cache.FAILED:
+    #     message = cache.exception
+    #     output = cache.exception + "\n" + cache.backtrace
+    output = ''
+    tc.add_failure_info(flatten_ascii(str(note)), flatten_ascii(output))
+    return tc
 
 # language=css
 CSS = """
