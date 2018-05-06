@@ -168,7 +168,7 @@ def go():
         books = OrderedDict(books)
         for id_book, book in books.items():
             d = os.path.join(dist, id_book)
-            change_frame(d, '../../')
+            change_frame(d, '../../', current_slug=id_book)
 
             d0 = dist
 
@@ -336,33 +336,36 @@ def junit_test_case_from_note(i, note):
 
 import os
 
-def change_frame(d0, rel):
+def change_frame(d0, rel, current_slug):
 
     for f in locate_files(d0, '*.html'):
         if os.path.basename(f) == 'out.html':
             continue
         print(f)
-        do_it(f, rel)
+        do_it(f, rel, current_slug)
 
 
-def do_it(f, rel):
+def do_it(f, rel, current_slug):
     f2 = f + '.old'
     if not os.path.exists(f2):
         shutil.copy(f, f2)
     orig = open(f2).read()
 
     soup = bs_entire_document(orig)
-    soup2 = make_changes(soup, f, rel)
+    soup2 = make_changes(soup, f, rel, current_slug)
     data = to_html_entire_document(soup2)
     write_data_to_file(data, f)
 
 
-def make_changes(soup, f, rel):
+def make_changes(soup, f, rel, current_slug):
     s = bs(SPAN_BOOKS)
 
     for option in s.select('option[value]'):
         # noinspection PyAugmentAssignment
         option.attrs['value'] = rel + option.attrs['value']
+
+        if current_slug in  option.attrs['value'] :
+            option.attrs['selected'] = 1
 
     for a in s.select('a[href]'):
         # noinspection PyAugmentAssignment
@@ -386,8 +389,12 @@ function changed(e) {
 }
 
 </script>
-
-            <span id="books">
+<style>
+#books {
+    margin-bottom:2em;
+}
+</style>
+            <div id="books">
             <a target='frame' href="index.html">Home</a>
 
         <select onchange="changed(this)">
@@ -427,7 +434,7 @@ function changed(e) {
 <!--<option value="http://docs.duckietown.org/duckuments.html">Builds</option>-->
 
     </select>
-    </span>
+    </div>
 
 '''
 # language=css
