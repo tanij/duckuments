@@ -512,6 +512,9 @@ CSS = """
     #extra .notes-panel {
     display: none;
     }
+    #extra p {
+    max-width: 100%;
+    }
     .toc_ul-depth-3 {
     display: none;
     }
