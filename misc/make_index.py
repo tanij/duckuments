@@ -413,7 +413,6 @@ function changed(e) {
     <option id="opmanual_duckietown" onclick="activate(this)" value="opmanual_duckietown/out/index.html">Duckietown operation manual</option>
     <option id="software_carpentry" onclick="activate(this)" value="software_carpentry/out/index.html">Software carpentry</option>
 
-
     <option target='frame' id="software_architecture" onclick="activate(this)"
             value="software_architecture/out/index.html">SW Architecture</option>
     <option target='frame' id="software_devel" onclick="activate(this)"

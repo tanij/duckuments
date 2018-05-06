@@ -11,9 +11,9 @@ all:
 	make summaries
 
 summaries:
-	cp misc/frames.html duckuments-dist/index.html
+#	cp misc/frames.html duckuments-dist/index.html
 	. deploy/bin/activate && python misc/make_index.py \
-		duckuments-dist/summary.html \
+		duckuments-dist/index.html \
 		duckuments-dist/all_crossref.html \
 		duckuments-dist/errors_and_warnings.pickle
 
