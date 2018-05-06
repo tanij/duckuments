@@ -9,6 +9,7 @@ from mcdp_docs.sync_from_circle import get_artefacts, get_links2
 from mcdp_report.html import get_css_filename
 from mcdp_utils_misc import write_data_to_file, AugmentedResult
 from mcdp_utils_xml import bs, gettext
+from mcdp_docs.mcdp_render_manual import CROSSREF_CSS, CROSSREF_SCRIPT
 
 books = """
 !!omap
@@ -302,7 +303,7 @@ write_data_to_file(yaml.dump(manifest), mf)
 
 out_crossrefs = sys.argv[2]
 
-from mcdp_docs.mcdp_render_manual import CROSSREF_CSS, CROSSREF_SCRIPT
+
 html = Tag(name='html')
 head = Tag(name='head')
 body = Tag(name='body')
