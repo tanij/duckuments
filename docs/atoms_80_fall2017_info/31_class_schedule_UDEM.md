@@ -16,7 +16,7 @@ Slides:
 
 Book materials:
 
-* [](#part:duckietown-project)
+* [](#duckietown-project)
 
 * [](#autonomous-vehicles)
 
