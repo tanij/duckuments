@@ -73,15 +73,6 @@ jobs:
             command:  |
                 make package-artifacts
 
-#
-#        - run:
-#            name: Collecting job failure results
-#            when: always
-#            command: |
-#                mkdir -p out/comptests/junit
-#                comptests-to-junit out/comptests/compmake >  out/comptests/junit/junit.xml
-#
-
         - store_artifacts:
               path: out/package.tgz
               destination: out/package.tgz

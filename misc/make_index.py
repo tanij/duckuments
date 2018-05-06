@@ -291,6 +291,7 @@ def go():
     if nerrors > 0:
         sys.exit(nerrors)
 
+
 def get_junit_xml(res):
     # notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING)
     notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_ERROR)
@@ -303,6 +304,7 @@ def get_junit_xml(res):
     ts = TestSuite("notes", test_cases)
 
     return TestSuite.to_xml_string([ts])
+
 
 def flatten_ascii(s):
     if s is None:
