@@ -1,7 +1,7 @@
 import pickle
 import sys
 from collections import OrderedDict
-
+from junit_xml import TestSuite, TestCase
 import yaml
 from bs4 import Tag
 from mcdp_docs import logger
@@ -238,7 +238,7 @@ def go():
 
     out_junit  = os.path.join(os.path.dirname(out_pickle), 'junit.xml')
     s = get_junit_xml(res)
-    write_data_to_file(s, out_junit)
+    write_data_to_file(s.encode('utf8'), out_junit)
 
     # write_data_to_file(pickle.dumps(res), out_pickle, quiet=False)
 
@@ -287,7 +287,7 @@ def get_junit_xml(res):
         tc = junit_test_case_from_note(i, note)
         test_cases.append(tc)
 
-    ts = TestSuite("notes", notes)
+    ts = TestSuite("notes", test_cases)
 
     return TestSuite.to_xml_string([ts])
 
@@ -303,7 +303,7 @@ def flatten_ascii(s):
 def junit_test_case_from_note(i, note):
     # stderr = str(note)
     # stdout = ''
-    tc = TestCase(name=job_id)
+    tc = TestCase(name='note%03d' % i)
 
     # if cache.state == Cache.FAILED:
     #     message = cache.exception
