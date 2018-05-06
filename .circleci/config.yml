@@ -2,7 +2,7 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:19
+        - image: andreacensi/duckietown-xenial-kinetic:20
           environment:
               COLUMNS: 160
               NODE_PATH: /root/project/node_modules
@@ -22,11 +22,10 @@ jobs:
         - run:
             name: fonts
             command: |
-                cp -R fonts /usr/share/fonts/my-fonts
-                fc-cache -f -v
+                make install-fonts
 
         - run:
-            name: setup MCDP
+            name: Setup MCDP
             command: |
                 make install-ubuntu16
 
@@ -36,24 +35,29 @@ jobs:
                 make check-programs
 
         - run:
-            name: checkout duckietown repository
+            name: Checkout duckietown repository
             command: |
                 git clone -b master --depth 1 git@github.com:duckietown/Software /tmp/git_repos/duckietown/Software/master
                 ln -s /tmp/git_repos/duckietown/Software/master/ duckietown
 
         - run:
+            name: Synchronize Wordpress
+            command: |
+                make db.related.yaml
+
+        - run:
             name: Compile all books
             command: |
                 echo "config colorize 0" > .compmake.rc
-                ONLY_FOR_REFS=1 make -j4 code_docs books
+                ONLY_FOR_REFS=1 make -j4 book-code_docs books
 
         - run:
-            name: Compile all books again to get cross references again
+            name: Compile all books again to get cross references
             command: |
-                make -j4 code_docs books
+                make -j4 book-code_docs books
 
         - run:
-            name: create index
+            name: Create index of webpage
             command: |
               make summaries
 
@@ -64,7 +68,8 @@ jobs:
         - run:
             name: Package artifacts
             command:  |
-                bash package-art.sh out/package.tgz
+                make package-artifacts
+
 #
 #        - run:
 #            name: Collecting job failure results
@@ -73,8 +78,8 @@ jobs:
 #                mkdir -p out/comptests/junit
 #                comptests-to-junit out/comptests/compmake >  out/comptests/junit/junit.xml
 #
-#        - test-results-store:
-#            path: out/comptests/junit
+        - test-results-store:
+            path: duckuments-dist/junit.xml
 
         - store_artifacts:
               path: out/package.tgz

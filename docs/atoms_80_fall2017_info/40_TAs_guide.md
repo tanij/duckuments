@@ -34,7 +34,7 @@ Note that many of these are not sequential and can be done in parallel.
 
 Read about Duckietown's history; watch the Duckumentary.
 
-See: [](#part:duckietown-project)
+See: [](#duckietown-project)
 
 ### Online accounts
 

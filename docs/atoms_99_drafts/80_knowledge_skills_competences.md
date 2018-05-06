@@ -170,3 +170,21 @@ Programming is a competence. It requires a skill, e.g., Python, and knowledge, e
 
 <!-- How does the above relate, practically, to the Duckiebook? {k,s,c,p}-atoms? --> 
 
+
+
+
+<cite class='pub-ref-desc' id='bib:tani16duckietown'>
+    <span class="author"><a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, <a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>
+    <span class="title">Duckietown: an innovative way to teach autonomy.</span>
+    <span class="booktitle">In <em>EduRobotics 2016</em>. Athens, Greece, December 2016.</span>
+    <span class="links"><span class="pdf"><a href="http://people.csail.mit.edu/lpaull/publications/Tani_EDU_2016.pdf"><img style='border:0; margin-bottom:-6px; height: 17px'  src='pdf.png'/> pdf</a></span><span class="url"><a href="http://duckietown.mit.edu/"><img style='border:0; margin-bottom:-6px; height: 17px'  src='web.png'/> supp. material</a></span></span><a class='pub-ref-bibtex-link' onclick='javascript:document.getElementById("tani16duckietown").style.display="block";' href='javascript:void(0)'>bibtex</a><pre class='pub-ref-bibtex' id='tani16duckietown' style='display: none;'>@inproceedings{tani16duckietown,
+        author = "Tani, Jacopo and Paull, Liam and Zuber, Maria and Rus, Daniela and How, Jonathan and Leonard, John and Censi, Andrea",
+        title = "Duckietown: an Innovative Way to Teach Autonomy",
+        url = "http://duckietown.mit.edu/",
+        booktitle = "EduRobotics 2016",
+        year = "2016",
+        month = "December",
+        address = "Athens, Greece",
+        pdf = "http://people.csail.mit.edu/lpaull/publications/Tani_EDU_2016.pdf"
+    }</pre>
+</cite>
