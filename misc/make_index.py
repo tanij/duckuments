@@ -1,15 +1,16 @@
+import pickle
 import sys
 from collections import OrderedDict
 
 import yaml
 from bs4 import Tag
+from mcdp_docs import logger
 from mcdp_docs.embed_css import embed_css_files
-from mcdp_docs.mcdp_render_manual import get_extra_content
+from mcdp_docs.mcdp_render_manual import get_extra_content, CROSSREF_CSS, CROSSREF_SCRIPT
 from mcdp_docs.sync_from_circle import get_artefacts, get_links2
 from mcdp_report.html import get_css_filename
 from mcdp_utils_misc import write_data_to_file, AugmentedResult
 from mcdp_utils_xml import bs, gettext
-from mcdp_docs.mcdp_render_manual import CROSSREF_CSS, CROSSREF_SCRIPT
 
 books = """
 !!omap
@@ -241,7 +242,7 @@ for id_group, group in groups.items():
         d = os.path.join(dist, id_book)
         d0 = dist
 
-        errors_and_warnings = os.path.join(d0, 'out', 'errors_and_warnings.pickle')
+        errors_and_warnings = os.path.join(d, 'out', 'errors_and_warnings.pickle')
         if os.path.exists(errors_and_warnings):
             resi = pickle.loads(open(errors_and_warnings).read())
             res.merge(resi)
@@ -290,13 +291,23 @@ for id_group, group in groups.items():
             x = bs(open(crossrefs).read())
             all_crossrefs.append(x.__copy__())
         else:
-            print('File does not exist %s' % crossrefs)
+            logger.error('File does not exist %s' % crossrefs)
 
         divgroup.append(div)
     divgroups.append(divgroup)
+import pickle
 
-fnres = 'errors_and_warnings.pickleg'
-write_data_to_file(pickle.dumps(res), fnres, quiet=False)
+out_pickle = sys.argv[3]
+from mcdp_docs.manual_constants import MCDPManualConstants
+
+nwarnings = len(res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING))
+ntasks = len(res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_TASK))
+nerrors = len(res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_ERROR))
+logger.info('%d tasks' % ntasks)
+logger.warning('%d warnings' % nwarnings)
+logger.error('%d nerrors' % nerrors)
+
+write_data_to_file(pickle.dumps(res), out_pickle, quiet=False)
 
 extra = get_extra_content(AugmentedResult())
 
