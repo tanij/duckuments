@@ -55,8 +55,6 @@ jobs:
             name: Compile all books again to get cross references
             command: |
                 make -j4 book-code_docs books
-                # and again... bug
-                make -j4 book-code_docs books
 
         - run:
             name: Create index of webpage

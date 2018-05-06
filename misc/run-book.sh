@@ -40,7 +40,7 @@ else
    echo "Skipping polish, ONLY_FOR_REFS"
 
    # XXX: need to do split because of cross refs
-   options2="--split ${dist}/${short}/out/ --ignore_ref_errors"
+   options2="--split ${dist}/${short}/out/ --ignore_ref_errors --only_refs"
 fi
 
 
