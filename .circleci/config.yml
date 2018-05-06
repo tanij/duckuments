@@ -61,6 +61,9 @@ jobs:
             command: |
               make summaries
 
+        - test-results-store:
+            path: duckuments-dist/junit
+
         - store_artifacts:
               path: duckuments-dist
               destination: duckuments-dist
@@ -78,8 +81,6 @@ jobs:
 #                mkdir -p out/comptests/junit
 #                comptests-to-junit out/comptests/compmake >  out/comptests/junit/junit.xml
 #
-        - test-results-store:
-            path: duckuments-dist/junit.xml
 
         - store_artifacts:
               path: out/package.tgz

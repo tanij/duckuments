@@ -1,84 +1,85 @@
 import pickle
 import sys
 from collections import OrderedDict
-from junit_xml import TestSuite, TestCase
+
 import yaml
 from bs4 import Tag
+from junit_xml import TestSuite, TestCase
 from mcdp_docs import logger
 from mcdp_docs.embed_css import embed_css_files
+from mcdp_docs.manual_constants import MCDPManualConstants
 from mcdp_docs.mcdp_render_manual import get_extra_content, CROSSREF_CSS, CROSSREF_SCRIPT
 from mcdp_docs.sync_from_circle import get_artefacts, get_links2
 from mcdp_report.html import get_css_filename
 from mcdp_utils_misc import write_data_to_file, AugmentedResult
 from mcdp_utils_xml import bs, gettext
-from mcdp_docs.manual_constants import MCDPManualConstants
 
 BOOKS = """
 !!omap
 - base:
     title: Information about the project
-    
+
     abstract: |
         This is general information about the project
         and how to contribute to it.
-    
+
     books: !!omap
-    
+
         - the_duckietown_project:
             title: The Duckietown Project
             abstract: |
                 Learn about the history and current status.
-                    
+
         - guide_for_instructors:
             title: Guide for instructors
 
-        - duckumentation: 
+        - duckumentation:
             title: Contributing to the documentation
-             
-     
+
+
 - tech:
     title: Operation manuals
-    
+
     abstract: |
-    
+
         These are the operation manuals.
-    
+
     books: !!omap
-            
+
         - opmanual_duckiebot:
             title: Duckiebot manual
-        
+
         - opmanual_duckietown:
             title: Duckietown manual
-             
+
         - software_carpentry:
             title: Reference for useful commands
-             
+
 - SW:
     title: Software development
-    
+
     books: !!omap
         - software_architecture:
             title: Duckietown software architecture
 
         - software_devel:
             title: Software development in Duckietown
-             
+
         - code_docs:
             title: Packages documentation
-             
-     
+
+
 - theory:
     title: Class materials
-     
+
     books: !!omap
-            
+
         - learning_materials:
             title: Learning materials
-             
+
         - exercises:
-            title: Exercises     
-        
+            title: Exercises
+
         - preliminaries:
             title: Preliminaries
 
@@ -86,27 +87,28 @@ BOOKS = """
 - fall2017:
     title: Past editions
     books: !!omap
-            
+
         - class_fall2017:
             title: Fall 2017
-             
+
         - class_fall2017_projects:
             title: Fall 2017 projects
-            
+
 - misc:
     title: Miscellanea
-    
+
     abstract: |
         Other content
-    
+
     books: !!omap
         - drafts:
             title: Drafts
-            
+
         - deprecated:
             title: Deprecated
-    
+
 """
+
 
 def go():
     groups = OrderedDict(yaml.load(BOOKS))
@@ -133,7 +135,6 @@ def go():
     style = Tag(name='style')
 
     style.append(CSS)
-
 
     head.append(style)
     head.append(meta)
@@ -215,16 +216,16 @@ def go():
             crossrefs = os.path.join(d, 'crossref.html')
             if os.path.exists(crossrefs):
                 x = bs(open(crossrefs).read())
-                all_crossrefs.append(x.__copy__())
+                for e in x.select('[url]'):
+                    all_crossrefs.append('\n\n')
+                    all_crossrefs.append(e.__copy__())
             else:
                 logger.error('File does not exist %s' % crossrefs)
 
             divgroup.append(div)
         divgroups.append(divgroup)
 
-
     out_pickle = sys.argv[3]
-
 
     nwarnings = len(res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING))
     ntasks = len(res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_TASK))
@@ -236,7 +237,7 @@ def go():
     from mcdp_docs.mcdp_render_manual import write_errors_and_warnings_files
     write_errors_and_warnings_files(res, os.path.dirname(out_pickle))
 
-    out_junit  = os.path.join(os.path.dirname(out_pickle), 'junit.xml')
+    out_junit = os.path.join(os.path.dirname(out_pickle), 'junit', 'notes', 'junit.xml')
     s = get_junit_xml(res)
     write_data_to_file(s.encode('utf8'), out_junit)
 
@@ -271,16 +272,28 @@ def go():
 
     script = Tag(name='script')
     script.append(CROSSREF_SCRIPT)
-    body.append(all_crossrefs)
+
+    container = Tag(name='div')
+    container.attrs['id'] = 'container'
+    body.append(container)
+
+    details = Tag(name='details')
+    summary = Tag(name='summary')
+    summary.append('See all references')
+    details.append(summary)
+    details.append(all_crossrefs)
+    body.append(details)
     body.append(script)
     html.append(body)
 
     write_data_to_file(str(html), out_crossrefs)
 
-
+    if nerrors > 0:
+        sys.exit(nerrors)
 
 def get_junit_xml(res):
-    notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING)
+    # notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING)
+    notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_ERROR)
 
     test_cases = []
     for i, note in enumerate(notes):
@@ -290,7 +303,6 @@ def get_junit_xml(res):
     ts = TestSuite("notes", test_cases)
 
     return TestSuite.to_xml_string([ts])
-
 
 def flatten_ascii(s):
     if s is None:
@@ -309,8 +321,11 @@ def junit_test_case_from_note(i, note):
     #     message = cache.exception
     #     output = cache.exception + "\n" + cache.backtrace
     output = ''
-    tc.add_failure_info(flatten_ascii(str(note)), flatten_ascii(output))
+    ns = flatten_ascii(str(note))
+    ns = ns.replace('\n', '\a')
+    tc.add_failure_info(ns, flatten_ascii(output))
     return tc
+
 
 # language=css
 CSS = """
@@ -325,11 +340,11 @@ CSS = """
         font-weight: bold;
         font-size: smaller;
         color: darkblue;
-    } 
+    }
     a.EWT {
         text-decoration: none;
         font-family: arial;
-    } 
+    }
     .show_todos .EWT {
         display: inline;
     }
@@ -386,7 +401,7 @@ CSS = """
     list-style: none;
     }
     #extra .notes-panel {
-    display: none; 
+    display: none;
     }
     .toc_ul-depth-3 {
     display: none;
