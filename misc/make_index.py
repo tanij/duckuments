@@ -217,6 +217,8 @@ html.append(body)
 divgroups = Tag(name='div')
 all_crossrefs = Tag(name='div')
 
+res = AugmentedResult()
+
 for id_group, group in groups.items():
     divgroup = Tag(name='div')
     divgroup.attrs['class'] = 'group'
@@ -238,6 +240,15 @@ for id_group, group in groups.items():
     for id_book, book in books.items():
         d = os.path.join(dist, id_book)
         d0 = dist
+
+        errors_and_warnings = os.path.join(d0, 'out', 'errors_and_warnings.pickle')
+        if os.path.exists(errors_and_warnings):
+            resi = pickle.loads(open(errors_and_warnings).read())
+            res.merge(resi)
+        else:
+            msg = 'Path does not exist: %s' % errors_and_warnings
+            logger.error(msg)
+
         artefacts = get_artefacts(d0, d)
 
         div = Tag(name='div')
@@ -284,6 +295,9 @@ for id_group, group in groups.items():
         divgroup.append(div)
     divgroups.append(divgroup)
 
+fnres = 'errors_and_warnings.pickle'
+write_data_to_file(pickle.dumps(res), fnres, quiet=False)
+
 extra = get_extra_content(AugmentedResult())
 
 extra.attrs['id'] = 'extra'
@@ -302,7 +316,6 @@ mf = os.path.join(os.path.dirname(out), 'summary.manifest.yaml')
 write_data_to_file(yaml.dump(manifest), mf)
 
 out_crossrefs = sys.argv[2]
-
 
 html = Tag(name='html')
 head = Tag(name='head')
