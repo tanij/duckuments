@@ -6,6 +6,16 @@
 short=$1
 src=$2
 
+
+org=`git config --get remote.origin.url | cut -f2 -d":"  | cut -f1 -d/ | tr '[:upper:]' '[:lower:]'`
+
+base=http://docs-branches.duckietown.org/${org}/duckuments/branch/${branch}
+cross=${base}/all_crossref.html
+permalink_prefix=${base}/${short}/out
+extra_crossrefs=${base}/all_crossref.html
+
+
+
 if [ "$CI" = "" ]
 then
    echo "Not on Circle, using parallel compilation."
@@ -33,13 +43,6 @@ fi
 
 
 mkdir -p ${dist}
-
-org=`git config --get remote.origin.url | cut -f2 -d":"  | cut -f1 -d/ | tr '[:upper:]' '[:lower:]'`
-
-base=http://docs-branches.duckietown.org/${org}/duckuments/branch/${branch}
-cross=${base}/all_crossref.html
-permalink_prefix=${base}/${short}/out
-extra_crossrefs=${base}/all_crossref.html
 
 NP=${PWD}/node_modules:${NODE_PATH}
 
