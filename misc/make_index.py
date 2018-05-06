@@ -276,7 +276,9 @@ def go():
 
     write_data_to_file(str(html), out_crossrefs)
 
-
+    if nerrors > 0:
+        sys.exit(nerrors)
+        
 def get_junit_xml(res):
     # notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_WARNING)
     notes = res.get_notes_by_tag(MCDPManualConstants.NOTE_TAG_ERROR)
