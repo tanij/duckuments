@@ -322,7 +322,7 @@ def junit_test_case_from_note(i, note):
     #     output = cache.exception + "\n" + cache.backtrace
     output = ''
     ns = flatten_ascii(str(note))
-    ns = ns.replace('\n', '<br/>')
+    ns = ns.replace('\n', '\a')
     tc.add_failure_info(ns, flatten_ascii(output))
     return tc
 
