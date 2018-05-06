@@ -301,4 +301,20 @@ mf = os.path.join(os.path.dirname(out), 'summary.manifest.yaml')
 write_data_to_file(yaml.dump(manifest), mf)
 
 out_crossrefs = sys.argv[2]
-write_data_to_file(str(all_crossrefs), out_crossrefs)
+
+from mcdp_docs.mcdp_render_manual import CROSSREF_CSS, CROSSREF_SCRIPT
+html = Tag(name='html')
+head = Tag(name='head')
+body = Tag(name='body')
+style = Tag(name='style')
+style.append(CROSSREF_CSS)
+head.append(style)
+html.append(head)
+
+script = Tag(name='script')
+script.append(CROSSREF_SCRIPT)
+body.append(all_crossrefs)
+body.append(script)
+html.append(body)
+
+write_data_to_file(str(html), out_crossrefs)
