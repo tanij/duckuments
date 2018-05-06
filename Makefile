@@ -2,6 +2,7 @@
 
 tex-symbols=docs/symbols.tex
 duckietown-software=duckietown
+RUNBOOK=misc/run-book.sh
 
 all:
 	# make update-software
@@ -11,7 +12,10 @@ all:
 
 summaries:
 	cp misc/frames.html duckuments-dist/index.html
-	. deploy/bin/activate && python make_index.py duckuments-dist/summary.html duckuments-dist/all_crossref.html
+	. deploy/bin/activate && python misc/make_index.py \
+		duckuments-dist/summary.html \
+		duckuments-dist/all_crossref.html \
+		duckuments-dist/errors_and_warnings.pickle
 
 realclean: clean
 	rm -rf duckuments-dist
@@ -38,7 +42,13 @@ dependencies-ubuntu16:
 
 install-ubuntu16:
 	virtualenv --system-site-packages --no-site-packages deploy
+	$(MAKE) install-fonts
 	$(MAKE) update-software
+
+install-fonts:
+	cp -R misc/fonts /usr/share/fonts/my-fonts
+	fc-cache -f -v
+
 
 update-software:
 	git submodule sync --recursive
@@ -51,10 +61,10 @@ builds:
 	cp misc/jquery* builds/
 	python -m mcdp_docs.sync_from_circle duckietown duckuments builds builds/duckuments.html
 
+db.related.yaml:
+	. deploy/bin/activate && misc/download_wordpress.py > $@
 
-checks: check-programs
-	. deploy/bin/activate && python download_wordpress.py > db.related.yaml
-	cat db.related.yaml
+checks: check-programs db.related.yaml
 
 check-programs-pdf:
 	@which  pdftk >/dev/null || ( \
@@ -62,7 +72,7 @@ check-programs-pdf:
 		exit 1)
 
 check-programs:
-	(\
+	@(\
 	. deploy/bin/activate; \
 	\
 	which  bibtex2html >/dev/null || ( \
@@ -122,96 +132,82 @@ process-svg:
 
 
 books: \
-	duckumentation \
-	the_duckietown_project \
-	opmanual_duckiebot \
-	opmanual_duckietown \
-	software_carpentry \
-	software_devel \
-	software_architecture \
-	class_fall2017 \
-	class_fall2017_projects \
-	learning_materials \
-	exercises \
-	drafts \
-	guide_for_instructors \
-	deprecated \
-	preliminaries \
-	AI_driving_olympics
+	book-duckumentation \
+	book-the_duckietown_project \
+	book-opmanual_duckiebot \
+	book-opmanual_duckietown \
+	book-software_carpentry \
+	book-software_devel \
+	book-software_architecture \
+	book-class_fall2017 \
+	book-class_fall2017_projects \
+	book-learning_materials \
+	book-exercises \
+	book-drafts \
+	book-guide_for_instructors \
+	book-deprecated \
+	book-preliminaries \
+	book-AI_driving_olympics
 
-guide_for_instructors: checks
-	. deploy/bin/activate && ./run-book $@ docs/atoms_12_guide_for_instructors
+book-guide_for_instructors: checks
+	. deploy/bin/activate && $(RUNBOOK) guide_for_instructors docs/atoms_12_guide_for_instructors
 
-deprecated: checks
-	./run-book $@ docs/atoms_98_deprecated
+book-deprecated: checks
+	$(RUNBOOK) deprecated docs/atoms_98_deprecated
 
-AI_driving_olympics:
-	./run-book $@ docs/atoms_16_driving_olympics
+book-AI_driving_olympics:
+	$(RUNBOOK) AI_driving_olympics docs/atoms_16_driving_olympics
 
-code_docs: check-duckietown-software checks
-	./run-book $@ duckietown/catkin_ws/src/
+book-code_docs: check-duckietown-software checks
+	$(RUNBOOK) code_docs duckietown/catkin_ws/src/
 
-class_fall2017: checks
-	./run-book $@ docs/atoms_80_fall2017_info
+book-class_fall2017: checks
+	$(RUNBOOK) class_fall2017 docs/atoms_80_fall2017_info
 
-drafts: checks
-	./run-book $@ docs/atoms_99_drafts
+book-drafts: checks
+	$(RUNBOOK) drafts docs/atoms_99_drafts
 
-preliminaries: checks
-	./run-book $@ docs/atoms_29_preliminaries
+book-preliminaries: checks
+	$(RUNBOOK) preliminaries docs/atoms_29_preliminaries
 
-learning_materials: checks
-	./run-book $@ docs/atoms_30_learning_materials
+book-learning_materials: checks
+	$(RUNBOOK) learning_materials docs/atoms_30_learning_materials
 
-exercises: checks
-	./run-book $@ docs/atoms_40_exercises
+book-exercises: checks
+	$(RUNBOOK) exercises docs/atoms_40_exercises
 
-duckumentation: checks
-	./run-book $@ docs/atoms_15_duckumentation
+book-duckumentation: checks
+	$(RUNBOOK) duckumentation docs/atoms_15_duckumentation
 
-the_duckietown_project: checks
-	./run-book $@ docs/atoms_10_the_duckietown_project
+book-the_duckietown_project: checks
+	$(RUNBOOK) the_duckietown_project docs/atoms_10_the_duckietown_project
 
-opmanual_duckiebot: checks
-	./run-book $@ docs/atoms_17_opmanual_duckiebot
+book-opmanual_duckiebot: checks
+	$(RUNBOOK) opmanual_duckiebot docs/atoms_17_opmanual_duckiebot
 
-opmanual_duckietown: checks
-	./run-book $@ docs/atoms_18_setup_duckietown
+book-opmanual_duckietown: checks
+	$(RUNBOOK) opmanual_duckietown docs/atoms_18_setup_duckietown
 
-software_carpentry: checks
-	./run-book $@ docs/atoms_60_software_reference
+book-software_carpentry: checks
+	$(RUNBOOK) software_carpentry docs/atoms_60_software_reference
 
-software_devel: checks
-	./run-book $@ docs/atoms_70_software_devel_guide
+book-software_devel: checks
+	$(RUNBOOK) software_devel docs/atoms_70_software_devel_guide
 
-software_architecture: checks
-	./run-book $@ docs/atoms_80_duckietown_software
+book-software_architecture: checks
+	$(RUNBOOK) $software_architecture docs/atoms_80_duckietown_software
 
-class_fall2017_projects: checks
-	./run-book $@ docs/atoms_85_fall2017_projects
+book-class_fall2017_projects: checks
+	$(RUNBOOK) class_fall2017_projects docs/atoms_85_fall2017_projects
 
 clean:
 	rm -rf out
-#
-#fall2017: checks
-#
-#	DISABLE_CONTRACTS=1 mcdp-render-manual \
-#		--src $(src) \
-#		--stylesheet v_manual_split \
-#		--no_resolve_references \
-#		--symbols $(tex-symbols) \
-#		--compose fall2017.version.yaml \
-#		-o out/fall2017\
-#		--output_file duckuments-dist/fall2017/duckiebook.html \
-#		--split duckuments-dist/fall2017/duckiebook/ \
-#		--pdf duckuments-dist/fall2017/duckiebook.pdf \
-#		 -c "config echo 1; rparmake"
-#
-#fall2017-clean:
-#	rm -rf out/fall2017
 
 duckuments-bot:
 	python misc/slack_message.py
 
 clean-tmp:
 	find /mnt/tmp/mcdp_tmp_dir-duckietown -type d -ctime +10 -exec rm -rf {} \;
+
+package-artifacts:
+	bash misc/package-art.sh out/package.tgz

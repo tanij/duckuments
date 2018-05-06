@@ -42,7 +42,7 @@ Note: Please keep track of how much time you spend on each problem set. We will 
 
 ### Reading Material
 
-* [](#part:duckietown-project)
+* [](#duckietown-project)
 
 * [](#autonomy-overview)
 

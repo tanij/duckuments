@@ -1,1 +1,1 @@
-# Preliminaries {#book:preliminaries}
+# Preliminaries {#book:preliminaries status=ready}

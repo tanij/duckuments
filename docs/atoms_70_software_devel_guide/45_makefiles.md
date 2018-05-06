@@ -11,7 +11,9 @@ The command
 
     $ make all
 
-displays the help for each command. This help is also included here as [](#makefiles-help).
+displays the help for each command. 
+
+<!-- This help is also included here as [](#makefiles-help).-->
 
 ## Makefile organization
 
