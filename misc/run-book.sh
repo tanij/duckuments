@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # language=sh
-set -ex
+# set -euo pipefail
+# set -x # echo commands
 
 short=$1
 src=$2
@@ -32,7 +33,10 @@ fi
 
 mkdir -p ${dist}
 
-base=http://docs.duckietown.org/duckuments/branch/
+org=duckietown
+
+base=http://docs-branches.duckietown.org/${org}/duckuments/branch/
+cross=${base}/${branch}/all_crossref.html
 
 NP=${PWD}/node_modules:${NODE_PATH}
 
@@ -44,6 +48,7 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --stylesheet v_manual_split \
     --symbols docs/symbols.tex \
     --wordpress_integration \
+    --extra_crossrefs http://docs.duckietown.org/all_crossref.html \
     --output_crossref ${dist}/${short}/crossref.html \
     --likebtn 5ae54e0d6fd08bb24f3a7fa1 \
     -o out/${short} \

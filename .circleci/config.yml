@@ -22,8 +22,7 @@ jobs:
         - run:
             name: fonts
             command: |
-                cp -R fonts /usr/share/fonts/my-fonts
-                fc-cache -f -v
+                make install-fonts
 
         - run:
             name: Setup MCDP
@@ -58,7 +57,7 @@ jobs:
                 make -j4 code_docs books
 
         - run:
-            name: create index
+            name: Create index of webpage
             command: |
               make summaries
 
@@ -69,7 +68,8 @@ jobs:
         - run:
             name: Package artifacts
             command:  |
-                bash package-art.sh out/package.tgz
+                make package-artifacts
+
 #
 #        - run:
 #            name: Collecting job failure results
