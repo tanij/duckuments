@@ -25,7 +25,7 @@ then
 
 else
    echo "Skipping polish, ONLY_FOR_REFS"
-   options=""
+   options="--ignore_ref_errors"
 fi
 
 
