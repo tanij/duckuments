@@ -26,7 +26,7 @@ jobs:
                 fc-cache -f -v
 
         - run:
-            name: setup MCDP
+            name: Setup MCDP
             command: |
                 make install-ubuntu16
 
@@ -36,10 +36,15 @@ jobs:
                 make check-programs
 
         - run:
-            name: checkout duckietown repository
+            name: Checkout duckietown repository
             command: |
                 git clone -b master --depth 1 git@github.com:duckietown/Software /tmp/git_repos/duckietown/Software/master
                 ln -s /tmp/git_repos/duckietown/Software/master/ duckietown
+
+        - run:
+            name: Synchronize Wordpress
+            command: |
+                make db.related.yaml
 
         - run:
             name: Compile all books

@@ -51,10 +51,10 @@ builds:
 	cp misc/jquery* builds/
 	python -m mcdp_docs.sync_from_circle duckietown duckuments builds builds/duckuments.html
 
+db.related.yaml:
+	. deploy/bin/activate && python download_wordpress.py > $@
 
-checks: check-programs
-	. deploy/bin/activate && python download_wordpress.py > db.related.yaml
-	cat db.related.yaml
+checks: check-programs db.related.yaml
 
 check-programs-pdf:
 	@which  pdftk >/dev/null || ( \
