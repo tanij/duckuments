@@ -1,4 +1,4 @@
-# Special paragraphs and environments {#special-pars status=ready}
+# Special paragraphs and environments {#markduck-special-pars status=ready  label-name="Special paragraphs"}
 
 ## Special paragraphs tags {#special-paragraphs}
 
@@ -113,6 +113,12 @@ A: answer
 
 Maintainer: maintainer
 
+    Assigned: AndreaCensi
+    
+Assigned: AndreaCensi
+
+<!-- deprecated
+
     Author: author
 
 Author: author
@@ -121,10 +127,11 @@ Author: author
 
 Point of Contact: Point of Contact name
 
+
     Slack channel: slack channel name
 
 Slack channel: slack channel name
-
+-->
 
 ### References
 

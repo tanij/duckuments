@@ -1,6 +1,6 @@
-# Overview {status=ready} 
+# Overview {#duckumentation-intro status=ready} 
 
-TODO: write more about the design principles
+TODO: write more about the design principles.
 
 ## Where the documentation is
 
@@ -17,4 +17,3 @@ You can find all these artifacts produced at the site [`docs.duckietown.org`](ht
 The simplest way to contribute to the documentation is to click any of the "✎" icons next to the headers.
 
 They link to the "edit" page in Github. There, one can make and commit the edits in only a few seconds.
-

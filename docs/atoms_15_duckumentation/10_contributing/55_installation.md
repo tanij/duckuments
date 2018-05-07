@@ -1,4 +1,4 @@
-# Installation and compilation {#installing-docs-system status=ready}
+# Installation and compilation {#duckumentation-installing-docs-system status=ready}
 
 In the following, we are going to assume that the documentation system is installed in `~/duckuments`. However, it can be installed anywhere.
 
@@ -31,19 +31,19 @@ Use this to install a virtual environment and dependencies:
 ```
 $ cd ~/duckuments
 $ make dependencies-ubuntu16
-$ make install-ubuntu16    
+$ make install-ubuntu16
 ```
 
-For other distributions, you might need to modify the `install-ubuntu` (e.g. use `venv` instead of `virtualenv`).
+For other distributions, you might need to modify the `install-ubuntu16` Makefile recipe (e.g. use `venv` instead of `virtualenv`).
 
 ## Compiling the documentation   {#compiling-master}
 
 ### Compiling all the books
 
-To compile all the books, run:
+To compile everything from scratch, run:
 
 ```
-$ make clean all 
+$ make realclean all
 ```
 
 To see the results, open the file
@@ -52,8 +52,7 @@ To see the results, open the file
 ~/duckuments/duckuments-dist/index.html
 ```
 
-If you want to do incremental compilation, you can omit the `clean` and just
-use:
+If you want to do incremental compilation, you can omit the `clean` and just use:
 
 ```
 $ make all
@@ -64,31 +63,29 @@ $ make all
 After you have compiled all the books,  you can use one of the following commands to re-compile one single book:
 
 ```
-$ make duckumentation
-$ make the_duckietown_project 
-$ make opmanual_duckiebot_base 
-$ make opmanual_duckiebot_fancy 
-$ make opmanual_duckietown 
-$ make software_carpentry 
-$ make software_devel 
-$ make software_architecture 
-$ make class_fall2017 
-$ make class_fall2017_projects 
-$ make learning_materials 
-$ make exercises 
-$ make drafts 
-$ make guide_for_instructors 
-$ make deprecated 
-$ make preliminaries
+$ make book-duckumentation
+$ make book-the_duckietown_project
+$ make book-opmanual_duckiebot_base
+$ make book-opmanual_duckiebot_fancy
+$ make book-opmanual_duckietown
+$ make book-software_carpentry
+$ make book-software_devel
+$ make book-software_architecture
+$ make book-class_fall2017
+$ make book-class_fall2017_projects
+$ make book-learning_materials
+$ make book-exercises
+$ make book-drafts
+$ make book-guide_for_instructors
+$ make book-deprecated
+$ make book-preliminaries
 ```
 
-If compilation is unsuccesfull, try:
+The compilation is always incremental, but sometimes you might need to do a reset using:
 
 ```
-$ make clean
+$ make realclean
 ```
-
-You can also compile one single book at the beginning, but you will get some errors about references not found.
 
 ## Reporting problems
 
@@ -96,18 +93,15 @@ First, see the section [](#markduck-troubleshooting) for common problems and the
 
 Please report problems with the duckuments using [the `duckuments` issue tracker][tracker].
 
-If it is urgent, please tag people (Andrea); otherwise these are processed in batch mode every few days.
-
 [tracker]: https://github.com/duckietown/duckuments/issues
 
-If you have a problem with a generated PDF, please attach the offending PDF.
+Special notes:
 
-If you say something like "This happens for Figure 3", then it is hard to know which figure you are referencing exactly, because numbering changes from commit to commit.
-
-If you want to refer to specific parts of the text, please commit all your work on your branch, and obtain the name of the commit using the following commands:
+* If you have a problem with a generated PDF, please attach the offending PDF.
+* If you say something like "This happens for Figure 3", then it is hard to know which figure you are referencing exactly, because numbering changes from commit to commit.
+  If you want to refer to specific parts of the text, please commit all your work on your branch, and obtain the name of the commit using the following commands:
 
 ```
 $ git -C ~/duckuments rev-parse HEAD      # commit for duckuments
 $ git -C ~/duckuments/mcdp rev-parse HEAD # commit for mcdp
 ```
-

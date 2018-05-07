@@ -4,7 +4,7 @@
 
 Requires: [](#read-camera-data)
 
-Requires: [](#sec:rc-control)
+Requires: [](#rc-control)
 
 Result: A verified log.
 

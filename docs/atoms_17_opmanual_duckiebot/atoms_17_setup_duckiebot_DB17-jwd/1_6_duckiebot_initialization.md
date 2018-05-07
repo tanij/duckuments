@@ -123,7 +123,7 @@ Doubt: Not sure it's a good idea to boot into Byobu. -??
 
 ## Setup network
 
-See: [](#sec:duckiebot_network)
+See: [](#duckiebot_network)
 
 ## Update the system
 

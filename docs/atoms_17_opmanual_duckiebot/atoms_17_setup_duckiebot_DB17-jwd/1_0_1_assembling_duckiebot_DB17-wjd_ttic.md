@@ -23,20 +23,20 @@ Note: The [FAQ](#op-assembly-db17wjd-faq) section at the bottom of this page may
 This section is comprised of 14 parts. Each part builds upon some of the previous parts, so make
 sure to follow them in the following order.
 
-- [Part I: Motors](#sub:howto-mount-motors)
-- [Part II: Wheels](#sub:howto-mount-wheels)
-- [Part III: Omni-directional wheel](#sub:howto-mount-omni-wheel)
-- [Part IV: Chassis standoffs](#sub:howto-mount-chassis-standoffs)
-- [Part V: Camera kit](#sub:howto-mount-camera-kit)
-- [Part VI: Heat sinks](#sub:howto-mount-heat-sinks)
-- [Part VII: Raspberry Pi 3](#sub:howto-mount-raspberry-pi-3)
-- [Part VIII: Top plate](#sub:howto-mount-top-plate)
-- [Part IX: USB Power cable](#sub:howto-prepare-usb-power-cable)
-- [Part X: DC Stepper Motor HAT](#sub:howto-mount-dc-stepper-motor-hat)
-- [Part XI: Battery](#sub:howto-mount-battery)
-- [Part XII: Upgrade to `DB17-w`](#sub:howto-upgrade-db17-w)
-- [Part XIII: Upgrade to `DB17-j`](#sub:howto-upgrade-db17-j)
-- [Part XIV: Upgrade to `DB17-d`](#sub:howto-upgrade-db17-d)
+- [Part I: Motors](#howto-mount-motors)
+- [Part II: Wheels](#howto-mount-wheels)
+- [Part III: Omni-directional wheel](#howto-mount-omni-wheel)
+- [Part IV: Chassis standoffs](#howto-mount-chassis-standoffs)
+- [Part V: Camera kit](#howto-mount-camera-kit)
+- [Part VI: Heat sinks](#howto-mount-heat-sinks)
+- [Part VII: Raspberry Pi 3](#howto-mount-raspberry-pi-3)
+- [Part VIII: Top plate](#howto-mount-top-plate)
+- [Part IX: USB Power cable](#howto-prepare-usb-power-cable)
+- [Part X: DC Stepper Motor HAT](#howto-mount-dc-stepper-motor-hat)
+- [Part XI: Battery](#howto-mount-battery)
+- [Part XII: Upgrade to `DB17-w`](#howto-upgrade-db17-w)
+- [Part XIII: Upgrade to `DB17-j`](#howto-upgrade-db17-j)
+- [Part XIV: Upgrade to `DB17-d`](#howto-upgrade-db17-d)
 
 
 ## Motors {#howto-mount-motors}
@@ -447,7 +447,7 @@ Pass the motor wires through the openings in the top plate.
 #### Step 2
 
 Use *4* M3x6 screws to secure the top plate to the nylon standoffs (mounted on the bottom plate in
-[](#sub:howto-mount-chassis-standoffs)) as shown in [](#fig:howto-mount-plate-sketch).
+[](#howto-mount-chassis-standoffs)) as shown in [](#fig:howto-mount-plate-sketch).
 
 <div figure-id="fig:howto-mount-plate-sketch" figure-caption="How to secure the top plate to the bottom plate.">
      <img src="howto_mount_plate_sketch.jpg" style='width: 30em'/>
