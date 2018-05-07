@@ -1,5 +1,4 @@
 
-# Documentation style guide {#part:style-guide status=ready}
 
 # Style guide {#documentation-style-guide status=ready}
 

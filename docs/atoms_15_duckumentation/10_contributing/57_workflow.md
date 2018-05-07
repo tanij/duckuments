@@ -1,4 +1,4 @@
-# Workflow to edit documentation  {#duckumentation-workflow status=draft}
+# Workflow to edit documentation  {#duckumentation-workflow status=ready}
 
 This section describes the workflow to edit the documentation collaboratively.
 
