@@ -1,6 +1,6 @@
 # Chapter template {#theory-chapter-template status=ready}
 
-Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters. Rememeber to check [](#documentation-manual) for a comprehensive and up-to-date list of Duckiebook supported features.
+Theory chapters benefit from a standardized exposition. Here, we define the template for these chapters. Rememeber to check [](#markduck) for a comprehensive and up-to-date list of Duckiebook supported features.
 
 ## Example Title: PID control {#pid-example-theory-label}
 
