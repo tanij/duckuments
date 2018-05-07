@@ -1,6 +1,4 @@
-# Documentation format {#part:documentation-format status=ready}
-
-# Basic Markduck guide {#documentation-manual status=ready}
+# Basic Markduck guide {#markduck-basic status=ready}
 
 The Duckiebooks are written in Markduck, a Markdown dialect.
 
@@ -127,7 +125,7 @@ Alternatively, you can put anywhere an element `figcaption` with ID `![figure id
     <element figure-id="fig:![figure ID]">
         ![figure content]
     </element>
-    
+
     <figcaption id='fig:![figure ID]:caption'>
         This the caption figure.
     </figcaption>
@@ -165,7 +163,7 @@ This is the result:
     <div figure-id="subfig:first" figure-caption="Caption 1">
         <p style='width:5em;height:5em;background-color:#eef'>first subfig</p>
     </div>
-    
+
     <div figure-id="subfig:second" figure-caption="Caption 2">
         <p style='width:5em;height:5em;background-color:#fee'>second subfig</p>
     </div>
@@ -181,7 +179,7 @@ To make them flow horizontally, add `figure-class="flow-subfigures"` to the exte
     <div figure-id="subfig:first2" figure-caption="Caption 1">
         <p style='width:5em;height:5em;background-color:#eef'>first subfig</p>
     </div>
-    
+
     <div figure-id="subfig:second2" figure-caption="Caption 2">
         <p style='width:5em;height:5em;background-color:#fee'>second subfig</p>
     </div>
@@ -363,3 +361,18 @@ For example, you might have a script whose output is:
     See: http://purl.org/dth/scuderia
 
 When the user clicks on the link, they will be redirected to [](#scuderia).
+
+## Comments
+
+You can insert comments using the HTML syntax for comments:
+any text between "<code>&lt;!--</code>" and "<code>--&gt;</code>" is ignored.
+
+<pre trim="1">
+<code trim="1">
+# My section
+
+&lt;!-- this text is ignored --&gt;
+
+Let's start by...
+</code>
+</pre>

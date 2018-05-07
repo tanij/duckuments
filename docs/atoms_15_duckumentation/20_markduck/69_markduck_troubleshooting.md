@@ -1,8 +1,4 @@
-# Markduck troubleshooting {#markduck-troubleshooting status=ready}
-
-## Changes don't appear on the website
-
-For these issues, see [](#duckuments-bot).
+# Troubleshooting {#markduck-troubleshooting status=ready}
 
 ## Troubleshooting errors in the compilation process
 
