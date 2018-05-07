@@ -641,8 +641,6 @@ Make sure that the LEDs on the Raspberry Pi 3 and the DC Stepper Motor HAT are o
 
 
 
--------
-
 ## Upgrade to `DB17-w` {#howto-upgrade-db17-w}
 
 This upgrade equips the Duckiebot with a secondary, faster, Wi-Fi connection, ideal for image streaming.
@@ -720,7 +718,7 @@ Duckiebot to the configuration DB17-d.">
 
 - Mount your USB drive as explained in [](#mounting-usb).
 
-----
+
 
 ## FAQ {#op-assembly-db17wjd-faq}
 
