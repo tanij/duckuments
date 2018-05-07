@@ -1,4 +1,4 @@
-# Using LaTeX constructs in documentation {#markduck-latex status=ready}
+# Using LaTeX constructs in documentation {#markduck-latex status=ready label-name="LaTeX constructs"}
 
 <div class='requirements' markdown="1">
 
