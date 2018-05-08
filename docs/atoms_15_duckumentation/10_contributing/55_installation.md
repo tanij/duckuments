@@ -15,7 +15,10 @@ See: [Adding public key on Github](#howto-add-pubkey-to-github).
 Download the `duckietown/duckuments` repository in the `~/duckuments` directory:
 
 ```
-$ git lfs clone --depth 10 git@github.com:duckietown/duckuments ~/duckuments
+$ git lfs clone --depth 11 git@github.com:duckietown/duckuments ~/duckuments
+$ cd ~/duckuments
+$ git submodule init
+$ git submodule update --recursive 
 ```
 
 Here, note we are using `git lfs clone` -- it's much faster, because it downloads the Git LFS files in parallel.
