@@ -41,13 +41,14 @@ dependencies-ubuntu16:
 		libmysqlclient-dev
 
 install-ubuntu16:
+	git submodule init
 	virtualenv --system-site-packages --no-site-packages deploy
 	$(MAKE) install-fonts
 	$(MAKE) update-software
 
 install-fonts:
-	cp -R misc/fonts /usr/share/fonts/my-fonts
-	fc-cache -f -v
+	sudo cp -R misc/fonts /usr/share/fonts/my-fonts
+	sudo fc-cache -f -v
 
 
 update-software:
