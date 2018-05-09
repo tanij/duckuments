@@ -41,13 +41,18 @@ dist=duckuments-dist
 
 if [ "$ONLY_FOR_REFS" = "" ]
 then
-   options2="--pdf ${dist}/${short}/out.pdf --output_file ${dist}/${short}/out.html --split ${dist}/${short}/out/ "
+   options2="--output_file ${dist}/${short}/out.html --split ${dist}/${short}/out/"
 
 else
    echo "Skipping polish, ONLY_FOR_REFS"
 
    # XXX: need to do split because of cross refs
    options2="--split ${dist}/${short}/out/ --ignore_ref_errors --only_refs"
+fi
+
+if [ "$USER" = "andrea" ]
+then
+    options2="${options2} --pdf ${dist}/${short}/out.pdf"
 fi
 
 
