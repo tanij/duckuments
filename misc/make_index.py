@@ -217,6 +217,7 @@ def go():
                 for a in x.select('a[href]'):
                     href = a.attrs['href']
                     a.attrs['href'] = id_book + '/out/' + href
+                x.name = 'div' # not fragment
                 div.append(x)
             crossrefs = os.path.join(d, 'crossref.html')
             if os.path.exists(crossrefs):
@@ -259,7 +260,9 @@ def go():
     for e in body.select('.notes-panel'):
         e.extract()
     out = sys.argv[1]
-    write_data_to_file(str(html), out)
+    data = str(html)
+    data = data.replace('<body>', '<body>\n<?php header1() ?>\n')
+    write_data_to_file(data, out)
 
     manifest = [dict(display='summary', filename=os.path.basename(out))]
     mf = os.path.join(os.path.dirname(out), 'summary.manifest.yaml')
@@ -339,7 +342,7 @@ import os
 def change_frame(d0, rel, current_slug):
 
     for f in locate_files(d0, '*.html'):
-        if os.path.basename(f) == 'out.html':
+        if os.path.basename(f) in ['out.html', 'toc.html']:
             continue
         print(f)
         do_it(f, rel, current_slug)
@@ -354,6 +357,8 @@ def do_it(f, rel, current_slug):
     soup = bs_entire_document(orig)
     soup2 = make_changes(soup, f, rel, current_slug)
     data = to_html_entire_document(soup2)
+
+    data = data.replace('<body>', '<body>\n<?php header1() ?>\n')
     write_data_to_file(data, f)
 
 

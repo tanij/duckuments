@@ -50,9 +50,18 @@ else
    options2="--split ${dist}/${short}/out/ --ignore_ref_errors --only_refs"
 fi
 
+# only andrea and CI build the PDF version
+
 if [ "$USER" = "andrea" ]
 then
     options2="${options2} --pdf ${dist}/${short}/out.pdf"
+fi
+
+if [ "$CI" = "" ]
+then
+   echo
+else
+   options2="${options2} --pdf ${dist}/${short}/out.pdf"
 fi
 
 
