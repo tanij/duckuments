@@ -259,7 +259,9 @@ def go():
     for e in body.select('.notes-panel'):
         e.extract()
     out = sys.argv[1]
-    write_data_to_file(str(html), out)
+    data = str(html)
+    data = data.replace('<body>', '<body>\n<?php header1() ?>\n')
+    write_data_to_file(data, out)
 
     manifest = [dict(display='summary', filename=os.path.basename(out))]
     mf = os.path.join(os.path.dirname(out), 'summary.manifest.yaml')
