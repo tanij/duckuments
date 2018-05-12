@@ -217,6 +217,7 @@ def go():
                 for a in x.select('a[href]'):
                     href = a.attrs['href']
                     a.attrs['href'] = id_book + '/out/' + href
+                x.name = 'div' # not fragment
                 div.append(x)
             crossrefs = os.path.join(d, 'crossref.html')
             if os.path.exists(crossrefs):
@@ -341,7 +342,7 @@ import os
 def change_frame(d0, rel, current_slug):
 
     for f in locate_files(d0, '*.html'):
-        if os.path.basename(f) == 'out.html':
+        if os.path.basename(f) in ['out.html', 'toc.html']:
             continue
         print(f)
         do_it(f, rel, current_slug)
