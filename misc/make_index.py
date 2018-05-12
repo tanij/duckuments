@@ -354,6 +354,8 @@ def do_it(f, rel, current_slug):
     soup = bs_entire_document(orig)
     soup2 = make_changes(soup, f, rel, current_slug)
     data = to_html_entire_document(soup2)
+
+    data = data.replace('<body>', '<body>\n<?php header1() ?>\n')
     write_data_to_file(data, f)
 
 
