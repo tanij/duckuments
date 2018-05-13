@@ -1,27 +1,13 @@
-# Overview of the competition
+# Overview of the competition {#aido-overview status=beta}
 
-
-<abbr>ML</abbr>, deep learning, and deep reinforcement learning have shown remarkable success on a variety of tasks in the very recent past. However, the ability of these methods to supersede classical approaches on  physically embodied agents is still unclear. In particular, it remains to be seen whether learning-based approached can be completely trusted to control safety-critical systems such as self-driving cars.
-
-This live competition is designed to explore which approaches work  best for what tasks and subtasks in a complex robotic system. The participants will need to design algorithms that implement either part or all of the management and navigation required for a fleet of self-driving miniature taxis.
-
-
-We call this competition the "AI Driving Olympics" because there will be a set of different trials that correspond to progressively more sophisticated behaviors for the cars. These  vary in complexity, from the reactive task of lane following to more complex and "cognitive" behaviors, such as obstacle avoidance, point-to-point navigation, and finally coordinating a vehicle fleet while adhering to the entire set of the "rules of the road". We will provide  baseline solutions for the tasks based on conventional autonomy architectures; the participants will be free to replace any or all of the components with custom learning-based solutions.
-
-The competition will be live at NIPS, but participants will not need to be physically present---they will just need to send their source code packaged as a Docker image.
-There will be qualifying rounds in simulation, similar to the recent DARPA Robotics Challenge,
-and we will make available the use of "robotariums," which are facilities that allow remote experimentation in a reproducible setting.
-
-
-
-
-What are the \emph{AI Driving Olympics}? The AI Driving Olympics (AIDO) are a set of $5$ challenges designed to exemplify the unique characteristics of data science in the context of autonomous driving.
+What are the *AI Driving Olympics*? The AI Driving Olympics (AIDO) are a set of 5 challenges designed to exemplify the unique characteristics of data science in the context of autonomous driving.
 
 To understand how to solve a robotics challenge, we will explore the various dimensions of performance and difficulties involved.
 
 ## Novelty
 
 Many competitions exist in the robotics field.
+
 One example is the long-running annual Robocup, originally thought for robot soccer (wheeled, quadruped, and biped), and later extended to other tasks (search and rescue, home assistance, etc.). Other impactful competitions are the DARPA Challenges, such as the DARPA Grand Challenges in 2007-8 that rekindled the field of self-driving cars, and the recent DARPA Robotics Challenge for humanoid robots.
 
 In the field of robotics, these competitions are generally considered to be extremely useful to push the state of the art, and to make the field more reproducible by imposing exact and uniform experimentation environments.
@@ -49,17 +35,17 @@ This event will probe the frontier of the state of the art in ᴍʟ: the interac
 Can "black box", symbol-less AI power safety-critical systems like self-driving cars?
 
 We propose to test this hypothesis using the miniature
-self-driving cars of "Duckietown", a platform for autonomy education and research (Fig.~\ref{fig:duckietown_nice})\footnote{To learn more about Duckietown,
-the reader might start by watching a few videos at \href{http://vimeo.com/duckietown}{http://vimeo.com/duckietown}}.  At present, the Duckietown platform comprises mostly "classical" (non-neural) baseline implementations of typical robotics navigation tasks, with learning used only in a few instances (such as object detection). The promise of DL is that these methods should be able to easily eclipse classical methods---but is this really the case?
+self-driving cars of "Duckietown", a platform for autonomy education and research (Fig.~\ref{fig:duckietown_nice})
 
+To learn more about Duckietown, the reader might start [by watching a few videos](http://vimeo.com/duckietown).  
+
+At present, the Duckietown platform comprises mostly "classical" (non-neural) baseline implementations of typical robotics navigation tasks, with learning used only in a few instances (such as object detection). The promise of DL is that these methods should be able to easily eclipse classical methods---but is this really the case?
 
 \begin{figure}[p]
 \centering
 \includegraphics[width=0.75\columnwidth, trim={0 35mm 0 0}]{figures/duckietown_nice_with_bot2.jpg}
-
 \vspace{1em}
 \includegraphics[width=1\columnwidth]{figures/CameraDataProcessed.jpg}
-
 \caption{In Duckietown, inhabitants (duckies) are transported via an autonomous mobility-on-demand service (Duckiebots). Duckietown is designed to be inexpensive and modular, yet still enable many of the research and educational opportunities of a full-scale self-driving car platform.
 The robots are completely vision based and all computation runs in real time on a Raspberry PI. }
 \label{fig:duckietown_nice}
@@ -72,3 +58,31 @@ Our experience thus far indicates that many of the inherent assumptions made in 
 Ultimately, the hope is that we can use this competition to benchmark the state of the art as it pertains to real physical systems and, in the process, hopefully spawn a more meaningful discussion about what is necessary to move the field forward.
 
 The best possible  outcome is that a larger proportion of the ᴍʟ community redirects its efforts towards real physical agents acting in the real world, and helps to address the unique characteristics of the problem. The guaranteed impact is that we can establish a baseline for where the state of the art really is in this domain.
+
+## Overview of tasks {#task_overview}
+
+TODO: \JZ{Fix links to go to correct sections}
+
+
+<div figure-id="fig:summary">
+<img src='images/in_lane.jpg' style='width:15%' figure-id="subfig:in_lane" figure-caption="Lane following"/>
+<img src='images/lane_following_v.jpg' style='width:15%' figure-id="subfig:lane_following_v" figure-caption="Lane following+v"/>
+<img src='images/Autolab_map.png' style='width:15%' figure-id="subfig:Autolab_map" figure-caption="Navigation+v"/>
+<img src='images/fleet_management.jpg' style='width:15%' figure-id="subfig:fleet_management" figure-caption="Fleet management"/>
+<img src='images/amod_gray3.png' style='width:15%' figure-id="subfig:amod_gray3" figure-caption="AMOD coordination"/>
+</div>
+
+The AI Driving Olympics competition is structured into the following five separate tasks:
+
+* **Embodied individual robot tasks**: Tasks within which code to control a single Duckiebot is submitted.
+  * [Lane following](#lf): Control of a Duckiebot to drive on the right lane on streets within Duckietown without other moving Duckiebots present. For a detailed description click Fig.~\ref{fig:task_lf} to redirect to section~\ref{sec:lf}.
+  * [Lane following + vehicles](#lf_v): Control of a Duckiebot to drive on the right lane on streets within Duckietown with other moving Duckiebots present.  
+  * [Navigation + vehicles](#nav_v): Navigation task of a Duckiebot to drive from point $A$ to point $B$ while following the rules of the road and while other Duckiebots are likewise driving in the road.  
+* **Fleet-level social tasks**: Tasks within which code to control multiple robots or agents is submitted while lower-level functions are already provided.
+  * [Fleet management](#nav_v): Task to control a small fleet of Duckiebots within Duckietown to pick up a set of virtual customers and drive them to a destination point. 
+  * [Autonomous Mobility-on-Demand](#amod): Task to control the movement of a fleet of autonomous vehicles in a simulated city to pick up customers and drive them to their destinations.
+
+
+Participants may submit code to each challenge individually. Tasks proposed in the *AI Driving Olympics* are ordered first by type and secondly by increasing difficulty in a way which encourages modular reuse of solutions to previous tasks.
+
+For a mathematical introduction to solving tasks in the context in robotics, please refer to [](#general_problem).
