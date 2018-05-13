@@ -56,7 +56,7 @@ Furthermore, as a basis for the decisions of the artificial intelligence algorit
 1. **Information on robotaxis.** This includes the status, location in the network and if the robotaxi can be diverted, i.e., reassigned to a new task.
 2. **Information on requests.** This includes the request id, its submission time, origin and destination. 
 3. **Other information.** Furthermore, at very instant, the current time $t$ in the simulation can be accessed. 
-4. **Performance metrics.} All performance metrics $\sigma: \mathbb{R}_{\geq 0} \to   \mathbb{R}_{\geq 0}$ can be accessed during simulation for the current timestep $\sigma(t)$ as well as an integrated quantity $\tilde{\sigma**(t) := \int_a^b \sigma(\tau) d \tau$. 
+4. **Performance metrics.** All performance metrics $\sigma: \mathbb{R}_{\geq 0} \to   \mathbb{R}_{\geq 0}$ can be accessed during simulation for the current timestep $\sigma(t)$ as well as an integrated quantity $\tilde{\sigma}(t) := \int_a^b \sigma(\tau) d \tau$. 
 
 
 This challenge offers the opportunity to train and develop artificial intelligence algorithms for mobility-on-demand scenarios. The goal is to design an algorithm that captures the general problem well and can be used in another AMoD scenario than the ones provided. The final test will be held in a surprise city! 
