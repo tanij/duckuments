@@ -35,7 +35,7 @@ This event will probe the frontier of the state of the art in ML: the interactiv
 Can "black box", symbol-less AI power safety-critical systems like self-driving cars?
 
 We propose to test this hypothesis using the miniature
-self-driving cars of "Duckietown", a platform for autonomy education and research (Fig.~\ref{fig:duckietown_nice})
+self-driving cars of "Duckietown", a platform for autonomy education and research ([](#fig:duckietown_nice)).
 
 To learn more about Duckietown, the reader might start [by watching a few videos](http://vimeo.com/duckietown).  
 
@@ -71,7 +71,7 @@ The best possible  outcome is that a larger proportion of the ML community redir
 
 <style>
 #fig\:summary img {
-width: 10em;
+width: 16em;
 }
 </style>
 
@@ -91,20 +91,20 @@ Participants may submit code to each challenge individually. Tasks proposed in t
 For a mathematical introduction to solving tasks in the context in robotics, please refer to [](#general_problem).
 
 
-<cite id="bib:Singh">TODO: find paper</cite>
+<cite id="bib:Singh">TODO: find paper Singh</cite>
 
-<cite id="bib:DARLA">TODO: find paper</cite>
+<cite id="bib:DARLA">TODO: find paper DARLA</cite>
 
-<cite id="bib:autonomous_cmu">TODO: find paper</cite>
+<cite id="bib:autonomous_cmu">TODO: find paper autonomous_cmu</cite>
 
-<cite id="bib:autonomous_germany">TODO: find paper</cite>
+<cite id="bib:autonomous_germany">TODO: find paper autonomous_germany</cite>
 
-<cite id="bib:autonomous_nvidia">TODO: find paper</cite>
+<cite id="bib:autonomous_nvidia">TODO: find paper autonomous_nvidia</cite>
 
-<cite id="bib:Robotarium">TODO: find paper</cite>
+<cite id="bib:Robotarium">TODO: find paper Robotarium</cite>
 
-<cite id="bib:AprilTags">TODO: find paper</cite>
+<cite id="bib:AprilTags">TODO: find paper AprilTags</cite>
 
-<cite id="bib:amodeus">TODO: find paper</cite>
+<cite id="bib:amodeus">TODO: find paper amodeus</cite>
 
 

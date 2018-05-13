@@ -16,7 +16,7 @@ TODO: JZ: Ego perspective pictures for collision and intersection - yield positi
 
 <div figure-id="fig:others2">
 <img src='images/collision1.jpg' figure-id="subfig:collision1"  style="width:90%"/>
-<img src='images/yield.jpg' figure-id="subfig:yield"  style="width:90%"/>
+<img src='images/yield.jpg' figure-id="subfig:aido-yield"  style="width:90%"/>
 </div>
 
 

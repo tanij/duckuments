@@ -1,8 +1,8 @@
+# Embodied individual robot tasks {#embodied_tasks status=beta}
+
 $$
-\usepackage{xspace}
 \newcommand{\AC}[1]{{\color{blue}AC: #1}}
 \newcommand{\JZ}[1]{{\color{olive}JZ: #1}}
-\newcommand{\XXX}{{\color{red} XXX}\xspace}
 \newcommand{\fix}{\marginpar{FIX}}
 \newcommand{\new}{\marginpar{NEW}}
 % Robot:
@@ -72,8 +72,6 @@ $$
 $$
 
 
-# Embodied individual robot tasks {#embodied_tasks status=beta}
-
 This section focuses on the infrastructure and background of the embodied individual robotic tasks as outlined in [](#task_overview).
 
 For examples of Duckiebot driving see [a set of demo videos of Duckiebots driving in Duckietown](#demos).
@@ -107,7 +105,7 @@ We briefly describe the physical Duckietown platform, which comprises  autonomou
 
 #### Robot
 
-Duckiebots are designed with the objectives of affordability, modularity and ease of construction. They are equipped with only one *sensor*: a front viewing camera with $160$ deg fish-eye lens capable of streaming $640\times480$ resolution images reliably at $30$~fps.
+Duckiebots are designed with the objectives of affordability, modularity and ease of construction. They are equipped with only one *sensor*: a front viewing camera with $160$ deg fish-eye lens capable of streaming $640\times480$ resolution images reliably at $30$ fps.
 
 *Actuation* is provided through two DC motors that independently drive the front wheels (differential drive configuration), while the rear end of the Duckiebot is equipped with a passive omnidirectional wheel.
 
@@ -115,16 +113,17 @@ TODO: JZ: is this up-to-date? with new Raspberry Pi?
 
 All the *computation* is done onboard on a Raspberry Pi 3 computer, equipped with a quad Core 1.2 GHz, 64 bit CPU and 1 GB of RAM.
 
-We will support other configurations for the purposes of deploying neural networks onto the robots. (More details in Section~\ref{sub:computation}.)
+We will support other configurations for the purposes of deploying neural networks onto the robots. 
+More details in [](#computation).
 
 *Power* is provided by a $10000$ mAh battery which provides several hours ($>5$) of operation.
 
 #### Environment
 
-Duckietowns are modular, structured environments built on two layers: the *road* and the *signal* layers (Fig.~\ref{fig:duckietown-environment}).
+Duckietowns are modular, structured environments built on two layers: the *road* and the *signal* layers ([](#fig:duckietown-environment)).
 
 
-There are six well defined *road segments*: straight, left and right $90$~deg turns, 3-way intersection, 4-way intersection, and empty tile. Each is built on individual tiles, and their interlocking enables customizability of city sizes and topographies. The appearance specifications detail the color and size of the lines as well as the geometry of the roads.
+There are six well defined *road segments*: straight, left and right $90$ deg turns, 3-way intersection, 4-way intersection, and empty tile. Each is built on individual tiles, and their interlocking enables customizability of city sizes and topographies. The appearance specifications detail the color and size of the lines as well as the geometry of the roads.
 
 The signal layer comprises of street signs and traffic lights. *Street signs* enable global localization (knowing where they are within a predefined map)  of Duckiebots in the city and interpretation of intersection topologies. They are defined as the union of an AprilTag \cite{AprilTags} in addition to the typical road sign symbol. Their size, height and relative positioning with respect to the road are specified. Many signs are supported, including intersection type (3- or 4-way), stop signs, road names, and pedestrian crossings.
 
@@ -146,7 +145,7 @@ to gain access to the robotariums.
 
 Simulation environments for each of the individual challenges will be provided as Docker containers with clearly specified APIs. The baseline solutions for each challenge will be provided as separate containers. When both containers (the simulation and corresponding solution) are loaded and configured correctly, the simulation will effectively replace the real robot(s). A proposed solution can be uploaded to our cloud servers, at which point it will be automatically run against our pristine version of the simulation environment (on a cluster) and a score will be assigned and returned to the uploader.
 
-Examples of the simulators provided are shown in Fig.~\ref{fig:maxsim}.
+Examples of the simulators provided are shown in [](#fig:maxsim).
 The left panel shows a lightweight simulator with low-level timing control built on OpenGL. This simulator is also integrated with the OpenAI Gym environment for reinforcement learning agent training. An API for designing reward functions or tweaking domain randomization will be provided. The simulator in the right panel is built on Gazebo and has much more high fidelity physics models for high-level control algorithm testing and tuning and will be used to test algorithms for the navigation tasks.
 
 <div figure-id="fig:simulations">
@@ -171,7 +170,7 @@ to conduct remote experiments. Two similar installations are under construction 
 
 In the months before the competition, we will make available five robotariums for remote testing of the code in a controlled environment.
 
-The idea of a robotarium (contraction of *robot* and *aquarium*) was conceived at Georgia Tech~\cite{Robotarium}. Currently the Georgia Tech robotarium has about 300 users. The users are able to submit programs that guide the movements of a swarm of robots. The system queues the requests, runs the programs, then sends the results, before resetting the robots to the initial state for the next user. Because there is no human intervention required, and the robot self-charge, the robotarium can run continuously.
+The idea of a robotarium (contraction of *robot* and *aquarium*) was conceived at Georgia Tech \cite{Robotarium}. Currently the Georgia Tech robotarium has about 300 users. The users are able to submit programs that guide the movements of a swarm of robots. The system queues the requests, runs the programs, then sends the results, before resetting the robots to the initial state for the next user. Because there is no human intervention required, and the robot self-charge, the robotarium can run continuously.
 
 The use of a robotarium has two advantages:
 
@@ -203,6 +202,7 @@ TODO: JZ: the status i remember is that there is only the purist option?
 2. The "small-GPU-on-board" option: we have successfully used the Movidius "Neural Compute Stick". This stick is optimized for performing parallel matrix multiplications necessary for forward passes of a neural network. It is also comes with an API for deploying pre-trained networks. At present, the Caffe and TensorFlow frameworks are actively supported, with planned support for PyTorch. Additionally, new software, such as ONYX, has been developed to convert networks from other frameworks.
 3. The "remote GPU" option: the computation happens off-board, either on a local server, or remotely on the cloud.
 
+
 ## Performance metrics
 
 Measuring performance in robotics is less clear cut and more multidimensional than traditionally encountered in machine learning settings. To nevertheless achieve reliable performance estimates, we define $N$ to be the number of experiments. Let $\objective$ denote our objective or cost function to optimize which we report for every experiment.
@@ -228,7 +228,7 @@ $$
 
 The following are a list of rule objectives the Duckiebots are supposed to abide by within Duckietown. All individual rule violations will be summarized in one overall traffic law objective $\objective_{TL}$.
 
-\paragraph{Quantification of "Staying in the lane"}
+#### Quantification of "Staying in the lane"
 
  The Duckietown traffic laws say:
 
@@ -259,8 +259,8 @@ The following are a list of rule objectives the Duckiebots are supposed to abide
  *Every time the vehicle arrives at an intersection with a red stop line,
  the vehicle should come to a complete stop, before continuing. *
 
- During each intersection traversal, the vehicle gets a penalty~$\gamma$ if
- there was not a time~$t$ such that the vehicle was in the stopping zone (defined as being between~$0$ and~$5$ cm of the stop line) and~$v_t = 0$, where~$v_t$ is the longitudinal velocity of the vehicle with respect to the direction of the lane. The condition that the position~$p$ of the Duckiebot is in the stopping zone is denoted with~$p_{bot} \in S_{zone}$.
+ During each intersection traversal, the vehicle gets a penalty $\gamma$ if
+ there was not a time $t$ such that the vehicle was in the stopping zone (defined as being between $0$ and $5$ cm of the stop line) and $v_t = 0$, where $v_t$ is the longitudinal velocity of the vehicle with respect to the direction of the lane. The condition that the position $p$ of the Duckiebot is in the stopping zone is denoted with $p_{bot} \in S_{zone}$.
  $$
  	\objective_{SI} = \begin{cases} 0  & \text{if } p_{bot} \notin S_{zone}\\
  	\gamma & \text{if } \nexists t \text{ s.t. } v_t=0 \text{ and }  p_{bot} \in S_{zone}\\
@@ -297,7 +297,7 @@ The Duckietown traffic laws say:
 
 Time intervals are chosen to allow for maneuvering after collisions without incurring further costs.
 
-An illustration of a collision is displayed in Fig.~\ref{fig:collision1}.
+An illustration of a collision is displayed in [](#fig:collision1).
 
 #### Quantification of "Yielding the right of way"
 
@@ -312,7 +312,7 @@ $$
 \end{cases}
 $$
 
-The yield situation at an intersection is depicted in Fig.~\ref{fig:yield}.
+The yield situation at an intersection is depicted in [](#fig:yield).
 
 
 #### Hierarchy of rules
@@ -358,18 +358,18 @@ where $M$ denotes the number of time steps.
 
 ## Overview
 
-As a summary of the various costs for the embodied individual robotics tasks we provide Tab.~\ref{tab:summary_costs_embodied}.
+As a summary of the various costs for the embodied individual robotics tasks we provide [](#tab:summary_costs_embodied).
 
 <div figure-id="tab:summary_costs_embodied">
 	 <figcaption>Summary table of which cost function parts apply for which task. Mentioned cost function parts may be found in the previous subsections.</figcaption>
 	 \begin{tabular}{l|cccc}
-	   **Task** &
-	   **Lane follow.**  &
-	   **Lane follow. + v**  &
-	   **Navigation + v** & \\
-       **Performance ind.** & $\objective_{PS}$ & $\objective_{PS}$ &  $\objective_{SAB}$  \\
-	   **Traffic law** & $\objective_{SL}$ & $\objective_{SL} + \objective_{SD} + \objective_{AC} + \objective_{YR} + \objective_{SI}$ &  $\objective_{SL} + \objective_{SD} + \objective_{AC} + \objective_{YR} + \objective_{SI}$  \\
-	   **Comfort** & $\objective_{CM}$ & $\objective_{CM}$ &  $\objective_{CM}$  \\
+	   Task &
+	   Lane follow.  &
+	   Lane follow. + v   &
+	   Navigation + v & \\
+       Performance ind. & $\objective_{PS}$ & $\objective_{PS}$ &  $\objective_{SAB}$  \\
+	   Traffic law & $\objective_{SL}$ & $\objective_{SL} + \objective_{SD} + \objective_{AC} + \objective_{YR} + \objective_{SI}$ &  $\objective_{SL} + \objective_{SD} + \objective_{AC} + \objective_{YR} + \objective_{SI}$  \\
+	   Comfort & $\objective_{CM}$ & $\objective_{CM}$ &  $\objective_{CM}$  \\
 	 \end{tabular}
 </div>
 
@@ -406,7 +406,7 @@ We will use Docker containers to package, deploy, and run the applications on th
 
 [dockerhub]: https://hub.docker.com/r/duckietown/
 
-A *Master* server will be used to collect and queue all submitted programs ([](#fig:dockerflow)) The *simulation evaluation agents* will execute each queued program as they become available. Submissions that pass the simulation environment will be queued for execution in the {robotariums}.
+A *Master* server will be used to collect and queue all submitted programs ([](#fig:dockerflow)) The *simulation evaluation agents* will execute each queued program as they become available. Submissions that pass the simulation environment will be queued for execution in the robotariums.
 
 <div figure-id="fig:dockerflow">
 \input{dockerflow.tex}
@@ -470,4 +470,4 @@ TODO: Cite previous work by German university (Bundeswehr?), CMU, Nvidia
 
 ### Navigation
 
-TODO: cite some of mark pfeiffer's work on end-to-end navigation.
+TODO: cite some of Mark Pfeiffer's work on end-to-end navigation.

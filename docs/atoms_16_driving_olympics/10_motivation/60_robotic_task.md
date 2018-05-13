@@ -5,7 +5,7 @@ TODO:  I think that we should reorder this. I would put these general considerat
 TODO: JZ: cite andrea's work on task specification
 
 A *robotic task* consists of one or more objectives, at least one robot and an environment in which to complete the objectives.
-More formally, a *robotic task*$\robotictask$ is defined by a *set of objectives*$\objective = \{\objective_1, \dots, \objective_L\}$, a *robot*$\robot$ and an *environment*$\environment$.
+More formally, a *robotic task* $\robotictask$ is defined by a *set of objectives* $\objective = \{\objective_1, \dots, \objective_L\}$, a *robot* $\robot$ and an *environment* $\environment$.
 
 $$
 \robotictask = \objective \times \robot \times \environment
