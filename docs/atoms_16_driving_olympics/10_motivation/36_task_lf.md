@@ -9,39 +9,25 @@ In this task, we ask participants to submit code allowing the Duckiebot to drive
 The task is designed in a way that should allow for a completely \emph{reactive} algorithm design. This meant to say that to accomplish the task, it should not be strictly necessary to keep past observations in memory.
 
 
-To better illustrate the "Lane following" task we provide Fig.~\ref{fig:bird_eye_lf}, \ref{fig:ego_view_lf}, \ref{fig:bird_eye_lf_crossing} and \ref{fig:ego_view_lf_crossing}.
+To better illustrate the "Lane following" task we provide [](#bird_eye_lf), [](#ego_view_lf), [](#bird_eye_lf_crossing) and [](#ego_view_lf_crossing).
 
-TODO: \JZ{PICTURE OF EGO PERSPECTIVE HERE}
+TODO: JZ: PICTURE OF EGO PERSPECTIVE HERE
 
-\begin{figure}[h]
-\centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{images/in_lane.jpeg}
-  \captionof{figure}{A figure}
-  \label{fig:bird_eye_lf}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{images/in_lane_sideview.jpg}
-  \captionof{figure}{Another figure}
-  \label{fig:ego_view_lf}
-\end{minipage}
-\end{figure}
+<div figure-id="fig:views1">
+    <img src="images/in_lane.jpg" figure-id="subfig:bird_eye_lf"/>
+    <img src="images/in_lane_sideview.jpg" figure-id="subfig:ego_view_lf"/>
+</div>
+ 
 
-
-\begin{figure}[h]
-\centering
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{images/crossing_lane.jpg}
-  \captionof{figure}{A figure}
-  \label{fig:bird_eye_lf_crossing}
-\end{minipage}%
-\begin{minipage}{.5\textwidth}
-  \centering
-  \includegraphics[width=.8\linewidth]{images/crossing_lane_sideview.jpg}
-  \captionof{figure}{Another figure}
-  \label{fig:ego_view_lf_crossing}
-\end{minipage}
-\end{figure}
+<div figure-id="fig:views2">
+    <img src="images/crossing_lane.jpg" figure-id="subfig:bird_eye_lf_crossing"/>
+    <img src="images/crossing_lane_sideview.jpg" figure-id="subfig:ego_view_lf_crossing"/>
+</div>
+ 
+ 
+<style>
+#fig\:views1 img,
+#fig\:views2 img {
+width: 20em; 
+}
+</style>
