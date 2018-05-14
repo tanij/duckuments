@@ -31,6 +31,11 @@ BOOKS = """
             abstract: |
                 Learn about the history and current status.
 
+        - AI_driving_olympics:
+            title: The AI Driving Olympics
+            abstract: |
+                Learn about the 2018 competition at NIPS.
+
         - guide_for_instructors:
             title: Guide for instructors
 
