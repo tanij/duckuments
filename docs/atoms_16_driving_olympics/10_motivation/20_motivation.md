@@ -43,7 +43,7 @@ At present, the Duckietown platform comprises mostly "classical" (non-neural) ba
 
 <div figure-id="fig:duckietown_nice">
 <img src="images/duckietown_nice_with_bot2.jpg" figure-id="subfig:duckietown_nice_with_bot2" style="width: 80%"/>
-<img src="images/CameraDataProcessed.jpg" figure-id="subfig:CameraDataProcessed" style="width: 80%"/>
+<img src="images/CameraDataProcessed.png" figure-id="subfig:CameraDataProcessed" style="width: 80%"/>
 <figcaption>
 In Duckietown, inhabitants (duckies) are transported via an autonomous mobility-on-demand service (Duckiebots). Duckietown is designed to be inexpensive and modular, yet still enable many of the research and educational opportunities of a full-scale self-driving car platform.
 The robots are completely vision based and all computation runs in real time on a Raspberry PI.
