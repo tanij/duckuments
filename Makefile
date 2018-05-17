@@ -148,13 +148,17 @@ books: \
 	book-guide_for_instructors \
 	book-deprecated \
 	book-preliminaries \
-	book-AI_driving_olympics
+	book-AI_driving_olympics \
+	book-duckietown_high_school
 
 book-guide_for_instructors: checks
 	. deploy/bin/activate && $(RUNBOOK) guide_for_instructors docs/atoms_12_guide_for_instructors
 
 book-deprecated: checks
 	$(RUNBOOK) deprecated docs/atoms_98_deprecated
+
+book-duckietown_high_school:
+	$(RUNBOOK) duckietown_high_school docs/atoms_11_duckietown_high_school
 
 book-AI_driving_olympics:
 	$(RUNBOOK) AI_driving_olympics docs/atoms_16_driving_olympics

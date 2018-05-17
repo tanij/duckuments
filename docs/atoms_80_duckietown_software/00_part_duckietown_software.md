@@ -1,5 +1,8 @@
 # The duckietown system {#book:duckietown-software status=ready}
 
+Maintainer: Andrea
+
+
 # Overview {#part:duckietown-software-part status=ready}
 
 This part describes the Duckietown algorithms and system architecture.

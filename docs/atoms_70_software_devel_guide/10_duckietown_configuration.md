@@ -137,7 +137,7 @@ Assigned: Andrea
 TODO: Describe the people database.
 
 
-### The globally-unique Duckietown ID {status=to-update}
+### The globally-unique Duckietown ID {status=outdated}
 
 This is a globally-unique ID for people in the Duckietown project.
 

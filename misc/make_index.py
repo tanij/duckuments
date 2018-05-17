@@ -177,11 +177,12 @@ def go():
 
             d0 = dist
 
-
-
             errors_and_warnings = os.path.join(d, 'out', 'errors_and_warnings.pickle')
             if os.path.exists(errors_and_warnings):
                 resi = pickle.loads(open(errors_and_warnings).read())
+                # print(errors_and_warnings)
+
+                resi.update_file_path(prefix=os.path.join(id_book, 'out'))
                 res.merge(resi)
             else:
                 msg = 'Path does not exist: %s' % errors_and_warnings
@@ -200,7 +201,6 @@ def go():
                 s = gettext(a)
                 if 'error' in s or 'warning' in s or 'task' in s:
                     a['class'] = 'EWT'
-            # p  = Tag(name='p')
 
             if False:
                 h = Tag(name='h3')
@@ -254,7 +254,7 @@ def go():
 
     # write_data_to_file(pickle.dumps(res), out_pickle, quiet=False)
 
-    extra = get_extra_content(AugmentedResult())
+    extra = get_extra_content(res)
 
     extra.attrs['id'] = 'extra'
     body.append(extra)
@@ -269,7 +269,7 @@ def go():
     data = data.replace('<body>', '<body>\n<?php header1() ?>\n')
     write_data_to_file(data, out)
 
-    manifest = [dict(display='summary', filename=os.path.basename(out))]
+    manifest = [dict(display='index', filename=os.path.basename(out))]
     mf = os.path.join(os.path.dirname(out), 'summary.manifest.yaml')
     write_data_to_file(yaml.dump(manifest), mf)
 
@@ -364,7 +364,7 @@ def do_it(f, rel, current_slug):
     data = to_html_entire_document(soup2)
 
     data = data.replace('<body>', '<body>\n<?php header1() ?>\n')
-    write_data_to_file(data, f)
+    write_data_to_file(data, f, quiet=True)
 
 
 def make_changes(soup, f, rel, current_slug):
@@ -520,7 +520,7 @@ CSS = """
     list-style: none;
     }
     #extra .notes-panel {
-    display: none;
+    /* display: none;*/
     }
     #extra p {
     max-width: 100%;

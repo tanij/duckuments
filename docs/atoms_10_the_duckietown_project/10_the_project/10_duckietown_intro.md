@@ -1,12 +1,13 @@
-#  The Duckietown project {#book:duckietown-project status=beta}
+# The Duckietown project {#duckietown-project status=beta}
 
-# General info {#part:general-info status=beta}
+Duckietown is a robotics education and outreach effort. It started at MIT in 2016 and now includes hundreds of people around the world.
 
-# What is Duckietown? {#what-is-duckietown status=beta}
+## Mission
+
+TODO for Andrea, Liam, Kirsten: add mission here
+
 
 ## Goals and objectives
-
-Duckietown is a robotics education and outreach effort.
 
 The most tangible goal of the project is to provide a low-cost educational platform for learning about autonomous systems, consisting of lectures and other learning material, the Duckiebot autonomous robots, and the Duckietowns, which constitute the infrastructure in which the Duckiebots navigate.
 
@@ -19,16 +20,12 @@ We have two targets:
 2. For **self-guided learners**, we want to create a "self-learning experience" that allows students to go from having zero knowledge of robotics to a graduate-level understanding.
 
 In addition, the Duckietown platform is also suitable for research.
-
-<!-- TODO: add references to papers submitted/published with it. -->
-
-<!-- Duckietown has been recently incorporated as a non-profit foundation. -->
+ 
 
 ## Learn about the Duckietown educational experience
 
-The video in [](#fig:duckumentary) is the "Duckumentary", a documentary about the first version
+The video in [](#duckumentary) is the "Duckumentary", a documentary about the first version
 of the class, during Spring 2016.
-
 
 <div figure-id="fig:duckumentary">
     <figcaption>The Duckumentary, created by <a href="https://www.facebook.com/ChrisWelchPhotography/">Chris Welch.</a>
@@ -36,7 +33,7 @@ of the class, during Spring 2016.
     <dtvideo src='vimeo:231688769'/>
 </div>
 
-The video in [](#fig:road-to-autonomy) is a documentary created by Red Hat
+The video in [](#road-to-autonomy) is a documentary created by Red Hat
 on the current developments in self-driving cars.
 
 <div figure-id="fig:road-to-autonomy">
@@ -55,17 +52,19 @@ methods, etc.
 <!-- The best way to get a sense of how the platform looks is to watch
 these videos. They show off the capabilities of the platform. -->
 
-The video in [](#fig:v3) shows some of the functionality of the platform.
+The video in [](#duckietown-functionality-v3) shows some of the functionality of the platform.
 
 If you would like to know more, the paper [](#bib:paull17duckietown) describes the Duckiebot
 and its software. (With 30 authors, we made the record for a robotics conference!)
 
-<div figure-id="fig:v3">
+
+<div figure-id="fig:duckietown-functionality-v3">
     <figcaption>Duckietown functionality</figcaption>
     <dtvideo src="vimeo:231843373"/>
 </div>
 
 
+TODO for Jacopo: put bibtex for the papers cited.
 
 <cite class='pub-ref-desc' id='bib:tani16duckietown'>
     <span class="author"><a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, <a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>

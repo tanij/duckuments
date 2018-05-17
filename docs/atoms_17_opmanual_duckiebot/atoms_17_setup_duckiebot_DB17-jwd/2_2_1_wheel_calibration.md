@@ -141,7 +141,7 @@ running the command:
 
 You won't really know if it's right until you verify it though! onto the next section
 
-### Verify your calibration {#verify-kinematic-calibration status=recently-updated}
+### Verify your calibration {#verify-kinematic-calibration}
 
 Construct a calibration station similar to the one in [](#fig:kinematic_calibration):
 
@@ -182,7 +182,7 @@ The first time you save the parameters, this command will create the file
 
     ![DUCKIEFLEET_ROOT]/calibrations/kinematics/![robot name].yaml
 
-#### Committing {#committing-calib status=to-update}
+#### Committing {#committing-calib status=outdated}
 
 You can add and commit it to the repository. Then you should create a pull request in the [duckiefleet repo](https://github.com/duckietown/duckiefleet).
 

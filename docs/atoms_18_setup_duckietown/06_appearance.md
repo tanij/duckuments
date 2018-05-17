@@ -72,7 +72,7 @@ Currently, the left turn and right turn tiles are symmetric: one is the 90 degre
 
 There are 3 colors of tapes: white, yellow, and red.
 
-#### White tape {status=recently-updated}
+#### White tape 
 
 \begin{proposition}\label{prop:white_tape}
 A Duckiebot never collides with Duckietown if it never crosses or touches a white tape strip.

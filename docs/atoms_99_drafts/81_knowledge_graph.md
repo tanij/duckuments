@@ -113,7 +113,7 @@ Each atom version has:
 - A human-readable **summary** (1 short paragraph).
 
 
-### Status values (updated Sep 12) {#status-values status=recently-updated }
+### Status values (updated Sep 12) {#status-values}
 
 Each document has a **status** value.
 
@@ -125,10 +125,9 @@ The allowed values are described in [](#tab:status).
                       for public consumption.</s>
     <code>beta</code>  <s>Early reviewers should look at it now.</s>
     <code>ready</code> <s>The document is ready for everybody.</s>
-    <code>recently-updated</code> <s> The document has been recently updated (less than 1 week)</s>
-    <code>to-update</code> <s>A new pass is needed on this document, because
+    <code>outdated</code> <s>A new pass is needed on this document, because
     it is not up to date anymore.</s>
-    <code>deprecated</code> <s>The document is ready for everybody.</s>
+    <code>deprecated</code> <s>This part is not in use anymore.</s>
 </col2>
 
 

@@ -62,14 +62,8 @@ jobs:
             command: |
               make summaries
 
-        - test-results-store:
-            path: duckuments-dist/junit
-
-        - store_artifacts:
-              path: duckuments-dist
-              destination: duckuments-dist
-
         - run:
+            when: always
             name: Package artifacts
             command:  |
                 make package-artifacts
@@ -77,3 +71,10 @@ jobs:
         - store_artifacts:
               path: out/package.tgz
               destination: out/package.tgz
+
+        - test-results-store:
+            path: duckuments-dist/junit
+
+        - store_artifacts:
+              path: duckuments-dist
+              destination: duckuments-dist

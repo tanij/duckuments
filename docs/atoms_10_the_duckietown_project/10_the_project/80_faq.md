@@ -44,7 +44,7 @@ TODO: to write
 
 Q: I want to teach a Duckietown class. How do I get started?
 
-Please get in touch with us at [duckietown@mit.edu](mailto:duckietown@mit.edu). We will be
+Please get in touch with us at [info@duckietown.org](mailto:info@duckietown.org). We will be
 happy to get you started and sign you up to the Duckietown instructors mailing list.
 
 <!--

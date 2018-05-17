@@ -75,7 +75,7 @@ Comment: I got no error on first execution on the Raspberry Pi
 <!-- (you have to be under the `catkin_ws` folder to invoke `catkin_make`) -->
 
 
-## Clone the duckiefleet repository {#clone-duckiefleet status=recently-updated}
+## Clone the duckiefleet repository {#clone-duckiefleet}
 
 Clone the relevant `duckiefleet` repository into `~/duckiefleet`.
 
@@ -90,7 +90,7 @@ Also, make sure that you execute `~/.bashrc` in the current shell by running the
     source ~/.bashrc
 
 
-## Add your vehicle data to the robot database {#edit-machines-file status=recently-updated}
+## Add your vehicle data to the robot database {#edit-machines-file}
 
 Next, you need to add your robot to the vehicles database.  This is not optional and required in order to launch any ROS scripts.
 

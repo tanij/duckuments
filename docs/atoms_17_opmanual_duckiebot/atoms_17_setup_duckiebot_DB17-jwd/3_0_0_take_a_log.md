@@ -1,4 +1,4 @@
-# Taking and verifying a log {#take-a-log status=recently-updated}
+# Taking and verifying a log {#take-a-log status=outdated}
 
 <div class='requirements' markdown='1'>
 
@@ -35,7 +35,7 @@ Run on the laptop:
 
 and verify that indeed your camera is streaming imagery.
 
-## Record the log {#record-log status=recently-updated}
+## Record the log {#record-log}
 
 ### Option: Full Logging
 
@@ -45,7 +45,7 @@ To log everything that is being published, on the Duckiebot in a new terminal (S
 
 where here we are assuming that you are logging to the USB and have followed [](#mounting-usb).
 
-### Option: Log Minimal 
+### Option: Log Minimal
 
 To log only the imagery, camera_info, the control commands and a few other essential things, on the Duckiebot in a new terminal (See [](#byobu)):
 

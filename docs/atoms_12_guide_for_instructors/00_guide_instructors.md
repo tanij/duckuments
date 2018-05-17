@@ -1,4 +1,5 @@
 # Guide for instructors {#book:guide-instructors status=draft}
 
-TODO: to write guide for instructors
+Maintainer: Jacopo
 
+TODO for Jacopo, Liam: to write guide for instructors

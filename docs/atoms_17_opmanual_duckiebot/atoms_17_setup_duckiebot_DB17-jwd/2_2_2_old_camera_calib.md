@@ -122,7 +122,7 @@ You should see that your new calibration file is uncommitted. You need to commit
 
 Before moving on to the extrinsic calibration, make sure to kill all running processes by pressing <kbd>Ctrl</kbd>-<kbd>C</kbd> in each of the terminal windows.
 
-## Extrinsic calibration {#camera-calib-extrinsics status=recently-updated}
+## Extrinsic calibration {#camera-calib-extrinsics}
 
 ### Setup {#camera-calib-extrinsics-setup}
 
