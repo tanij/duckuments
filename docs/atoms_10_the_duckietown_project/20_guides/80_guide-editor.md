@@ -1,4 +1,6 @@
-# Guide for website editors  {status=draft}
+# Guide for website editors  {#guide-editors status=draft}
+
+TODO for Kirsten: Add here content from [here](https://docs.google.com/document/d/1FeM2fxHTFedzDBetrpZnRyO0Y6hiFBUvhAv_8Asr3eg/edit).
 
 An editor for the website is a person who can administer content. 
 
