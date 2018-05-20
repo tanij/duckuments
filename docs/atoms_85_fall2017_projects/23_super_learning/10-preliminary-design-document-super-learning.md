@@ -1,6 +1,8 @@
+# Supervised learning {#part:super-learning}
+
 # Supervised learning: preliminary report {#super-learning-pdd status=beta}
 
-TODO: JT: adapt links to book style
+TODO for Jacopo: adapt links to book style
 
 
 ## Part 1: Mission and scope

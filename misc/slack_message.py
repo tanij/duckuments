@@ -19,10 +19,11 @@ slack = Slacker(token)
 
 maintainers = """
 <@U0DLXEWRL> (Andrea Censi)
-<@U0MDRAY9X> (Jacopo Tani)
-<@U0DMSBSBG> (Liam Paull)
-<@U6RE1RBR9> (Andrea Daniele)
 """
+# 
+# <@U0MDRAY9X> (Jacopo Tani)
+# <@U0DMSBSBG> (Liam Paull)
+# <@U6RE1RBR9> (Andrea Daniele)
 #
 # maintainers = """
 # <@U0DLXEWRL> (Andrea Censi)
