@@ -1,6 +1,6 @@
 # Makefile system {#makefiles status=ready}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 We use Makefiles to describe frequently-used commands.
 

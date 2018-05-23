@@ -1,6 +1,6 @@
 # Duckiebot Initialization {#setup-duckiebot status=beta}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 
 <div class='requirements' markdown="1">

@@ -1,6 +1,6 @@
 # Interlude: Ergonomics {#ergonomics status=beta}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 So far, we have been spelling out all commands for you, to make
 sure that you understand what is going on.

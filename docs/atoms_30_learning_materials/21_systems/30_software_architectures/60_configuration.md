@@ -1,6 +1,6 @@
 # Configuration management {#configuration-management status=draft}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 <div class='requirements' markdown="1">
 

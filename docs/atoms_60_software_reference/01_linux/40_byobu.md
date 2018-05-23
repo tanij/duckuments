@@ -1,6 +1,6 @@
 # Byobu {#byobu status=ready}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 You need to learn to use Byobu. It will save you much time later.
 
