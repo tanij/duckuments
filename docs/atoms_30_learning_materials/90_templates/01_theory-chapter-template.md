@@ -192,8 +192,8 @@ See also: become a linear algebra master: [Matrix cookbook](#bib:matrix-cookbook
 Do not include a reference chapter. References are automatically compiled to [the Bibliography Section](#bibliography).
 
 
-Author: Jacopo
+Author: Jacopo Tani
 
-Maintainer: Jacopo
+Maintainer: Jacopo Tani
 
-Point of Contact: Jacopo
+Point of Contact: Jacopo Tani

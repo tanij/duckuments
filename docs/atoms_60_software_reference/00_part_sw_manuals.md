@@ -1,6 +1,6 @@
 # Software reference {#book:sw-carpentry status=ready nonumber=1}
 
-Maintainer: Andrea
+Maintainer: Andrea Censi
 
 This part describes quick reference about the UNIX/Linux environments.
 

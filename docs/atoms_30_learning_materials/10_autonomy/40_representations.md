@@ -109,9 +109,3 @@ Discuss:
 ### Duckietown Environment Representation
 
 TODO: Discuss specific environment representation for Duckietown.
-
-
-
-Author: Matthew Walter
-
-Maintainer: Matthew Walter

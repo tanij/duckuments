@@ -1,3 +1,3 @@
 # Duckietown {#book:duckietown-experience status=ready}
 
-Maintainer: Andrea, Liam
+Maintainer: Andrea Censi, Liam Paull
