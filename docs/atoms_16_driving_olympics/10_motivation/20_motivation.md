@@ -51,7 +51,7 @@ The robots are completely vision based and all computation runs in real time on 
 </div>
 
 
-Many recent works in deep (reinforcement) learning cite robotics as a potential application domain \cite{DARLA,Singh}. However, comparatively few actually demonstrate results on  physical agents. This competition is an opportunity to properly benchmark the current state of the art of these methods as applied to a real robotics system.
+Many recent works in deep (reinforcement) learning cite robotics as a potential application domain \cite{darpa_grand_challenge}. However, comparatively few actually demonstrate results on  physical agents. This competition is an opportunity to properly benchmark the current state of the art of these methods as applied to a real robotics system.
 
 Our experience thus far indicates that many of the inherent assumptions made in the ML community may not be valid on real-time physically embodied systems. Additionally, considerations related to resource consumption, latency, and system engineering are rarely considered in the ML domain but are crucially important for fielding real robots.
 
@@ -77,34 +77,32 @@ width: 16em;
 
 The AI Driving Olympics competition is structured into the following five separate tasks:
 
-1. **Embodied individual robot tasks**: Tasks within which code to control a single Duckiebot is submitted.
+**Embodied individual robot tasks**: Tasks within which code to control a single Duckiebot is submitted.
   * [Lane following](#lf): Control of a Duckiebot to drive on the right lane on streets within Duckietown without other moving Duckiebots present.
   * [Lane following + vehicles](#lf_v): Control of a Duckiebot to drive on the right lane on streets within Duckietown with other moving Duckiebots present.  
-  * [Navigation + vehicles](#nav_v): Navigation task of a Duckiebot to drive from point $A$ to point $B$ while following the rules of the road and while other Duckiebots are likewise driving in the road.  
-2. **Fleet-level social tasks**: Tasks within which code to control multiple robots or agents is submitted while lower-level functions are already provided.
-  * [Fleet management](#nav_v): Task to control a small fleet of Duckiebots within Duckietown to pick up a set of virtual customers and drive them to a destination point. 
+  * [Navigation + vehicles](#nav_v): Navigation task of a Duckiebot to drive from point $A$ to point $B$ within Duckietown while following the rules of the road and while other Duckiebots are likewise driving in the road.  
+**Fleet-level social tasks**: Tasks within which code to control multiple robots or agents is submitted while lower-level functions are already provided.
+  * [Fleet management](#nav_v): Task to control a small fleet of Duckiebots within Duckietown to pick up a set of virtual customers and drive them to a destination point.
   * [Autonomous Mobility-on-Demand](#amod): Task to control the movement of a fleet of autonomous vehicles in a simulated city to pick up customers and drive them to their destinations.
 
 
 Participants may submit code to each challenge individually. Tasks proposed in the *AI Driving Olympics* are ordered first by type and secondly by increasing difficulty in a way which encourages modular reuse of solutions to previous tasks.
 
-For a mathematical introduction to solving tasks in the context in robotics, please refer to [](#general_problem).
+[comment]: <For a mathematical introduction to solving tasks in the context in robotics, please refer to [](#general_problem).>
 
 
 <cite id="bib:Singh">TODO: find paper Singh</cite>
 
-<cite id="bib:DARLA">TODO: find paper DARLA</cite>
+<cite id="bib:darpa_grand_challenge">TODO: find paper DARLA</cite>
 
-<cite id="bib:autonomous_cmu">TODO: find paper autonomous_cmu</cite>
+<cite id="bib:cmu_self_driving_original">TODO: find paper autonomous_cmu</cite>
 
 <cite id="bib:autonomous_germany">TODO: find paper autonomous_germany</cite>
 
-<cite id="bib:autonomous_nvidia">TODO: find paper autonomous_nvidia</cite>
+<cite id="bib:nvidia_autonomous">TODO: find paper autonomous_nvidia</cite>
 
-<cite id="bib:Robotarium">TODO: find paper Robotarium</cite>
+<cite id="bib:robotarium">TODO: find paper Robotarium</cite>
 
 <cite id="bib:AprilTags">TODO: find paper AprilTags</cite>
 
 <cite id="bib:amodeus">TODO: find paper amodeus</cite>
-
-
