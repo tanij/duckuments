@@ -2,4 +2,4 @@
 
 Maintainer: Jacopo Tani
 
-TODO for Jacopo, Liam: to write guide for instructors
+TODO for Jacopo Tani, Liam Paull: to write guide for instructors
