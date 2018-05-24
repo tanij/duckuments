@@ -2,7 +2,7 @@
 
 # Learning in Duckietown {#learning-duckietown lang=en status=draft type=text}
 
-Assigned: Jacopo
+Assigned: Jacopo Tani
 
 
 

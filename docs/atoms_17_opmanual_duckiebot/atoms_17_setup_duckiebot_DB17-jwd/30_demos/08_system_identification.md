@@ -1,6 +1,6 @@
 # Demo system ID {#demo-sysid status=beta}
 
-TODO for Jacopo: fix broken refs
+TODO for Jacopo Tani: fix broken refs
 
 
 This is the description of the wheels calibration procedure. In order to complete the procedure, you need your Duckiebot in configuration DB17-lc with its camera calibrated and the same chessboard as for the camera calibration.

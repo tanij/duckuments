@@ -10,7 +10,7 @@ The original Duckietown class was at MIT in 2016 ([](#MIT-class)).
     <figcaption>Part of the first MIT class, during the final demo.</figcaption>
 </div>
 
-TODO for Liam, Andrea: provide better description.
+TODO for Liam Paull, Andrea Censi: provide better description.
 
 Duckietown was built by elves ([](#elves)).
 
@@ -41,9 +41,9 @@ These are some advertisement videos we used.
 ## University-level classes in 2016 {status=beta}
 
 
-TODO for Jacopo: Put links to websites and statistics collected.
+TODO for Jacopo Tani: Put links to websites and statistics collected.
 
-TODO for Kirsten: if we use Wordpress for these statistics, link them here.
+TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
 Later that year, the Duckietown platform was also used in these classes:
 
@@ -65,9 +65,9 @@ Later that year, the Duckietown platform was also used in these classes:
 ## University-level classes in 2017
 
 
-TODO for Jacopo: Put links to websites and statistics collected.
+TODO for Jacopo Tani: Put links to websites and statistics collected.
 
-TODO for Kirsten: if we use Wordpress for these statistics, link them here.
+TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
 In 2017, these four courses were taught together, with the students interacting among institutions:
 
@@ -85,8 +85,8 @@ Furthermore, the Duckietown platform was used also in the following universities
 - National Tainan Normal University, Taiwan - Prof. Jen-Jee Chen's *Vehicle to Everything* (V2X) course; and
 - Yuan Zhu University, Taiwan - Prof. Kan-Lin Hsiung's Control course.
 
-TODO for Jacopo: can we put links to these classes? or to professors names?
+TODO for Jacopo Tani: can we put links to these classes? or to professors names?
 
 ## 2018 and beyond
 
-The classes are too many to list. 
+The classes are too many to list.

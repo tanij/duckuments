@@ -1,6 +1,6 @@
 # Signage {#signage status=draft}
 
-Assigned: Liam
+Assigned: Liam Paull
 
 <div class='requirements' markdown="1">
 

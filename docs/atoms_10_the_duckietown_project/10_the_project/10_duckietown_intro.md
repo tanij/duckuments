@@ -4,7 +4,7 @@ Duckietown is a robotics education and outreach effort. It started at MIT in 201
 
 ## Mission
 
-TODO for Andrea, Liam, Kirsten: add mission here
+TODO for Andrea Censi, Liam Paull, Kirsten Bowser: add mission here
 
 
 ## Goals and objectives
@@ -20,7 +20,7 @@ We have two targets:
 2. For **self-guided learners**, we want to create a "self-learning experience" that allows students to go from having zero knowledge of robotics to a graduate-level understanding.
 
 In addition, the Duckietown platform is also suitable for research.
- 
+
 
 ## Learn about the Duckietown educational experience
 
@@ -64,7 +64,7 @@ and its software. (With 30 authors, we made the record for a robotics conference
 </div>
 
 
-TODO for Jacopo: put bibtex for the papers cited.
+TODO for Jacopo Tani: put bibtex for the papers cited.
 
 <cite class='pub-ref-desc' id='bib:tani16duckietown'>
     <span class="author"><a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, <a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>

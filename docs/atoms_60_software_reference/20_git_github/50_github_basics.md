@@ -1,6 +1,6 @@
 # Setup Github access {#github-access status=ready}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 
 This chapter describes how to create a Github account and setup SSH

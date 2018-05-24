@@ -1,6 +1,6 @@
 # ROS installation and reference {#introduction_to_ros status=ready}
 
-Assigned: Liam
+Assigned: Liam Paull
 
 
 ## Install ROS {#install-ROS}

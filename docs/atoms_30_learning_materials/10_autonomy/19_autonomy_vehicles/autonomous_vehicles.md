@@ -1,6 +1,6 @@
 # Autonomous Vehicles {#autonomous-vehicles status=draft}
 
-Assigned: Liam
+Maintainer: Andrea Censi
 
 ## Autonomous Vehicles in the News {#autonomous-vehicles-news}
 

@@ -1,6 +1,6 @@
 # Linearity and Vectors {#linear_algebra status=draft}
 
-Assigned: Jacopo
+Assigned: Jacopo Tani
 
 <!--Start with a brief introduction of the discussed topic, describing its place in the bigger picture, justifying the reading constraints/guidelines below. Write it as if the reader knew the relevant terminology. -->
 
@@ -412,9 +412,9 @@ See also: [Matrix cookbook](#bib:matrix-cookbook)
 </div>
 
 
-Author: Jacopo
+Author: Jacopo Tani
 
-Maintainer: Jacopo
+Maintainer: Jacopo Tani
 
-Point of Contact: Jacopo
+Point of Contact: Jacopo Tani
 

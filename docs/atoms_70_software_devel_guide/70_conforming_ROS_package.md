@@ -1,6 +1,6 @@
 # ROS package verification {#ROS-package-verification status=draft}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 This chapter describes formally what makes a conforming ROS package in the
 Duckietown software architecture.

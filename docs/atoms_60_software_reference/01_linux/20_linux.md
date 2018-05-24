@@ -1,6 +1,6 @@
 # GNU/Linux general notions {#linux-general status=draft}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 ## Background reading
 

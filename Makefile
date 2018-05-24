@@ -11,7 +11,6 @@ all:
 	make summaries
 
 summaries:
-#	cp misc/frames.html duckuments-dist/index.html
 	. deploy/bin/activate && python misc/make_index.py \
 		duckuments-dist/index.html \
 		duckuments-dist/all_crossref.html \

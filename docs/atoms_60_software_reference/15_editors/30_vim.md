@@ -1,7 +1,7 @@
 
 # VIM {#vim status=ready}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 
 To do quick changes to files, especially when logged remotely,

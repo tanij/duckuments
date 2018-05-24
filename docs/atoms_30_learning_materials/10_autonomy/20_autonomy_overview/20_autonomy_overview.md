@@ -1,6 +1,6 @@
 # Autonomy overview {#autonomy-overview status=ready}
 
-Assigned: Liam
+Assigned: Liam Paull
 
 This unit introduces some basic concepts ubiquitous in autonomous vehicle navigation.
 
@@ -10,7 +10,7 @@ This unit introduces some basic concepts ubiquitous in autonomous vehicle naviga
 The minimal basic backbone processing pipeline for autonomous vehicle navigation is shown in [](#fig:autonomy_block_diagram).
 
 <div figure-id="fig:autonomy_block_diagram" figure-caption="The basic building blocks of any autonomous vehicle">
-  <img src="autonomy_overview_block.jpg" style='width: 30em; height:auto'/>
+  <img src="assets/autonomy_overview_block.jpg" style='width: 30em; height:auto'/>
 </div>
 
 For an autonomous vehicle to function, it must achieve some level of performance for all of these components. The level of performance required depends on the *task* and the *required performance*. In the remainder of this section, we will discuss some of the most basic options. In [the next section](#advanced-blocks) we will briefly introduce some of the more advanced options that are used in state-of-the-art autonomous vehicles.
@@ -20,21 +20,23 @@ For an autonomous vehicle to function, it must achieve some level of performance
 
 <div figure-id="fig:sensors" figure-class="flow-subfigures" figure-caption="Some common sensors used for autonomous navigation">
     <div figure-id="subfig:velo" figure-caption="Velodyne 3D Laser Scanner">
-        <img src="velo.pdf" style='width: 20ex; height: auto'/>
+        <img src="assets/velo.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:camera" figure-caption="Camera">
-        <img src="camera.pdf" style='width: 20ex; height: auto'/>
+        <img src="assets/camera.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:radar" figure-caption="Automotive Radar">
-        <img src="radar.pdf" style='width: 20ex; height: auto'/>
+        <img src="assets/radar.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:gps" figure-caption="GPS Receiver">
-        <img src="gps.pdf" style='width: 20ex; height: auto'/>
+        <img src="assets/gps.pdf" style='width: 20ex; height: auto'/>
     </div>
     <div figure-id="subfig:imu" figure-caption="Inertial Measurement Unit">
-        <img src="imu.pdf" style='width: 20ex; height: auto'/>
+        <img src="assets/imu.pdf" style='width: 20ex; height: auto'/>
     </div>
 </div>
+
+TODO for Liam Paull: Actually we can directly include the SVG files.
 
 <style>
 
@@ -109,7 +111,7 @@ The animation in [](#fig:lane_following) shows the lane following procedure. The
 ### Navigation and Planning {#navigation-planning}
 
 <div figure-id="fig:nested_control" figure-caption="An example of nested control loops">
-  <img src="keynote_figs.001.jpg" style='width: 30em; height: auto'/>
+  <img src="assets/keynote_figs.001.jpg" style='width: 30em; height: auto'/>
 </div>
 
 In general we decompose the task of controlling an autonomous vehicle into a series of **nested control loops**.

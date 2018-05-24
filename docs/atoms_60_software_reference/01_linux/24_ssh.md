@@ -1,6 +1,6 @@
 # Accessing computers using SSH {#ssh status=ready}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 ## Background reading {status=draft}
 

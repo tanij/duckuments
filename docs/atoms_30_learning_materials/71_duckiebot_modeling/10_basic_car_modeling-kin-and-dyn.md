@@ -277,7 +277,7 @@ and therefore:
 \dot v_w(t) = c\ddot\theta(t).
 \]
 
-Note: a simpler way of deriving \eqref{eq:mod-no-lat-slip-final-dot} is noticing, from \eqref{eq:mod-v_A^R}, that $\dot y_A^R = v_w(t) - c\dot\theta(t)$. 
+Note: a simpler way of deriving \eqref{eq:mod-no-lat-slip-final-dot} is noticing, from \eqref{eq:mod-v_A^R}, that $\dot y_A^R = v_w(t) - c\dot\theta(t)$.
 
 - _Pure rolling_: the wheels never slips or skids ([](#fig:mod-pure-rolling)). Recalling that $R$ is the radius of the wheels (identical) and letting $\dot \varphi_{l}, \dot \varphi_{r}$ be the angular velocities of the left and right wheels respectively, the velocity of the ground contact point P in the robot frame is given by:
 
@@ -298,51 +298,7 @@ F_{u, (\cdot)}(t)R = \tau_{(\cdot)}(t),
 
 where $\tau_{(\cdot)}(t)$ is the torque exerted by each motor on its wheel $(\cdot) = {l,r}$.
 
-<!--
-Recalling that the robot is assumed to be a rigid body, the velocity of point $P$ in the inertial frame can be expressed as the sum of the translational velocity $\avec{v_A}$ and that of the rotating field $\avec{w_P^I} = L \dot \theta$ due to the robot's rotation. The $X_I,Y_I $ components of $\avec{v_P}$ can therefore be expressed as:
 
-\begin{align} \label{eq:mod-pure-rolling-inertial-left}
-\left\{  \begin{array}{ll} \dot x_{P,r} &= \dot x_A + L\dot \theta \cos \theta \\
-                      \dot y_{P,r} &= \dot y_A + L \dot \theta \sin \theta  \end{array} \right. ,
-\end{align}
-
-and
-
-\begin{align} \label{eq:mod-pure-rolling-inertial-right}
-\left\{  \begin{array}{ll} \dot x_{P,l} &= \dot x_A + L\dot \theta \cos \theta \\
-                      \dot y_{P,l} &= \dot y_A + L \dot \theta \sin \theta  \end{array} \right..
-\end{align}
-
-By recalling \eqref{eq:mod-orthogonality-cond} and \eqref{eq:mod-no-lat-slip-constraint-r}, the expression of left and right wheel velocities in the robot frame can be summarized in the _pure rolling constraint_ equation:
-
-\begin{align} \label{eq:mod-pure-rolling-constraint}
-\left\{  \begin{array}{ll} \dot x_{P,r} \cos \theta +  \dot y_{P,r} \sin \theta &= R \dot \varphi_r \\
-                           \dot x_{P,l} \cos \theta +  \dot y_{P,l} \sin \theta &= R \dot \varphi_l                 \end{array} \right..
-\end{align}
--->
-<!-- The following is useful in the Laplacian approach
-### Kinematic constraints summary
-
-Note: The kinematic constraints (\eqref{eq:mod-no-lat-slip-constraint-i}, \eqref{eq:mod-pure-rolling-constraint}) of a differential drive robot can be succinctly expressed as: \[ \label{eq:mod-constraints-succint} \amat{\Lambda}(\avec{q})\avec{\dot q} = 0,\]
-
-where:
-
-\begin{align} \label{eq:mod-lambda}
- \amat{\Lambda}(\avec{q}) = \left[ \begin{array}{ccccc} -\sin \theta & \cos \theta & 0 & 0 & 0 \\
-                                                 \cos \theta & \sin \theta & L & -R & 0 \\
-                                                 \cos \theta & \sin \theta & -L & 0 & R \\
-   \end{array}  \right]
-\end{align}
-
-and:
-
-\[ \label{eq:mod-q} \avec{\dot q} = \left[ \dot x_A \quad \dot y_A \quad \dot \theta \quad \dot \varphi_r \quad \dot \varphi_l \right]^T,  \]
-
-\begin{align} \label{eq:mod-pure-rolling-relabel}
-\left\{  \begin{array}{ll} v_{r} &= R \dot \varphi_{r}\\
-                      v_{l} &= R \dot \varphi_{l}  \end{array} \right..
-\end{align}
--->
 ## Differential drive robot kinematic model {#mod-kin}
 
 In a differential drive robot, controlling the wheels at different speeds generates a rolling motion of rate $\omega = \dot \theta$.  In a rotating field there always is a fixed point, the _center of instantaneous curvature_ (ICC), and all points at distance $d$ from it will have a velocity given by $\omega d$, and direction orthogonal to that of the line connecting the ICC and the wheels (i.e., the _axle_). Therefore, by looking at [](#fig:mod-kin), we can write:
@@ -383,14 +339,14 @@ By recalling the _no lateral slipping motion_ \eqref{eq:mod-no-lat-slip-constrai
 \left\{  \begin{array}{l} \dot x_A^R &= R (\dot \varphi_R +\dot \varphi_L)/2  \\
                           \dot y_A^R &= 0 \\
                           \dot \theta &= \omega = R(\dot \varphi_R - \dot \varphi_L)/(2L) \end{array} \right.,
-\end{align}  
+\end{align}
 
 which in more compact yields the _simplified forward kinematics_ in the robot frame:
 
 \begin{align} \label{eq:mod-forward-kinematics-robot-frame}
   \left[ \begin{array}{c} \dot x_A^R \\ \dot y_A^R \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2}  & \frac{R}{2}  \\
                             0 & 0   \\
-                            \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]  
+                            \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]
                              \left[ \begin{array}{c} \dot \varphi_R \\ \dot \varphi_L \end{array} \right].
 \end{align}
 
@@ -400,10 +356,10 @@ Note: The _simplified forward kinematics_ model of a differential drive vehicle 
 \begin{align} \label{eq:mod-forward-kinematics-inertial-frame}
 \displaystyle \avec{\dot q}^I = \amat{R}(\theta)  \left[ \begin{array}{c} \dot x_A^r \\ \dot y_A^r \\ \dot \theta \end{array} \right] = \left[ \begin{array}{cc} \frac{R}{2} \cos \theta & \frac{R}{2} \cos \theta \\
 \frac{R}{2} \sin \theta & \frac{R}{2} \sin \theta   \\
-  \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]  
+  \frac{R}{2L} & -\frac{R}{2L}   \\  \end{array}  \right]
  \left[ \begin{array}{c} \dot \varphi_R \\ \dot \varphi_L \end{array} \right] = \left[ \begin{array}{cc} \cos \theta & 0 \\
                              \sin \theta & 0   \\
-                             0 & 1   \\  \end{array}  \right]  
+                             0 & 1   \\  \end{array}  \right]
                               \left[ \begin{array}{c} v_A \\ \omega \end{array} \right].
 \end{align}
 
@@ -422,7 +378,7 @@ Although \eqref{eq:mod-dyn-model-a} describes the dynamics of the robot, the inp
 
 \begin{align} \label{eq:mod-dyn-matrix-form}
 \left[ \begin{array}{cc} M  & 0 \\
-                          0 & Mc^2+J   \end{array}  \right] \left[ \begin{array}{c} \dot v_u \\ \ddot \theta \end{array} \right]+  
+                          0 & Mc^2+J   \end{array}  \right] \left[ \begin{array}{c} \dot v_u \\ \ddot \theta \end{array} \right]+
 \left[ \begin{array}{cc} 0  & -Mc\dot\theta \\
                          Mc\dot\theta & 0  \end{array}  \right] \left[ \begin{array}{c}  v_u \\ \dot \theta \end{array} \right] = \frac{1}{R}\left[ \begin{array}{cc} 1  & 1 \\
                          L  & -L  \end{array}  \right] \left[ \begin{array}{c} \tau_R \\ \tau_L \end{array} \right].
@@ -581,7 +537,7 @@ then recall that through the rotation matrix $\amat{R}(t)$:
 
 \begin{align} \label{eq:mod-dyn-constraints-rot-refresh}
   \left[ \begin{array}{c} \dot x_C \\ \dot y_C \end{array} \right] = \left[ \begin{array}{cc} \\cos\theta  & -\\sin\theta  \\
-  \\sin\theta  & \\cos\theta     \end{array}  \right]  
+  \\sin\theta  & \\cos\theta     \end{array}  \right]
    \left[ \begin{array}{c} v_u \\ v_w \end{array} \right].
 \end{align}
 
@@ -601,7 +557,7 @@ Although \eqref{eq:mod-dyn-model-a} describes the dynamics of the robot, the inp
 
 \begin{align} \label{eq:mod-dyn-matrix-form}
 \left[ \begin{array}{cc} M  & 0 \\
-                          0 & Mc^2+J   \end{array}  \right] \left[ \begin{array}{c} \dot v_u \\ \ddot \theta \end{array} \right]+  
+                          0 & Mc^2+J   \end{array}  \right] \left[ \begin{array}{c} \dot v_u \\ \ddot \theta \end{array} \right]+
 \left[ \begin{array}{cc} 0  & -Mc\dot\theta \\
                          Mc\dot\theta & 0  \end{array}  \right] \left[ \begin{array}{c}  v_u \\ \dot \theta \end{array} \right] = \frac{1}{R}\left[ \begin{array}{cc} 1  & 1 \\
                          L  & -L  \end{array}  \right] \left[ \begin{array}{c} \tau_R \\ \tau_L \end{array} \right].
@@ -664,7 +620,7 @@ Regardless, we now have a sequence of descriptive tools that receive as input th
 
 Several outstanding questions remain. For example, we need to determine what is the best representation for our robotic platform - polar coordinates, Cartesian with respect to an arbitrary reference point? Or maybe there is a better choice?
 
-Finally, the above model assumes the knowledge of a number of constants that are characteristic of the robot's geometry, materials, and the DC motors. Without the knowledge of those constant the model could be completely off. Determination of these parameters in a measurement driven way, i.e., the "system identification" of the robot's plant, is subject of the _odometry_ class.  
+Finally, the above model assumes the knowledge of a number of constants that are characteristic of the robot's geometry, materials, and the DC motors. Without the knowledge of those constant the model could be completely off. Determination of these parameters in a measurement driven way, i.e., the "system identification" of the robot's plant, is subject of the _odometry_ class.
 
 <!--
 - assumptions: rigid body, same distance L, c from left/right wheel, friction and weight?, mass an inertias of wheels are not taken in consideration
