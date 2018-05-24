@@ -103,7 +103,7 @@ are the scores obtained at the live competition. The participants will not need 
 
 We briefly describe the physical Duckietown platform, which comprises  autonomous vehicles (*Duckiebots*) and a customizable model urban environment (*Duckietown*).
 
-#### Computational substrate available {#computation}
+#### Computational substrate available  
 
 For this part of the computation, computation will be performed in real-time on the cloud. Calculated commands will be sent to Duckiebots.
 
@@ -165,7 +165,7 @@ We will use Docker containers to package, deploy, and run the applications on th
 
 A *Master* server will be used to collect and queue all submitted programs ([](#fig:dockerflow)) The *simulation evaluation agents* will execute each queued program as they become available. Submissions that pass the simulation environment will be queued for execution in the robotariums.
 
-<div figure-id="fig:dockerflow">
+<div figure-id="fig:dockerflow2">
 \input{dockerflow.tex}
 <figcaption>Submission, Deployment, and Execution Flow
 </figcaption>

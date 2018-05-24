@@ -103,7 +103,7 @@ are the scores obtained at the live competition. The participants will not need 
 
 We briefly describe the physical Duckietown platform, which comprises  autonomous vehicles (*Duckiebots*) and a customizable model urban environment (*Duckietown*).
 
-#### Robot
+#### Robot {#robot}
 
 Duckiebots are designed with the objectives of affordability, modularity and ease of construction. They are equipped with only one *sensor*: a front viewing camera with $160$ deg fish-eye lens capable of streaming $640\times480$ resolution images reliably at $30$ fps.
 
@@ -116,7 +116,7 @@ More details in [](#computation).
 
 *Power* is provided by a $10000$ mAh battery which provides several hours ($>5$) of operation.
 
-#### Environment
+#### Environment {#environment}
 
 Duckietowns are modular, structured environments built on two layers: the *road* and the *signal* layers ([](#fig:duckietown-environment)).
 
@@ -226,7 +226,7 @@ The following are a list of rule objectives the Duckiebots are supposed to abide
 
  *The vehicle should stay at all times in the right lane, and ideally near the center.*
 
- We quantify this as follows: Suppose that $d$ is the absolute perpendicular distance of the body from the midline of the lane, such that $d=0$ corresponds to the robot at the center. While $d$ stays within an acceptable range no cost is incurred. When the small safety margin $d_{safety}$ is violated cost starts accruing proportional to the squared distance $d$ up to an upper bound $d_{max}$. If even this bound is violated a lump penalty $\alpha$ is incurred.  
+ We quantify this as follows: Suppose that $d$ is the absolute perpendicular distance of the body from the midline of the lane, such that $d=0$ corresponds to the robot at the center. While $d$ stays within an acceptable range no cost is incurred. When the small safety margin $d_{safety}$ is violated cost starts accruing proportional to the squared distance $d$ up to an upper bound $d_{max}$. If even this bound is violated a lump penalty $\alpha$ is incurred.
 
  So we define the "stay-in-lane" cost function as follows:
 

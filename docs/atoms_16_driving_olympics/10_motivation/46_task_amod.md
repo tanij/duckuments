@@ -1,6 +1,6 @@
 # Task: Autonomous Mobility-on-Demand on AMoDeus {#amod status=beta}
 
-TODO: JZ: Comment: Please match notation to overall document - cost function should be $\objective$
+TODO for Claudio Ruch: Please match notation to overall document - cost function should be $\objective$
 
 In this task, we zoom out of Duckietown and switch to a task so big that it is not yet accessible in Duckietown but only in simulation. This is likely changing as Duckietowns across the world experience a tremendous growth in population, partly due to the surprising fertility rate of the Duckies themselves, partly due to the significant immigration of Duckies of engineering background.
 
@@ -106,7 +106,7 @@ The challenge can be accessed using a dedicated \verb|Python| environment that i
 <figcaption>General structure of the challenge environment.</figcaption>
 </div>
 
-TODO: render generalStructure.pdf_tex
+TODO for Julian Zilly: render generalStructure.pdf_tex
 
 
 1. **Pre-Execution Steps:** In this part of the code, the designer can specify if a specific scenario should be used or a random scenario. It is possible to access the road network in \verb|XML| format (which does not include traffic information) and it is possible to set a possible reduction in population if wanted.

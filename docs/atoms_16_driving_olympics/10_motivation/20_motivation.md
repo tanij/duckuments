@@ -37,7 +37,7 @@ Can "black box", symbol-less AI power safety-critical systems like self-driving 
 We propose to test this hypothesis using the miniature
 self-driving cars of "Duckietown", a platform for autonomy education and research ([](#fig:duckietown_nice)).
 
-To learn more about Duckietown, the reader might start [by watching a few videos](http://vimeo.com/duckietown).  
+To learn more about Duckietown, the reader might start [by watching a few videos](http://vimeo.com/duckietown).
 
 At present, the Duckietown platform comprises mostly "classical" (non-neural) baseline implementations of typical robotics navigation tasks, with learning used only in a few instances (such as object detection). The promise of DL is that these methods should be able to easily eclipse classical methods---but is this really the case?
 
@@ -79,8 +79,8 @@ The AI Driving Olympics competition is structured into the following five separa
 
 **Embodied individual robot tasks**: Tasks within which code to control a single Duckiebot is submitted.
   * [Lane following](#lf): Control of a Duckiebot to drive on the right lane on streets within Duckietown without other moving Duckiebots present.
-  * [Lane following + vehicles](#lf_v): Control of a Duckiebot to drive on the right lane on streets within Duckietown with other moving Duckiebots present.  
-  * [Navigation + vehicles](#nav_v): Navigation task of a Duckiebot to drive from point $A$ to point $B$ within Duckietown while following the rules of the road and while other Duckiebots are likewise driving in the road.  
+  * [Lane following + vehicles](#lf_v): Control of a Duckiebot to drive on the right lane on streets within Duckietown with other moving Duckiebots present.
+  * [Navigation + vehicles](#nav_v): Navigation task of a Duckiebot to drive from point $A$ to point $B$ within Duckietown while following the rules of the road and while other Duckiebots are likewise driving in the road.
 **Fleet-level social tasks**: Tasks within which code to control multiple robots or agents is submitted while lower-level functions are already provided.
   * [Fleet management](#nav_v): Task to control a small fleet of Duckiebots within Duckietown to pick up a set of virtual customers and drive them to a destination point.
   * [Autonomous Mobility-on-Demand](#amod): Task to control the movement of a fleet of autonomous vehicles in a simulated city to pick up customers and drive them to their destinations.
@@ -88,7 +88,7 @@ The AI Driving Olympics competition is structured into the following five separa
 
 Participants may submit code to each challenge individually. Tasks proposed in the *AI Driving Olympics* are ordered first by type and secondly by increasing difficulty in a way which encourages modular reuse of solutions to previous tasks.
 
-[comment]: <For a mathematical introduction to solving tasks in the context in robotics, please refer to [](#general_problem).>
+<!-- For a mathematical introduction to solving tasks in the context in robotics, please refer to [](#general_problem). -->
 
 
 <cite id="bib:Singh">TODO: find paper Singh</cite>
@@ -99,10 +99,23 @@ Participants may submit code to each challenge individually. Tasks proposed in t
 
 <cite id="bib:autonomous_germany">TODO: find paper autonomous_germany</cite>
 
-<cite id="bib:nvidia_autonomous">TODO: find paper autonomous_nvidia</cite>
-
 <cite id="bib:robotarium">TODO: find paper Robotarium</cite>
 
 <cite id="bib:AprilTags">TODO: find paper AprilTags</cite>
 
 <cite id="bib:amodeus">TODO: find paper amodeus</cite>
+
+
+<cite id="bib:DARLA">TODO: find paper DARLA</cite>
+
+<cite id="bib:overview_autonomous_vision">TODO: find paper overview_autonomous_vision</cite>
+
+<cite id="bib:japan_self_driving">TODO: find paper japan_self_driving</cite>
+
+<cite id="bib:autonomous_nvidia">TODO: find paper autonomous_nvidia</cite>
+
+<cite id="bib:paull2017duckietown">TODO: find paper paull2017duckietown</cite>
+
+<cite id="bib:schwarting2018planning">TODO: find paper schwarting2018planning</cite>
+
+<cite id="bib:Pfeiffer2017FromRobots">TODO: find paper Pfeiffer2017FromRobots</cite>

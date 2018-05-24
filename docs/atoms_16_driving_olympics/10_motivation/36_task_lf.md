@@ -1,4 +1,4 @@
-# Task: Lane following (LF) {#lf}
+# Task: Lane following (LF) {#lf status=draft}
 
 
 The first task of the *AI Driving Olympics* is "Lane following".
@@ -11,7 +11,7 @@ The task is designed in a way that should allow for a completely \emph{reactive}
 
 To better illustrate the "Lane following" task we provide [](#bird_eye_lf), [](#ego_view_lf), [](#bird_eye_lf_crossing) and [](#ego_view_lf_crossing).
 
-TODO: PICTURE OF EGO PERSPECTIVE HERE
+TODO: Picture of ego perspective here.
 
 <div figure-id="fig:views1">
     <img src="images/in_lane.jpg" figure-id="subfig:bird_eye_lf"/>
