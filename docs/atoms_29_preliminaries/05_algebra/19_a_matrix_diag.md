@@ -1,6 +1,6 @@
 # Matrix diagonalization {#matrix-diagonalization status=draft}
 
-Assigned: Dzenan
+Assigned: Dzenan Lapandic
 
 - singular value decomposition SVD (topic for advanced-linear-algebra?)
 

@@ -1,4 +1,4 @@
-
+# Autonomous Vehicles {#autonomous-vehicles-slides status=draft type=slides nonumber=1 label-name="🎦 Autonomous Vehicles"}
 
 Maintainer: Andrea Censi
 
@@ -59,13 +59,17 @@ TODO: add video here
 
 - For some less fortunate, a self-driving car would be more than a “convenience”
 
-![image-20180521163355871](blind-person.png)
+<figure class="stretch">
+<img src="assets/blind-person.png"/>
+</figure>
 
 ## The Potential - Economic
 
 TODO: add video
 
-![image-20180521163335599](image-20180521163335599.png)
+<figure class="stretch">
+<img src="assets/image-20180521163335599.png"/>
+</figure>
 
 - Prediction: the trucking industry will look very different in 10 years
 - What about all the jobs lost?

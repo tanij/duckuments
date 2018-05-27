@@ -1,6 +1,6 @@
 # Soldering boards (`DB17`) {#soldering-boards-c0 status=beta}
 
-Assigned: Shiying
+Assigned: Shiying Li
 
 <!--
 Shiying: how long does it take to solder the stuff described in this chapter? (I guessed 30 mins, change it with the real number)

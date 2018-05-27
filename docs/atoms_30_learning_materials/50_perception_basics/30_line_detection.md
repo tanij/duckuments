@@ -1,6 +1,6 @@
 # Line Detection {#line_detection status=draft}
 
-Assigned: Matt
+Assigned: Matt Walter
 
 
 **Topics**:

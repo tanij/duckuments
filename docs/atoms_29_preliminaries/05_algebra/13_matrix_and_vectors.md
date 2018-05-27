@@ -1,6 +1,6 @@
 # Matrices and vectors {#mats-and-vecs status=draft}
 
-Assigned: Dzenan
+Assigned: Dzenan Lapandic
 
 - matrix-vector product
 
