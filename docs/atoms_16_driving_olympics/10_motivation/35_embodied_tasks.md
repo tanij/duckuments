@@ -103,22 +103,20 @@ are the scores obtained at the live competition. The participants will not need 
 
 We briefly describe the physical Duckietown platform, which comprises  autonomous vehicles (*Duckiebots*) and a customizable model urban environment (*Duckietown*).
 
-#### Robot
+#### Robot {#robot}
 
 Duckiebots are designed with the objectives of affordability, modularity and ease of construction. They are equipped with only one *sensor*: a front viewing camera with $160$ deg fish-eye lens capable of streaming $640\times480$ resolution images reliably at $30$ fps.
 
 *Actuation* is provided through two DC motors that independently drive the front wheels (differential drive configuration), while the rear end of the Duckiebot is equipped with a passive omnidirectional wheel.
 
-TODO: JZ: is this up-to-date? with new Raspberry Pi?
-
 All the *computation* is done onboard on a Raspberry Pi 3 computer, equipped with a quad Core 1.2 GHz, 64 bit CPU and 1 GB of RAM.
 
-We will support other configurations for the purposes of deploying neural networks onto the robots. 
+We will support other configurations for the purposes of deploying neural networks onto the robots.
 More details in [](#computation).
 
 *Power* is provided by a $10000$ mAh battery which provides several hours ($>5$) of operation.
 
-#### Environment
+#### Environment {#environment}
 
 Duckietowns are modular, structured environments built on two layers: the *road* and the *signal* layers ([](#fig:duckietown-environment)).
 
@@ -170,7 +168,7 @@ to conduct remote experiments. Two similar installations are under construction 
 
 In the months before the competition, we will make available five robotariums for remote testing of the code in a controlled environment.
 
-The idea of a robotarium (contraction of *robot* and *aquarium*) was conceived at Georgia Tech \cite{Robotarium}. Currently the Georgia Tech robotarium has about 300 users. The users are able to submit programs that guide the movements of a swarm of robots. The system queues the requests, runs the programs, then sends the results, before resetting the robots to the initial state for the next user. Because there is no human intervention required, and the robot self-charge, the robotarium can run continuously.
+The idea of a robotarium (contraction of *robot* and *aquarium*) was conceived at Georgia Tech \cite{robotarium}. Currently the Georgia Tech robotarium has about 300 users. The users are able to submit programs that guide the movements of a swarm of robots. The system queues the requests, runs the programs, then sends the results, before resetting the robots to the initial state for the next user. Because there is no human intervention required, and the robot self-charge, the robotarium can run continuously.
 
 The use of a robotarium has two advantages:
 
@@ -193,17 +191,11 @@ as well as for regular research activities.
 
 The Duckietown platform uses the ROS middleware, so it is easy to run the computation off-board. For example, during the development, students usually edit code and run it directly on their laptops.
 
-We are considering three alternatives regarding the computation available for the trials.
-Each of the following will be its own "specialty":
 
-TODO: JZ: the status i remember is that there is only the purist option?
-
-1. The "purist" option: the only computation available is the Raspberry PI 3 processor on board. The baseline solutions we provide using conventional methods run in real time using the Raspberry PI processor only.
-2. The "small-GPU-on-board" option: we have successfully used the Movidius "Neural Compute Stick". This stick is optimized for performing parallel matrix multiplications necessary for forward passes of a neural network. It is also comes with an API for deploying pre-trained networks. At present, the Caffe and TensorFlow frameworks are actively supported, with planned support for PyTorch. Additionally, new software, such as ONYX, has been developed to convert networks from other frameworks.
-3. The "remote GPU" option: the computation happens off-board, either on a local server, or remotely on the cloud.
+For the competition we will the "purist" computational substrate option: the only computation available is the Raspberry PI 3 processor on board. The baseline solutions we provide using conventional methods run in real time using the Raspberry PI processor only.
 
 
-## Performance metrics
+## Performance metrics {#performance_metrics}
 
 Measuring performance in robotics is less clear cut and more multidimensional than traditionally encountered in machine learning settings. To nevertheless achieve reliable performance estimates, we define $N$ to be the number of experiments. Let $\objective$ denote our objective or cost function to optimize which we report for every experiment.
 
@@ -234,21 +226,18 @@ The following are a list of rule objectives the Duckiebots are supposed to abide
 
  *The vehicle should stay at all times in the right lane, and ideally near the center.*
 
- We quantify this as follows: Suppose that $d$ is the distance of the body from the midline of the lane, such that $d=0$ corresponds to the robot at the center. Suppose that the angle is $\phi$, and that the shape of the robot is $W \times H$, and $L$ is the width of the lane. Then there is an invasion of the next lane if:
-
- $$
- 	d + \sqrt{W^2+H^2} \sin(\phi) \geq L/2.
- $$
+ We quantify this as follows: Suppose that $d$ is the absolute perpendicular distance of the body from the midline of the lane, such that $d=0$ corresponds to the robot at the center. While $d$ stays within an acceptable range no cost is incurred. When the small safety margin $d_{safety}$ is violated cost starts accruing proportional to the squared distance $d$ up to an upper bound $d_{max}$. If even this bound is violated a lump penalty $\alpha$ is incurred.
 
  So we define the "stay-in-lane" cost function as follows:
 
+ $$
+ \Delta \objective_{LF} = \begin{cases} 0  & \text{if } d < d_{safety} \\
+     \beta d^2 & \text{if } d_{safety} \leq d \leq d_{max} \\
+   	\alpha & \text{if } d > d_{max} \text{ or if $d$ is not within field-of-view anymore}
+   	\end{cases}
+$$
 
- $$
- 	\objective_{SL}(t) = \begin{cases}
- 			   \alpha  & \text{if } d + \sqrt{W^2+H^2} \sin(\phi) \geq L/2,  \\
- 			   \beta d^2 & \text{otherwise}.
- 			\end{cases}
- $$
+
 
 
 
@@ -257,10 +246,11 @@ The following are a list of rule objectives the Duckiebots are supposed to abide
  The Duckietown traffic laws say:
 
  *Every time the vehicle arrives at an intersection with a red stop line,
- the vehicle should come to a complete stop, before continuing. *
+ the vehicle should come to a complete stop, before continuing.*
 
  During each intersection traversal, the vehicle gets a penalty $\gamma$ if
  there was not a time $t$ such that the vehicle was in the stopping zone (defined as being between $0$ and $5$ cm of the stop line) and $v_t = 0$, where $v_t$ is the longitudinal velocity of the vehicle with respect to the direction of the lane. The condition that the position $p$ of the Duckiebot is in the stopping zone is denoted with $p_{bot} \in S_{zone}$.
+
  $$
  	\objective_{SI} = \begin{cases} 0  & \text{if } p_{bot} \notin S_{zone}\\
  	\gamma & \text{if } \nexists t \text{ s.t. } v_t=0 \text{ and }  p_{bot} \in S_{zone}\\
@@ -463,11 +453,18 @@ Leaderboards are reset at the beginning of October 2018.
 
 ## Related work
 
+Vision-based solutions for autononomus driving were independently developed in Europe, Japan and the US \cite{overview_autonomous_vision}.
+
 ### Lane following
 
-TODO: Cite previous work by German university (Bundeswehr?), CMU, Nvidia
-\cite{autonomous_germany}, \cite{autonomous_cmu}, \cite{autonomous_nvidia}, cite Duckietown paper with existing solution.
+In 1979, Tsugawa et al. \cite{japan_self_driving} developed a first application of pattern matching to drive a car within 30 km/h.
+
+Already in 1987, Dickmanns and Zapp developed vision-based driving algorithms based on recursive estimation and were able to drive a car on structured roads at high speeds \cite{autonomous_germany}.
+
+Using machine learning for lane following dates back to 1989, where a neural network was trained to drive the Carnegie Mellon autonomous navigation test vehicle \cite{cmu_self_driving_original}. Similarly, the company Nvidia demonstrated that also in modern time an approach similar to \cite{cmu_self_driving_original} can yield interesting results \cite{autonomous_nvidia}.
+
+Driving within Duckietowns has been likewise been explored by the creators of Duckietown \cite{paull2017duckietown} where they describe implemented model-based solutions for autonomous driving specifically in the Duckietown environment.
 
 ### Navigation
 
-TODO: cite some of Mark Pfeiffer's work on end-to-end navigation.
+A recent review of planning for autonomous cars both traditional as well as learning-based approaches to navigation and planning are discussed \cite{schwarting2018planning}. As an example of more recent learning approach to navigation, an end-to-end navigation neural network was trained in simulation and tested in real-world office environments \cite{Pfeiffer2017FromRobots}.

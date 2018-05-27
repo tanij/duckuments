@@ -1,6 +1,6 @@
 # RC control launched remotely {#rc-launched-remotely status=beta}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 <div class='requirements' markdown='1'>
 

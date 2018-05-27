@@ -1,5 +1,5 @@
 # Operation manual - Duckietown {#book:duckietowns status=ready}
 
-Maintainer: Liam
+Maintainer: Liam Paull
 
-# Operation manual - Build it {#build-it status=ready}
+# Operation manual - Build it {#part:build-it status=ready}

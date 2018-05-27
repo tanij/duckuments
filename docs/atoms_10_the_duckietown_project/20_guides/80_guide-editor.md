@@ -1,6 +1,8 @@
-# Guide for website editors  {status=draft}
+# Guide for website editors  {#guide-editors status=draft}
 
-An editor for the website is a person who can administer content. 
+TODO for Kirsten Bowser: Add here content from [here](https://docs.google.com/document/d/1FeM2fxHTFedzDBetrpZnRyO0Y6hiFBUvhAv_8Asr3eg/edit).
+
+An editor for the website is a person who can administer content.
 
 Your job is to help people publish content on the website.
 

@@ -1,7 +1,7 @@
 # Organizing team {#aido-team status=beta}
 
 The organizing team comprises 5 universities (ETH Zürich, University of Montréal, Georgia Tech, National Chiao Tung University, Taiwan, Tsinghua University, China) and 3 companies: a self-driving car company (nuTonomy), a cloud company (Amazon AWS), and a startup (Rerobots) working on remote access to robotic platforms.
- 
+
 
 <style>
 img.logo {
@@ -9,7 +9,7 @@ width: 10em;
 }
 </style>
 
-<img src="images/nuTonomyLogo_horizontal.png" class="logo"/> 
+<img src="images/nuTonomyLogo_horizontal.png" class="logo"/>
 
 
 At nuTonomy and ETH Zürich:
@@ -25,9 +25,9 @@ At nuTonomy:
 	automated warehouses with hundreds of robots working simultaneously.
 *  Dr. **Oscar Beijbom** is the Machine Learning Lead at nuTonomy. He will help supervising the definition of the metrics in a way that is realistic for a self-driving car applications.
 * **Ruslan Hristov** is Principal Software Engineer at nuTonomy. He will lead the design of the container-based software infrastructure for device$\rightarrow$cloud$\rightarrow$device software deployment.
- 
 
-<img src="images/eth_logo_kurz_pos.png" class="logo"/> 
+
+<img src="images/eth_logo_kurz_pos.png" class="logo"/>
 
 At ETH Zürich:
 
@@ -36,7 +36,7 @@ At ETH Zürich:
 * Ph.D. candidate **Claudio Ruch** will be curating the AMOD challenges.
 
 
-<img src="images/UDEM.png" class="logo"/> 
+<img src="images/UDEM.png" class="logo"/>
 
 
 At the University of Montréal:
@@ -55,7 +55,7 @@ At the University of Montréal:
 At Georgia Tech:
 
 * Prof. **Magnus Egerstedt** is the Executive Director for the Institute for Robotics and Intelligent Machines at Georgia Tech. He pioneered the idea of remotely-accessible robot experiments in the Robotarium project.
- 
+
 <img src="images/AWS.png" class="logo"/>
 
 At Amazon AWS and UCLA:
@@ -66,7 +66,7 @@ At Amazon AWS and UCLA:
 * **Justin De Castri** is a Senior Solutions Architect at Amazon AWS. He is co-organizer of the Robocar Rally competition.
 
 <img src="images/tsinghua.png" class="logo"/>
- 
+
 
 At Tsinghua University in the People's Republic of China:
 
@@ -84,8 +84,4 @@ At National Chiao Tung University in Taiwan:
 
 * Prof. **Nick Wang** is Assistant Professor with the National Chiao Tung University. His group will build the Duckietown robotarium in Taiwan.
 
-
-At Rerobots, inc.:
-
-* Dr. **Scott Livington** is CEO of Rerobots, a company developing remote continuous integration solutions for reproducible robotics.
-
+ 

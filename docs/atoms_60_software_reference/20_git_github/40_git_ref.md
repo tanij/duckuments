@@ -1,6 +1,6 @@
 # Source code control with Git {#git-reference status=ready}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 ## Background reading
 

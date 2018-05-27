@@ -1,6 +1,6 @@
 # `DB17-l` setup {#leds-setup status=draft}
 
-Assigned: Shiying
+Assigned: Shiying Li
 
 <div class='requirements' markdown="1">
 

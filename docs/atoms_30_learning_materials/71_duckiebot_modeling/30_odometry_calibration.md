@@ -1,6 +1,6 @@
 # Odometry Calibration {#odometry_calibration status=draft}
 
-Assigned: Jacopo
+Assigned: Jacopo Tani
 
 <!-- From old google docs file: https://docs.google.com/document/d/1FmuOvPtKPMSIfay0wuxPQXESbmxYewl3gwJmhLU-4KY/edit#
 

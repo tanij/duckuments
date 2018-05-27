@@ -1,6 +1,6 @@
 # Assembling the Duckiebot (`DB17-lc`) {#assembling-duckiebot-c1 status=draft}
 
-Assigned: Shiying
+Assigned: Shiying Li
 
 <div class='requirements' markdown="1">
 

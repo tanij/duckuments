@@ -1,6 +1,6 @@
 # Norms {#intro-norms status=draft}
 
-Assigned: Dzenan
+Assigned: Dzenan Lapandic
 
 TODO: finish writing
 

@@ -1,6 +1,6 @@
 # Duckietown Assembly {#duckietown-assembly status=draft}
 
-Assigned: Shiying
+Assigned: Shiying Li
 
 
 Follow the rules in the [](#duckietown-specs).

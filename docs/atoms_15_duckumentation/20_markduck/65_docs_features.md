@@ -71,17 +71,116 @@ For example, to obtain:
 
 use the following:
 
-    Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
+```markdown
+Press <kbd>a</kbd> then <kbd>Ctrl</kbd>-<kbd>C</kbd>.
+```
 
 </div>
 
 ## Figures {#figures}
 
-For any element, adding an attribute called `figure-id`
-with value `fig:![figure ID]` or `tab:![table ID]`
-will create a figure that wraps the element.
+To create a figure, use the element `figure`:
+
+```html 
+<figure>
+    <figcaption>Hello</figcaption>
+    <img style='width:8em' src="duckietown-logo-transparent.png"/>
+</figure>
+```
+
+<figure>
+    <figcaption>Hello</figcaption>
+    <img style='width:8em' src="duckietown-logo-transparent.png"/>
+</figure>
+
+### More attributes
+
+Use `class="caption-left"` to have the caption show up on the left rather than on the bottom:
+
+```html
+<figure class="caption-left">
+    <figcaption>Hello</figcaption>
+    <img style='width:8em' src="duckietown-logo-transparent.png"/>
+</figure>
+```
+
+<figure class="caption-left">
+    <figcaption>Hello</figcaption>
+    <img style='width:8em' src="duckietown-logo-transparent.png"/>
+</figure>
 
 
+## Subfigures
+
+You can create subfigures by nesting `figure` elements:
+
+```html
+<figure>  
+    <figcaption>Main caption</figcaption>
+    <figure>
+        <figcaption>Hello</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+    <figure>  
+        <figcaption>second</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+</figure>
+```
+
+<figure>  
+    <figcaption>Main caption</figcaption>
+    <figure>
+        <figcaption>Hello</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+    <figure>  
+        <figcaption>second</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+</figure>
+
+By default, they are displayed one per block.
+To make them flow horizontally, add `class="flow-subfigures"` to the external figure:
+
+```html
+<figure class="flow-subfigures">  
+    <figcaption>Main caption</figcaption>
+    <figure>
+        <figcaption>Hello</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+    <figure>  
+        <figcaption>second</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+</figure>
+```
+
+<figure class="flow-subfigures">  
+    <figcaption>Main caption</figcaption>
+    <figure>
+        <figcaption>Hello</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+    <figure>  
+        <figcaption>second</figcaption>
+        <img style='width:8em' src="duckietown-logo-transparent.png"/>
+    </figure>
+</figure>
+
+
+
+
+For any element, adding an attribute called `figure-id` with value `fig:![figure ID]` or `tab:![table ID]` will create a figure that wraps the element.
+
+<!-- 
+
+* `float_bottom`
+
+-->
+
+<!--
 For example:
 
     <div figure-id="fig:![figure ID]">
@@ -98,21 +197,6 @@ It will create HMTL of the form:
         </figure>
     </div>
 
-<!--
-To add a class to the figure, use `figure-class`:
-
-    <div figure-id="fig:code" figure-class="myclass">
-        ![figure content]
-    </div>
-
-This will give it to the <code>&lt;figure&gt;</code> and the containing <code>&lt;figure&gt;</code>
-
-
-Useful classes:
-
-* `float_bottom`
-
--->
 
 To add a caption, add an attribute `figure-caption`:
 
@@ -184,7 +268,7 @@ To make them flow horizontally, add `figure-class="flow-subfigures"` to the exte
         <p style='width:5em;height:5em;background-color:#fee'>second subfig</p>
     </div>
 </div>
-
+-->
 
 ## Shortcut for tables
 
@@ -193,8 +277,8 @@ are expanded in tables with 2, 3, 4 or 5 columns.
 
 The following code:
 
-<pre trim="1">
-<code trim="1">
+<pre trim="1" class="html">
+<code trim="1" class="html">
 &lt;col2 figure-id="tab:mytable" figure-caption="My table"&gt;
     &lt;span&gt;A&lt;/span&gt;
     &lt;span&gt;B&lt;/span&gt;
@@ -203,6 +287,18 @@ The following code:
 &lt;/col2&gt;
 </code>
 </pre>
+
+<!--
+```html
+<col2 figure-id="tab:mytable" figure-caption="My table">
+    <span>A</span>
+    <span>B</span>
+    <span>C</span>
+    <span>D</span>
+</col2>
+```
+-->
+
 
 gives the following result:
 
@@ -259,11 +355,15 @@ Use the classes `labels-row1`  and `labels-row1` to make pretty tables like the 
 
 You give IDs to headers using the format:
 
-    ### ![header title] {#![topic ID]}
+```markdown
+### ![header title] {#![topic ID]}
+```
 
 For example, for this subsection, we have used:
 
-    ### Establishing names of headers {#establishing}
+```markdown
+### Establishing names of headers {#establishing}
+```
 
 With this, we have given this header the ID "`establishing`".
 
@@ -272,7 +372,9 @@ With this, we have given this header the ID "`establishing`".
 
 Some time ago, if there was a section called
 
-    ## My section
+```markdown
+## My section
+```
 
 then it would be assigned the ID "my-section".
 
@@ -280,7 +382,9 @@ This behavior has been removed, for several reasons.
 
 One is that if you don't see the ID then you will be tempted to just change the name:
 
-    ## My better section
+```markdown
+## My better section
+```
 
 and silently the ID will be changed to "my-better-section" and all the previous links will be invalidated.
 
@@ -295,13 +399,17 @@ Therefore, please choose descriptive IDs, with at least two IDs.
 
 E.g. if you make a section called
 
-    ## Localization  {#localization}
+```markdown
+## Localization  {#localization}
+```
 
 that's certainly a no-no, because "localization" is too generic.
 
 Better:
 
-    ## Localization {#intro-localization}
+```markdown
+## Localization {#intro-localization}
+```
 
 Also note that you don't *need* to add IDs to everything, only the things that people could link to. (e.g. not subsubsections)
 
@@ -310,7 +418,9 @@ Also note that you don't *need* to add IDs to everything, only the things that p
 
 You can use the syntax:
 
+
     [](#![topic ID])
+
 
 to refer to the header.
 
@@ -318,11 +428,11 @@ You can also use some slightly more complex syntax that also allows
 to link to only the name, only the number or both ([](#tab:link-examples)).
 
 <col1 figure-id="tab:link-examples" figure-caption="Syntax for referring to sections.">
-    <pre><code>See [](#establishing).</code></pre>
+    <pre class="markdown"><code class="markdown">See [](#establishing).</code></pre>
     <s>See <a href="#establishing"></a></s>
-    <pre><code>See &lt;a class="only_name" href="#establishing"&gt;&lt;/a&gt;.</code></pre>
+    <pre class="markdown"><code class="markdown">See &lt;a class="only_name" href="#establishing"&gt;&lt;/a&gt;.</code></pre>
     <s>See <a class="only_name" href="#establishing"></a>.</s>
-    <pre><code>See &lt;a class="only_number" href="#establishing"&gt;&lt;/a&gt;.</code></pre>
+    <pre class="markdown"><code class="markdown">See &lt;a class="only_number" href="#establishing"&gt;&lt;/a&gt;.</code></pre>
     <s>See <a class="only_number" href="#establishing"></a>.</s>
     <pre><code>See &lt;a class="number_name" href="#establishing"&gt;&lt;/a&gt;.</code></pre>
     <s>See <a class="number_name" href="#establishing"></a>.</s>
@@ -367,8 +477,8 @@ When the user clicks on the link, they will be redirected to [](#scuderia).
 You can insert comments using the HTML syntax for comments:
 any text between "<code>&lt;!--</code>" and "<code>--&gt;</code>" is ignored.
 
-<pre trim="1">
-<code trim="1">
+<pre trim="1" class="markdown">
+<code trim="1" class="markdown">
 # My section
 
 &lt;!-- this text is ignored --&gt;

@@ -1,6 +1,6 @@
 # Matrix inversions {#matrix-inversion status=draft}
 
-Assigned: Dzenan
+Assigned: Dzenan Lapandic
 
 ## Adjugate matrix
 

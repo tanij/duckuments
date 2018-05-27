@@ -100,7 +100,7 @@ All video content is hosted on Vimeo.
 
 ## Developer groups
 
-TODO for Andrea: finish this
+TODO for Andrea Censi: finish this
 
 - HW Platform
 - Simulators

@@ -1,6 +1,6 @@
 # Complex numbers {#intro-algebra-complex status=draft}
 
-Assigned: Dzenan
+Assigned: Dzenan Lapandic
 
 ## Powers of $i$
 

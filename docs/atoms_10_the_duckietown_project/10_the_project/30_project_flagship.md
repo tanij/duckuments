@@ -3,7 +3,7 @@
 
 ## The flagship class
 
-TODO for Liam: Describe the flagship project
+TODO for Liam Paull: Describe the flagship project
 
 
 ## Duckietown High School

@@ -76,6 +76,7 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --resources docs:${dist} \
     --stylesheet v_manual_split \
     --symbols docs/symbols.tex \
+    --slides \
     --wordpress_integration \
     --output_crossref ${dist}/${short}/crossref.html \
     --likebtn 5ae54e0d6fd08bb24f3a7fa1 \

@@ -6,6 +6,7 @@ from collections import OrderedDict
 import yaml
 from bs4 import Tag
 from junit_xml import TestSuite, TestCase
+
 from mcdp_docs import logger
 from mcdp_docs.embed_css import embed_css_files
 from mcdp_docs.manual_constants import MCDPManualConstants
@@ -222,7 +223,7 @@ def go():
                 for a in x.select('a[href]'):
                     href = a.attrs['href']
                     a.attrs['href'] = id_book + '/out/' + href
-                x.name = 'div' # not fragment
+                x.name = 'div'  # not fragment
                 div.append(x)
             crossrefs = os.path.join(d, 'crossref.html')
             if os.path.exists(crossrefs):
@@ -344,8 +345,8 @@ def junit_test_case_from_note(i, note):
 
 import os
 
-def change_frame(d0, rel, current_slug):
 
+def change_frame(d0, rel, current_slug):
     for f in locate_files(d0, '*.html'):
         if os.path.basename(f) in ['out.html', 'toc.html']:
             continue
@@ -374,7 +375,7 @@ def make_changes(soup, f, rel, current_slug):
         # noinspection PyAugmentAssignment
         option.attrs['value'] = rel + option.attrs['value']
 
-        if current_slug in  option.attrs['value'] :
+        if current_slug in option.attrs['value']:
             option.attrs['selected'] = 1
 
     for a in s.select('a[href]'):
@@ -444,6 +445,22 @@ function changed(e) {
 
     </select>
     </div>
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-119606699-2', 'auto');
+        ga('send', 'pageview');
+    </script>
 
 '''
 # language=css

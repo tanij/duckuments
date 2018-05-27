@@ -1,6 +1,6 @@
 # Installing Ubuntu on laptops {#setup-laptop status=beta}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 Before you prepare the Duckiebot, you need to have a laptop with Ubuntu installed.
 

@@ -131,7 +131,7 @@ The `machines` file is created from the scuderia data using this command:
 
 ## People database {#people-file status=draft}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 
 TODO: Describe the people database.

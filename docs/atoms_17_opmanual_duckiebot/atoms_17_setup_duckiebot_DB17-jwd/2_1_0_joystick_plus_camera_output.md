@@ -1,6 +1,6 @@
 # RC+camera remotely {#rc-cam-launched-remotely status=ready}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 <div class='requirements' markdown='1'>
 
