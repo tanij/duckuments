@@ -66,6 +66,7 @@ jobs:
             when: always
             name: Package artifacts
             command:  |
+                find duckuments-dist -name '*.old' -delete
                 make package-artifacts
 
         - store_artifacts:
