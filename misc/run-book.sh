@@ -75,6 +75,7 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --src ${src} \
     --resources docs:${dist} \
     --stylesheet v_manual_split \
+    --stylesheet_pdf v_manual_blurb_ready \
     --symbols docs/symbols.tex \
     --slides \
     --wordpress_integration \
