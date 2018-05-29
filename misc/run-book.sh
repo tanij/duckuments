@@ -27,7 +27,7 @@ extra_crossrefs=${base}/all_crossref.html
 if [ "$CI" = "" ]
 then
    echo "Not on Circle, using parallel compilation."
-   cmd=rparmake
+   cmd="rparmake n=4"
    options1="--extra_crossrefs ${extra_crossrefs}"
 else
    echo "On Circle, not using parallel compilation to avoid running out of memory."
@@ -77,7 +77,6 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --stylesheet v_manual_split \
     --stylesheet_pdf v_manual_blurb_ready \
     --symbols docs/symbols.tex \
-    --slides \
     --wordpress_integration \
     --output_crossref ${dist}/${short}/crossref.html \
     --likebtn 5ae54e0d6fd08bb24f3a7fa1 \

@@ -17,6 +17,8 @@ things are a bit more ready.
 
 [form]:  http://goo.gl/forms/OxZu85WGi7
 
+TODO for Kirsten Bowser: is this still the preferred way?
+
 Q: How can I start?
 
 See the section [First Steps](#first-steps).
@@ -36,7 +38,7 @@ TODO: to write
 
 Q: How large a class can it be? I teach large classes.
 
-TODO: to write
+TODO for Kirsten: to write
 
 Q: What is the budget for the robot?
 

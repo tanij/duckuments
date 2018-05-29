@@ -1,6 +1,8 @@
 # The Duckietown project {#duckietown-project status=beta}
 
-Duckietown is a robotics education and outreach effort. It started at MIT in 2016 and now includes hundreds of people around the world.
+Duckietown is a robotics education and outreach effort.
+
+It started at MIT in 2016 and now includes hundreds of people around the world.
 
 ## Mission
 
@@ -20,7 +22,6 @@ We have two targets:
 2. For **self-guided learners**, we want to create a "self-learning experience" that allows students to go from having zero knowledge of robotics to a graduate-level understanding.
 
 In addition, the Duckietown platform is also suitable for research.
-
 
 ## Learn about the Duckietown educational experience
 
@@ -42,15 +43,10 @@ on the current developments in self-driving cars.
 </div>
 
 
-If you'd like to know more about the educational experience, [](#bib:tani16duckietown) present
-a more formal description of the course design for Duckietown: learning objectives, teaching
-methods, etc.
+If you'd like to know more about the educational experience, [](#bib:tani16duckietown) present a more formal description of the course design for Duckietown: learning objectives, teaching methods, etc.
 
 
 ## Learn about the platform
-
-<!-- The best way to get a sense of how the platform looks is to watch
-these videos. They show off the capabilities of the platform. -->
 
 The video in [](#duckietown-functionality-v3) shows some of the functionality of the platform.
 
