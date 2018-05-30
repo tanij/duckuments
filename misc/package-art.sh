@@ -1,15 +1,12 @@
 #!/bin/bash
 set -e -x
+DIST="duckuments-dist"
 dest="dest"
 out=$1
 rm -rf ${dest}
 
 mkdir -p ${dest}/
-# cp -R out/compilation/split/ ${dest}/out
-# cp out/compilation/out.html ${dest}/out.html
-# cp out/compilation/out.pdf ${dest}/out.pdf
 
-cp -R duckuments-dist/* ${dest}
+cp -R ${DIST}/* ${dest}
 
-tar cvfz  ${out} -C dest .
-
+tar cvfz ${out} -C ${dest} .
