@@ -27,7 +27,6 @@ Q: How can I help?
 
 If you would like to help actively, please email [duckietown@mit.edu](mailto:duckietown@mit.edu).
 
-
 ### FAQ by students / independent learners
 
 Q:I want to build my own Duckiebot. How do I get started?
@@ -56,10 +55,17 @@ TODO: to write -->
 
 Q: Why the duckies?
 
-Compared to other educational robotics projects, the presence of the duckies is what makes this project stand out. Why the duckies?
+Duckies are entirely non-functional, purely decorative, yet essential. Compared to other educational robotics projects, the presence of the duckies is what makes this project stand out. Why the duckies?
 
 We want to present robotics in an accessible and friendly way.
 
-TODO: copy usual discussion from somewhere else.
+Robots are typically thought of as dangerous, strong, fast, aggressive and unpredictable. We designed Duckiebots instead to be safe, weak and slow. Through the use of the duckie theme, they are perceived as curious, friendly and fun.
 
-TODO: add picture of kids with Duckiebots.
+Duckietowns attract plenty of attention, even when there are no robots [](#fig:faq-duckies). We also designed Duckiebots so not to suffer from preconceived gender stereotypes by using a gender-neutral approach in the choice of colors, symbols and themes. Humans are very sensitive to gender cues, even in inanimate machines like robots.
+
+Previous work has explored the role of perceived robot “gender” during human-robot interaction [](#bib:siegel2009persuasive)]. For example, robots are considered “male” if their function is dangerous. “Male” robots are less appealing to prospective female roboticists [](#bib:robotics-few-females)].
+
+<div figure-id="fig:faq-duckies">
+    <figcaption>Duckies make the difference between a boring, cheap platform (b) and an object
+with which the students can form an emotional bond (c)</figcaption>
+</div>
