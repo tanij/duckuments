@@ -40,15 +40,15 @@ These are some advertisement videos we used.
 
 ## University-level classes in 2016 {status=beta}
 
-TODO for Jacopo Tani: Put links to websites and statistics collected.
+TODO for Jacopo Tani: add statistics collected.
 
 TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
 Later that year, the Duckietown platform was also used in these classes:
 
 - [National Chiao Tung University, Taiwan](http://duckietown.nctu.edu.tw/) - [Prof. Nick Wang];
-- Tsinghua University, People's Republic of China - Prof. (Samuel) Qing-Shan Jia's *Computer Networks with Applications* course;
-- Rennselaer Polytechnic Institute 2016  - Prof. John Wen;
+- Tsinghua University, People's Republic of China - [Prof. (Samuel) Qing-Shan Jia's](http://cfins.au.tsinghua.edu.cn/personalhg/jiaqingshan/HomgPage_QSJ_EN.htm) *Computer Networks with Applications* course; and
+- Rennselaer Polytechnic Institute 2016  - [Prof. John Wen](http://john-wen.com/node/241) [*Robotics I*](https://tinyurl.com/y7tejw8m) course.
 
 <div figure-id="fig:NCTU">
    <img src="duckietown-taiwan.jpg" class='group-photo'/>
@@ -63,7 +63,7 @@ Later that year, the Duckietown platform was also used in these classes:
 
 ## University-level classes in 2017
 
-TODO for Jacopo Tani: Put links to websites and statistics collected.
+TODO for Jacopo Tani: add statistics collected.
 
 TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
