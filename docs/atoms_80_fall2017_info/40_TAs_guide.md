@@ -34,7 +34,7 @@ Note that many of these are not sequential and can be done in parallel.
 
 Read about Duckietown's history; watch the Duckumentary.
 
-See: [](#part:duckietown-project)
+See: [](#duckietown-project)
 
 ### Online accounts
 
@@ -60,7 +60,7 @@ See: [](#setup-laptop)
 
 Install the Duckuments system, so you can edit these instructions.
 
-See: [](#part:contribute).
+See: [](#book:contribute).
 
 Point of Contact: Andrea
 
