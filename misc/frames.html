@@ -1,0 +1,240 @@
+<html>
+<head>
+    <title>Duckietown documentation</title>
+    <link rel="icon" href="http://duckietown.org/media/favicon.ico" type="image/x-icon" />
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            width: 100%;
+        }
+
+        #top-panel {
+            display: block;
+            /*height: 3em;*/
+            margin: 0;
+            padding-top: 0.3em;
+            padding-bottom: 0.3em;
+            width: 100%;
+            /*display: block;*/
+            font-size: smaller;
+            font-family: sans-serif;
+            color: gray;
+            font-weight: bold;
+        }
+
+        #top-panel A + A:before {
+            margin-left: 1em;
+        }
+
+        #top-panel A {
+            /*border: solid 1px red;*/
+            display: inline-block;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        #top-panel A:visited {
+            color: black;
+        }
+
+        iframe {
+            /*display: block;*/
+            width: 100%;
+            /*height: calc(100vh - 4em);*/
+            margin: 0;
+            padding: 0;
+        }
+
+        a:active {
+            color: blue;
+        }
+
+        #top-panel a {
+            color: black;
+        }
+
+        #top-panel a.active {
+            /*background-color: yellow;*/
+            /*color: black;*/
+        }
+
+        body {
+            height: 100%;
+        }
+
+        #container {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        iframe, #top-panel {
+            /*display: table-row;*/
+        }
+
+        iframe {
+            height: 100%;
+        }
+
+        table, tr, td {
+            margin: 0;
+            padding: 0;
+            border-spacing: 0;
+        }
+
+        tr {
+            vertical-align: top;
+        }
+
+        #top-panel {
+            /*height: 2em;*/
+        }
+
+        tr#frame-container {
+            height: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<script>
+    function activate(e) {
+        s = e.getAttribute('id');
+
+        current = document.body.getAttribute('current');
+
+        if (s != current) {
+            e.classList.add('active');
+
+            if (current != null) {
+                document.getElementById(current).classList.remove('active');
+            }
+
+            document.body.setAttribute('current', s);
+        }
+    }
+
+    function changed(e) {
+        loc = e.value;
+        // $('#dynamic').setText(loc);
+        document.getElementById("dynamic").innerHTML = loc;
+
+        document.getElementById('frame').src = loc;
+    }
+
+    function navigation(loc) {
+        document.getElementById("dynamic").innerHTML = loc;
+    }
+</script>
+
+<table id="container">
+    <tr id="top-panel">
+        <td>
+            <a target='frame' id="summary" onclick="activate(this)" href="summary.html">Home</a>
+
+            <!--Books:-->
+
+            <span id="books">
+
+        <select onchange="changed(this)">
+    <option
+            value="summary.html">Summary</option>
+    <option
+            value="the_duckietown_project/out/index.html">The Duckietown Project</option>
+    <option
+            value="guide_for_instructors/out/index.html">Guide for instructors</option>
+
+    <option
+            value="duckumentation/out/index.html">Contributing to the documentation</option>
+
+    <option id="opmanual_duckiebot"
+            value="opmanual_duckiebot/out/index.html">Duckiebot operation manual </option>
+    <option id="opmanual_duckietown" onclick="activate(this)" value="opmanual_duckietown/out/index.html">Duckietown operation manual</option>
+    <option id="software_carpentry" onclick="activate(this)" value="software_carpentry/out/index.html">Software carpentry</option>
+
+
+    <option target='frame' id="software_architecture" onclick="activate(this)"
+            value="software_architecture/out/index.html">SW Architecture</option>
+    <option target='frame' id="software_devel" onclick="activate(this)"
+            value="software_devel/out/index.html">SW Development</option>
+
+    <option target='frame' id="learning_materials" onclick="activate(this)" value="learning_materials/out/index.html">Learning materials</option>
+
+    <option target='frame' id="exercises" onclick="activate(this)" value="exercises/out/index.html">Exercises</option>
+    <option target='frame' id="preliminaries" onclick="activate(this)" value="preliminaries/out/index.html">Preliminaries</option>
+
+    <option target='frame' id="class_fall2017" onclick="activate(this)" value="class_fall2017/out/index.html">Fall 2017
+        class</option>
+    <option target='frame' id="class_fall2017_projects" onclick="activate(this)"
+            href="class_fall2017_projects/out/index.html">Fall 2017 projects</option>
+
+    <option target='frame' id="deprecated" onclick="activate(this)" value="deprecated/out/index.html">Deprecated material</option>
+    <option target='frame' id="drafts" onclick="activate(this)" value="drafts/out/index.html">Drafts</option>
+<!--<option value="http://docs.duckietown.org/duckuments.html">Builds</option>-->
+
+    </select>
+    </span>
+            <!--Misc:-->
+
+            <span id="dynamic"></span>
+            <!--<a style='' target='frame' id="duckuments" onclick="activate(this)"-->
+               <!--href="duckuments.html">-->
+                <!--builds</a>-->
+
+        </td>
+    </tr>
+
+    <tr id="frame-container">
+        <td>
+            <iframe src="summary.html" id="frame" name='frame'
+                    onload="navigation(this.contentWindow.location.href)"
+            />
+        </td>
+    </tr>
+
+</table>
+
+<script>
+    // $(document).ready(function () {
+    //     currentLocation = localStorage.prevUrl || 'summary.html';
+    //     console.log(currentLocation);
+    //     $('#dynamic').setText(currentLocation);
+    //     $('#frame').attr('src', currentLocation);
+    //
+    //     $('#frame').load(function () {
+    //         localStorage.prevUrl = $(this)[0].contentWindow.location.href;
+    //     })
+    // })
+</script>
+
+<script>
+    function iframeURLChange(iframe, callback) {
+        var unloadHandler = function () {
+            // Timeout needed because the URL changes immediately after
+            // the `unload` event is dispatched.
+            setTimeout(function () {
+                callback(iframe.contentWindow.location.href);
+            }, 0);
+        };
+
+        function attachUnload() {
+            // Remove the unloadHandler in case it was already attached.
+            // Otherwise, the change will be dispatched twice.
+            iframe.contentWindow.removeEventListener("unload", unloadHandler);
+            iframe.contentWindow.addEventListener("unload", unloadHandler);
+        }
+
+        iframe.addEventListener("load", attachUnload);
+        attachUnload();
+    }
+
+    iframeURLChange(document.getElementById("frame"), function (newURL) {
+        console.log("URL changed:", newURL);
+    });
+</script>
+</body>
+</html>
