@@ -1,6 +1,6 @@
 # Representations  {#representations status=draft}
 
-Assigned: Matt
+Assigned: Matt Walter
 
 <div class="requirements" markdown="1">
 
@@ -109,9 +109,3 @@ Discuss:
 ### Duckietown Environment Representation
 
 TODO: Discuss specific environment representation for Duckietown.
-
-
-
-Author: Matthew Walter
-
-Maintainer: Matthew Walter

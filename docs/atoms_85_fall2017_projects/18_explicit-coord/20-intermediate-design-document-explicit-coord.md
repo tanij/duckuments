@@ -1,4 +1,4 @@
-#  Explicit Coordination: Intermediate Report {#explicit-coordination-int-report status=ready}
+#  Explicit Coordination: intermediate report {#explicit-coordination-int-report status=ready}
 
 
 ## Part 1: System interfaces
@@ -54,7 +54,7 @@ Nodes:
         * LED_switch from LED-coordination, string message: on/ off
     * Published topics: None
 
-3. 
+3.
     1. LED_detection: Depending on the algorithm implemented:
         * Input: camera_image (possibly after anti-instagram) and message indicating whether detection is needed
         * Output: LED detected/ LED not detected
@@ -74,10 +74,10 @@ Nodes:
             * string message: LED_detected/ no_LED_detected with position and/or color and/or frequency
 
 
-A diagram of our nodes is shown below.
+A diagram of our nodes is shown in [](#fig:nodes-coord).
 
 
-<div figure-id="fig:Nodes" figure-caption="Nodes">
+<div figure-id="fig:nodes-coord" figure-caption="Nodes">
      <img src="nodes.png" style='width: 80ex; height: auto'/>
 </div>
 
@@ -105,7 +105,7 @@ Software architect check-off: I, XXX, (agree / do not agree) that the above is c
 
 ### Demo plan
 
-Our demo will be conceptually similar to the MIT2016 “openhouse-dp5”,  available from last year [](#Openhouse). The Duckiebots that are navigating in Duckietown, will stop at the red line and LED-communication and coordination will be performed leading to the eventual clearing of the intersection.
+Our demo will be conceptually similar to the MIT2016 “openhouse-dp5”,  available from last year [](#demo-coordination2016). The Duckiebots that are navigating in Duckietown, will stop at the red line and LED-communication and coordination will be performed leading to the eventual clearing of the intersection.
 
 From testing last year’s code we realized that the coordination does not seem to work with the mentioned demo. Duckiebots stop at the red line but they do not communicate so that they never leave the intersection or decide to go independently of the presence and decision of the other Duckiebots. Although we investigated the problem by looking at separate nodes, no solution has been found yet.
 
@@ -125,7 +125,7 @@ A four way intersection tile (see image below, center), four three-way intersect
 
 Performance will be evaluated with 3 tests:
 
-<col5 figure-id="tab:Performance" figure-caption="Performance Evaluation">
+<col5 figure-id="tab:Performance-eval" figure-caption="Performance Evaluation">
 
 <span>What is evaluated </span>
 <span>How</span>

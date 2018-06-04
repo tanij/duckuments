@@ -131,13 +131,13 @@ The `machines` file is created from the scuderia data using this command:
 
 ## People database {#people-file status=draft}
 
-Assigned: Andrea
+Assigned: Andrea Censi
 
 
 TODO: Describe the people database.
 
 
-### The globally-unique Duckietown ID {status=to-update}
+### The globally-unique Duckietown ID {status=outdated}
 
 This is a globally-unique ID for people in the Duckietown project.
 

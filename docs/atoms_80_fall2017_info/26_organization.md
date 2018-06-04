@@ -2,7 +2,9 @@
 
 The following roster shows the teaching staff.
 
-<div id='staff'>
+TODO: point to the roster on the website
+
+<!--<div id='staff'>
     <move-here src='#censi-roster'/>
     <move-here src='#paull-roster'/>
     <move-here src='#tani-roster'/>
@@ -21,7 +23,7 @@ The following roster shows the teaching staff.
     <move-here src='#greta-roster'/>
     <move-here src='#bowser-roster'/>
     <div style='clear:both'></div>
-</div>
+</div>-->
 
 <style>
 #staff div.roster-person {
