@@ -35,13 +35,13 @@ If the file exists, then the script must create:
 
 If any other error occurs, the script should exit with error code `99`.
 
-<div figure-id="fig:example" figure-class="flow-subfigures">
+<div figure-id="fig:example-adult" figure-class="flow-subfigures">
     <img figure-id="subfig:original" src='image-ops-original.jpg'/>
     <img figure-id="subfig:flip"     src='image-ops-flip.jpg'/>
     <img figure-id="subfig:side"     src='image-ops-side.jpg'/>
 </div>
 
-<figcaption id="fig:example:caption">
+<figcaption id="fig:example-adult:caption">
 Example input-output for the program <code>image-ops</code>.
 </figcaption>
 

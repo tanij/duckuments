@@ -1,7 +1,8 @@
-# Software reference {#part:before-you-start}
+# Software reference {#book:sw-carpentry status=ready nonumber=1}
 
-This part describes things that you should know about UNIX/Linux environments.
+Maintainer: Andrea Censi
 
+This part describes quick reference about the UNIX/Linux environments.
 
-Documentation writers: please make sure that every command used
-has a section in these chapters.
+Note: Documentation writers: please make sure that every command used
+has a section in these chapters. You are encouraged to link to other sources of information.

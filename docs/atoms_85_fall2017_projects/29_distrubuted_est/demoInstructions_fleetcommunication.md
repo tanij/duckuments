@@ -1,6 +1,6 @@
-# Demo instructions Fleet Communications {#demo-instruction-fleet-com status=draft}
+# Demo instructions Fleet Communications {#demo-instruction-fleet-com status=beta}
 
-TODO: fix spelling and grammar
+TODO for Jacopo Tani: fix spelling and grammar, move to operation manual section
 
 This is the description of a communication setup between multiple Duckiebots.
 
@@ -67,7 +67,7 @@ Change all four instances of wlan0 to wlan1.
 After a reboot you are ready to make your Duckiebots talk to each other.
 
 
-## Demo instructions {sec:demo-fleetcom-instructions}
+## Demo instructions {#demo-fleetcom-instructions}
 
 To run the demo ssh into the bots, then in your duckietown repository run:
 
@@ -79,7 +79,7 @@ and enjoy the show!
 
 [Demo video](https://drive.google.com/file/d/1zbOqEXugNF9p6Ln8f2nk8CakFrZYiSbp/preview)
 
-## Troubleshooting {#demo-template-troubleshooting}
+## Troubleshooting 
 
 It's networking. If it doesn't work try reinstalling while letting 99 duckies swim in the bathtub and lighting magic candles.
 

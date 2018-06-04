@@ -38,7 +38,7 @@ In the documentation, this is referred to as `DUCKIETOWN_ROOT`.
 
 During the first part of the class, you will only read from this repository.
 
-### Duckiefleet {status=recently-updated}
+### Duckiefleet 
 
 The [duckiefleet](http://github.com/duckietown/duckiefleet)
 repository contains the data specific to this instance of the class.
@@ -52,7 +52,7 @@ In the documentation, the location of this repo is referred to as `DUCKIEFLEET_R
 You will be asked to write to this repository, to update the robot DB
 and the people DB, and for doing exercises.
 
-### exercises-fall2017 {status=recently-updated}
+### exercises-fall2017 
 
 For homework submissions, we will use the following URL:
 
@@ -99,7 +99,7 @@ The URL to clone is:
 Only TAs have read and write permissions to this repository.
 
 
-## Git policy for homeworks (TTIC/UDEM) {#git-policy-homeworks status=recently-updated}
+## Git policy for homeworks (TTIC/UDEM) {#git-policy-homeworks}
 
 
 <div class='only-zurich' markdown="1">
@@ -144,7 +144,7 @@ upstream  git@github.com:duckietown/exercises-fall2017.git (push)
 
 Now the next time you push (without specifying a remote) you will push to your local private repo.
 
-### Duckiefleet file structure {status=to-update}
+### Duckiefleet file structure {status=outdated}
 
 
 You should put your homework files in folder at:

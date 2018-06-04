@@ -1,4 +1,6 @@
-#  The Saviors: Final Report {#saviors-final-report status=draft}
+#  The Saviors: Final Report {#saviors-final-report status=beta}
+
+TODO for Jacopo Tani: fix math formatting, video aspect ratio, standardize apperance, distribute "preliminaries" contributions in here appropriately throughout the book 
 
 <!--
 General notes:

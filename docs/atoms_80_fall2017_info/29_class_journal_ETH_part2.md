@@ -208,7 +208,7 @@ Lecture Project Pitches
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-06 - ETHZ - Project Pitches.pdf">PDF</a>.
 
 
-## Nov 8 (Wed) Motion Planing {#Zurich-2017-11-08}
+## Nov 8 (Wed) Motion Planning {#Zurich-2017-11-08}
 
 Lecture Motion Planing
 <a href="https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08 - ETHZ - Motion Planning Introduction.pdf">PDF</a>.

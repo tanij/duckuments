@@ -1,14 +1,13 @@
-# Anti Instagram: final report {#anti-instagram-final-report status=beta}
+# Anti-Instagram: final report {#anti-instagram-final-report status=beta}
 
 ## The final result
 
-_Video about anti instagram:_
-
-<div figure-id="fig:example-embed">
+<div figure-id="fig:anti-instagram-video">
     <figcaption>Anti instagram video</figcaption>
     <dtvideo src="vimeo:257258742"/>
 </div>
 
+TODO: add link to operation manually, add link to README / code sections (README.txt is in this folder - move to appropriate code section)
 
 ## Mission and Scope
 
@@ -32,14 +31,13 @@ Maybe you can better imagine the procedure as follows:
 You take all the pixels and their RGB values. Then you plot each pixel in your imaginary R,G,B coordinate system.  
 The k-Means algorithm now tries to detect clusters in this RGB space and estimates the center of these clusters. The centers of these clusters are now compared to the "true centers" which is the location of the optimal red for example in the RGB space. This leads to a transformation which is applied to every image from the camera of the Duckiebot.
 
-
-
 ### Opportunity
 
 #### Advantages of existing solution
 
 1. The idea of estimating a color transformation from a captured image based on estimated and true centers is very promising since it really focuses on transforming the colors.  
 Often other image transformations focus on white balance. But we are concerned the most of the colors. So this clustering approach is a good idea here.
+
 2. k-Means is a fairly simple approach and can be used for unsupervised learning. This is very interesting for a future online implementation.
 
 #### Disadvantages of existing solution {#anti-instagram-disadvantages-existing}
@@ -53,8 +51,8 @@ We sampled several pictures and tested the old implementation. Following a table
 Example 1:
 
 <div>
-      <img src="images_anti_instagram/ad1_orig.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
-      <img src="images_anti_instagram/ad1_corr.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
+      <img src="ad1_orig.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
+      <img src="ad1_corr.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
       <p style="clear: both;"></p>
 </div>
 
@@ -63,8 +61,8 @@ This was a good working example. The euclidean error of "true" centers compared 
 Example 2:
 
 <div>
-      <img src="images_anti_instagram/disad1_original.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
-      <img src="images_anti_instagram/disad1_corr.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
+      <img src="disad1_original.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
+      <img src="disad1_corr.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
       <p style="clear: both;"></p>
 </div>
 
@@ -74,8 +72,8 @@ This was a medium working example. The euclidean error of "true" centers compare
 Example 3:
 
 <div>
-      <img src="images_anti_instagram/disad2_orig.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
-      <img src="images_anti_instagram/disad2_corr.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
+      <img src="disad2_orig.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
+      <img src="disad2_corr.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
       <p style="clear: both;"></p>
 </div>
 
@@ -191,7 +189,7 @@ We're going to cluster all the pixels of the input image and try to find the red
 
 <center>
 <figure>
-<img src="images_anti_instagram/distance.svg" alt="kMeans approach" style="width: 250px;"/>
+<img src="distance.svg" alt="kMeans approach" style="width: 250px;"/>
 <figcaption> Basic idea of the k-Means transform </figcaption>
 </figure>
 </center>
@@ -200,33 +198,33 @@ We were convinced that a clustering approach is a good solution because of the f
 2. Clustering can be implemented unsupervised
 We were convinced that k-Means is a good solution since it is fairly simple to implement.  
 
-We decided to use the RGB space for the clustering approach and therefore as well as the reference space for the transformation described in [the chapter above](#mathematical-general-transform).
+We decided to use the RGB space for the clustering approach and therefore as well as the reference space for the transformation described in [the chapter above](#anti-instagram-mathematical-general-transform).
 
 The following pictures show how sample images look in different color spaces.  
 The far left is the original image where we got the data from. The second from left is the pixel values plotted in RGB space, the third in HSV space and the far right the pixel values in LAB space.
 
 <div>
     <div>
-        <img src="images_anti_instagram/comparison_colorspace/original.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
-        <img src="images_anti_instagram/comparison_colorspace/rgb.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
-        <img src="images_anti_instagram/comparison_colorspace/hsv.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
-        <img src="images_anti_instagram/comparison_colorspace/lab.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
+        <img src="original.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;" />
+        <img src="rgb.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
+        <img src="hsv.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
+        <img src="lab.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
         <p style="clear: both;"></p>
     </div>
 </div>
 
 <div>
     <div>
-        <img src="images_anti_instagram/comparison_colorspace/original2.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
-        <img src="images_anti_instagram/comparison_colorspace/rgb2.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
-        <img src="images_anti_instagram/comparison_colorspace/hsv2.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
-        <img src="images_anti_instagram/comparison_colorspace/lab2.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
+        <img src="original2.jpg" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
+        <img src="rgb2.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
+        <img src="hsv2.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>
+        <img src="lab2.png" style="float: left; width: 23%; margin-right: 1%; margin-bottom: 0.5em;"/>        
         <p style="clear: both;"></p>
     </div>
 </div>
 
 One sees that the color clusters of red, yellow, white and black are nicely distinct in the RGB space. So RGB is a good space to do clustering.
-As stated in [disadvantages](#disadvantages-existing) we used more than 3 cluster centers. So we tried it with 10 clusters. But now one has the problem that we don't know anymore which cluster is which. That's why we implemented a function which can determine which color is which.
+As stated in [disadvantages](#anti-instagram-disadvantages-existing) we used more than 3 cluster centers. So we tried it with 10 clusters. But now one has the problem that we don't know anymore which cluster is which. That's why we implemented a function which can determine which color is which.
 
 #### Color determination
 
@@ -252,7 +250,7 @@ That's why we came up with the following "color elimination" procedure:
 1. Pick three colors out of the four colors and do a least squares fit to find the color transformation.
 2. Estimate the error of the least squares fit.
 3. Repeat steps 1 and 2 for all color combinations and keep the three colors which give the lowest error. So this least squares fit would be the one without the outlier. So in the case you don't have any red in the image you would just use white, black and yellow since wrong red cluster would distort the color correction.
-If there are all the four colors in the picture we observed that most of the time the black cluster is thrown away. This makes quite sense since in the [chapter](#k-means-idea) above we saw that the black center doesn't really fulfill the assumptions for k-Means since the black cluster is quite elliptical shaped.
+If there are all the four colors in the picture we observed that most of the time the black cluster is thrown away. This makes quite sense since in the [chapter](#anti-instagram-k-means-idea) above we saw that the black center doesn't really fulfill the assumptions for k-Means since the black cluster is quite elliptical shaped.
 
 Something we observed was that sometimes the procedure gave unreasonably high parameters as an output. So we came up with a convex optimization approach.
 
@@ -290,7 +288,7 @@ After implementing the k-Means approach we saw that there was need for something
 #### Idea
 
 Doing research we found a promising approach for a very simple color balance.  
-Actually the analysis in the [disadvatages chapter](#disadvantages-existing) led us to this idea. Experimenting with gimp we found out that the automatic white balace leads to quite good results:  
+Actually the analysis in the [disadvatages chapter](#anti-instagram-disadvantages-existing) led us to this idea. Experimenting with gimp we found out that the automatic white balace leads to quite good results:  
 
 Example 1:
 
@@ -314,7 +312,7 @@ Example 2:
 
 This was a medium working example. The euclidean error of "true" centers compared to the centers which are estimated in the picture increased from 115.267 to 30.35.
 
-This were very promising results comparing to the results of the [disadvatages chapter](#disadvantages-existing).
+This were very promising results comparing to the results of the [disadvantages chapter](#anti-instagram-disadvantages-existing).
 
 The idea works as following:  
 1. Create a sorted list for every channel of the image.
@@ -399,48 +397,48 @@ In order to make the k-Means approach faster one could try to remove unwanted ba
 
         Compute the image gradient with Sobel operator. The result turns out to be better when done in RGB rather than HSV space.
 
-        <img src="images_anti_instagram/grad.png" style="width: 400px"/>
+        <img src="grad.png" style="width: 400px"/>
 
     2. Threshold gradient
 
         This makes a binary image out of the gradient.
 
-        <img src="images_anti_instagram/grad_th.png" style="width: 400px"/>
+        <img src="grad_th.png" style="width: 400px"/>
     3. Dilate gradient
 
         This continues broken lines in the gradient, due to noise (e.g. from motion blur).
 
-        <img src="images_anti_instagram/grad_th_dilated.png" style="width: 400px"/>
+        <img src="grad_th_dilated.png" style="width: 400px"/>
 
     4. Zero fill bottom ⅖
 
         This part is assumed to be lane surface. See next step for explanation.
 
-        <img src="images_anti_instagram/grad_th_dilated_zeroed.png" style="width: 400px"/>
+        <img src="grad_th_dilated_zeroed.png" style="width: 400px"/>
 
     5. Floodfill to get mask
 
         This yield the single connected component of low gradient part. The seed is chosen from the bottom ⅖.
 
-        <img src="images_anti_instagram/ff.png" style="width: 400px"/>
+        <img src="ff.png" style="width: 400px"/>
 
     6. Close narrow openings
 
         Regions inside narrow openings are probably high gradient part within the lane, and thus should be kept. We close it first, which is equivalent to dilation followed by errosion.
 
-        <img src="images_anti_instagram/ff_closed.png" style="width: 400px"/>
+        <img src="ff_closed.png" style="width: 400px"/>
 
     7. Fill the holes
 
         Then fill the resulting holes by floodfilling from the top, and take the complement.
 
-        <img src="images_anti_instagram/ff_closed_ff.png" style="width: 400px"/>
+        <img src="ff_closed_ff.png" style="width: 400px"/>
 
     8. Clip off top $\frac{1}{3}$
 
         This part are assumed to be not lane surface, so it gets clipped off from the mask.
 
-        <img src="images_anti_instagram/ff_closed_ff_clipped.png" style="width: 400px"/>
+        <img src="ff_closed_ff_clipped.png" style="width: 400px"/>
 
 #### Boundary Region Detection
 
@@ -452,19 +450,19 @@ In order to make the k-Means approach faster one could try to remove unwanted ba
 
         High gradient part corresponds to boundaries. Dilation is meant to cover more of the bordering pixels to get sufficient information.
 
-        <img src="images_anti_instagram/grad_cnt.png" style="width: 400px"/>
+        <img src="grad_cnt.png" style="width: 400px"/>
 
     2. Find contours as masks
 
         We want to capture the boundary areas, which can be found as contours in the gradient map above. This is done via the algorithm described in Suzuki, S. and Abe, K., Topological Structural Analysis of Digitized Binary Images by Border Following. CVGIP 30 1, pp 32-46 (1985) (implemented in OpenCV).
 
-        <img src="images_anti_instagram/grad_cnt_masked.png" style="width: 400px"/>
+        <img src="grad_cnt_masked.png" style="width: 400px"/>
 
     3. Remove small contours and fill in
 
         Contours that have small size are probably noise. Fill in the holes turn out to provide more information than noise.
 
-        <img src="images_anti_instagram/grad_cnt_masked_th.png" style="width: 400px"/>
+        <img src="grad_cnt_masked_th.png" style="width: 400px"/>
 
         The pixels under this mask then get fed into the k-means algorithm.
 
