@@ -1,6 +1,6 @@
 # Logistics for Chicago branch {#logistics_TTIC status=ready}
 
-Assigned: Matt
+Assigned: Matt Walter
 
 This section describes information specific to TTIC and UChicago students.
 

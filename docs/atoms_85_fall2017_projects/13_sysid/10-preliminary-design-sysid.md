@@ -1,4 +1,6 @@
-# PDD - System Identification {#sysid-pdd status=beta}
+# System Identification {#part:fall2017-sysid-city status=ready}
+
+# System Identification: preliminary report {#sysid-pdd status=beta}
 
 
 ## Part 1: Mission and scope
@@ -101,7 +103,7 @@ The same procedure can be done to get $c_l$.
 
 Using the assumption that we can measure $\dot \theta$ we will then get the semiaxis length $L$.
 
-<div figure-id="fig:mod-kin" figure-caption="Relevant notations for modeling a differential drive robot">
+<div figure-id="fig:mod-kin-modeling" figure-caption="Relevant notations for modeling a differential drive robot">
   <img src="mod-kin.png" style='width: 30em; height:auto'/>
 </div>
 
@@ -219,6 +221,8 @@ Performances of the current implementation
 
 #### Other relevant resources to investigate
 
+TODO Jacopo Tani: fix links
+
 [Handbook of robotics](https://www.dropbox.com/s/0lwdwyt1a61jh0k/handbook%20of%20robotics.pdf?dl=0)
 
 the above contains a number of interesting sections of relevance to the work of this group:
@@ -234,9 +238,6 @@ the above contains a number of interesting sections of relevance to the work of 
 - Adaptive control (pg. 147): another approach is implementing an adaptive controller. It is  meant to work with plant uncertainty.
 
 [Caster wheel literature](https://www.cambridge.org/core/services/aop-cambridge-core/content/view/0FB474602C01DDB0FAA1B5C68DB8245E/S026357470001883Xa.pdf/div-class-title-modeling-and-path-tracking-control-of-a-mobile-wheeled-robot-with-a-differential-drive-div.pdf)
-
-
-
 
 ### Risk analysis
 
