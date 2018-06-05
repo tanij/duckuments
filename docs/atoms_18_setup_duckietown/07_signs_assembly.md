@@ -12,7 +12,7 @@ Results: A set of signs to be used for assembling your Duckietown.
 
 ## Build a map
 
-Before beginning with sign assembly you should design a map that adheres to [the specification](#duckietown-specs). 
+Before beginning with sign assembly you should design a map that adheres to [the specification](#duckietown-specs).
 
 An example that was used for the 2017 version of the class is here: [](#fall2017-map)
 
@@ -38,13 +38,13 @@ Which tag you should use depends on what type of sign you are trying add. The ra
 
 </col4>
 
-First, find the last sign of the type that you are trying to make in the [signs and tags doc](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/Signs_and_tags_V3.docx). You will use the next available ID after this one. 
+First, find the last sign of the type that you are trying to make in the [signs and tags doc](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/Signs_and_tags_V3.docx). You will use the next available ID after this one.
 
 Construct the new sign by first copying and pasting an existing sign of similar type, and then replacing/adding the new AprilTag. To add the new april tag, use a screen capture mathod to crop precisely around the tag at the top and sides and include the sign id at the bottom. Then paste the tag into your word file under your desired and resize it exactly 6.5cm (2.56inches).
 
 If you make a new road name sign, you may need to change the font size of the name so that it appears on one line (this is why we like people with names like "ROY" and "RUS").
 
-Important: You must also add your new sign to the [April Tags DB](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/apriltagsDB.yaml) in the software repo. 
+Important: You must also add your new sign to the [April Tags DB](https://github.com/duckietown/Software/blob/master/catkin_ws/src/20-indefinite-navigation/apriltags_ros/signs_and_tags/apriltagsDB.yaml) in the software repo.
 
 Add a new block like the ones that already exists or modify the one with the appropriate tag id:
 ```
@@ -57,9 +57,9 @@ Add a new block like the ones that already exists or modify the one with the app
 
 The value of `![NEW_STREET_NAME]` is up to you to decide (have fun with it!). The value of `![TRAFFIC_SIGN_TYPE]` should be one of the signs in [](#fig:traffic-signs)
 
-When finished, regenerate the PDF version of the Word file, and commit everything to the repo (via a pull request of course). 
+When finished, regenerate the PDF version of the Word file, and commit everything to the repo (via a pull request of course).
 
-Note: It is also possible of course to start you own completely different signs and tags database, but make sure that you specify in the april_tags code which database to load from. 
+Note: It is also possible of course to start you own completely different signs and tags database, but make sure that you specify in the april_tags code which database to load from.
 
 TODO: Update the way that the april tags code loads the database
 
