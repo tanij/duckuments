@@ -1,0 +1,3 @@
+[submodule "mcdp"]
+	path = mcdp
+	url = git@github.com:AndreaCensi/mcdp.git
