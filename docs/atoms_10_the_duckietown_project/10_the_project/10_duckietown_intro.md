@@ -60,29 +60,8 @@ and its software. (With 30 authors, we made the record for a robotics conference
 </div>
 
 
-TODO for Jacopo Tani: put bibtex for the papers cited.
 
-<cite class='pub-ref-desc' id='bib:tani16duckietown'>
-    <span class="author"><a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, <a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>
-    <span class="title">Duckietown: an innovative way to teach autonomy.</span>
-    <span class="booktitle">In <em>EduRobotics 2016</em>. Athens, Greece, December 2016.</span>
-    <span class="links"><span class="pdf"><a href="http://people.csail.mit.edu/lpaull/publications/Tani_EDU_2016.pdf"><img style='border:0; margin-bottom:-6px; height: 17px'  src='pdf.png'/> pdf</a></span><span class="url"><a href="http://duckietown.mit.edu/"><img style='border:0; margin-bottom:-6px; height: 17px'  src='web.png'/> supp. material</a></span></span><a class='pub-ref-bibtex-link' onclick='javascript:document.getElementById("tani16duckietown").style.display="block";' href='javascript:void(0)'>bibtex</a><pre class='pub-ref-bibtex' id='tani16duckietown' style='display: none;'>@inproceedings{tani16duckietown,
-        author = "Tani, Jacopo and Paull, Liam and Zuber, Maria and Rus, Daniela and How, Jonathan and Leonard, John and Censi, Andrea",
-        title = "Duckietown: an Innovative Way to Teach Autonomy",
-        url = "http://duckietown.mit.edu/",
-        booktitle = "EduRobotics 2016",
-        year = "2016",
-        month = "December",
-        address = "Athens, Greece",
-        pdf = "http://people.csail.mit.edu/lpaull/publications/Tani_EDU_2016.pdf"
-    }</pre>
-</cite>
-
-
-
-
-
-
+<!--
 
 <style>
 img.icon {
@@ -106,11 +85,12 @@ img.icon {
 }
 </style>
 
-<cite class='pub-ref-desc' id='bib:paull17duckietown'>
+<cite class='pub-ref-desc' id='bib:'>
     <span class="author"><a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, Heejin Ahn, Javier Alonso-Mora, Luca Carlone, Michal Cap, Yu Fan Chen, Changhyun Choi, Jeff Dusek, Daniel Hoehener, Shih-Yuan Liu, Michael Novitzky, Igor Franzoni Okuyama, Jason Pazis, Guy Rosman, Valerio Varricchio, Hsueh-Cheng Wang, Dmitry Yershov, Hang Zhao, Michael Benjamin, <a href='http://web.mit.edu/chrisc/www/Home.html'>Christopher Carr</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://karaman.mit.edu/'>Sertac Karaman</a>, <a href='http://ares.lids.mit.edu/'>Emilio Frazzoli</a>, <a href='http://www.mit.edu/~ddv/'>Domitilla Del Vecchio</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>
     <span class="title">Duckietown: an open, inexpensive and flexible platform for autonomy education and research.</span>
     <span class="booktitle">In <em>IEEE International Conference on Robotics and Automation (ICRA)</em>. Singapore, May 2017.</span>
-    <span class="links"><span class="pdf"><a href="http://people.csail.mit.edu/lpaull/publications/Paull_ICRA_2017.pdf"><img style='border:0; margin-bottom:-6px; height: 17px'  src='pdf.png'/> pdf</a></span><span class="url"><a href="http://duckietown.mit.edu/"><img style='border:0; margin-bottom:-6px; height: 17px'  src='web.png'/> supp. material</a></span></span><a class='pub-ref-bibtex-link' onclick='javascript:document.getElementById("paull17duckietown").style.display="block";' href='javascript:void(0)'>bibtex</a><pre class='pub-ref-bibtex' id='paull17duckietown' style='display: none;'>@inproceedings{paull17duckietown,
+    <span class="links"><span class="pdf"><a href="http://people.csail.mit.edu/lpaull/publications/Paull_ICRA_2017.pdf"><img style='border:0; margin-bottom:-6px; height: 17px'  src='pdf.png'/> pdf</a></span><span class="url"><a href="http://duckietown.mit.edu/"><img style='border:0; margin-bottom:-6px; height: 17px'  src='web.png'/> supp. material</a></span></span><a class='pub-ref-bibtex-link' onclick='javascript:document.getElementById("paull17duckietown").style.display="block";' href='javascript:void(0)'>bibtex</a><pre class='pub-ref-bibtex' id='paull17duckietown' style='display: none;'>
+    @inproceedings{paull17duckietown,
         author = "Paull, Liam and Tani, Jacopo and Ahn, Heejin and Alonso-Mora, Javier and Carlone, Luca and Cap, Michal and Chen, Yu Fan and Choi, Changhyun and Dusek, Jeff and Hoehener, Daniel and Liu, Shih-Yuan and Novitzky, Michael and Okuyama, Igor Franzoni and Pazis, Jason and Rosman, Guy and Varricchio, Valerio and Wang, Hsueh-Cheng and Yershov, Dmitry and Zhao, Hang and Benjamin, Michael and Carr, Christopher and Zuber, Maria and Karaman, Sertac and Frazzoli, Emilio and Vecchio, Domitilla Del and Rus, Daniela and How, Jonathan and Leonard, John and Censi, Andrea",
         title = "Duckietown: an Open, Inexpensive and Flexible Platform for Autonomy Education and Research",
         url = "http://duckietown.mit.edu/",
@@ -121,3 +101,13 @@ img.icon {
         pdf = "http://people.csail.mit.edu/lpaull/publications/Paull_ICRA_2017.pdf"
     }</pre>
 </cite>
+
+
+<cite class='pub-ref-desc' id='bib:tani16duckietown'>
+    <span class="author"><a href='https://eapsweb.mit.edu/people/jtani'>Jacopo Tani</a>, <a href='http://people.csail.mit.edu/lpaull/'>Liam Paull</a>, <a href='https://eapsweb.mit.edu/people/zuber/'>Maria Zuber</a>, <a href='http://danielarus.csail.mit.edu/'>Daniela Rus</a>, <a href='http://www.mit.edu/~jhow/'>Jonathan How</a>, <a href='https://marinerobotics.mit.edu/'>John Leonard</a>, and <span class="author-ac">Andrea Censi</span>.</span>
+    <span class="title">Duckietown: an innovative way to teach autonomy.</span>
+    <span class="booktitle">In <em>EduRobotics 2016</em>. Athens, Greece, December 2016.</span>
+    <span class="links"><span class="pdf"><a href="http://people.csail.mit.edu/lpaull/publications/Tani_EDU_2016.pdf"><img style='border:0; margin-bottom:-6px; height: 17px'  src='pdf.png'/> pdf</a></span><span class="url"><a href="http://duckietown.mit.edu/"><img style='border:0; margin-bottom:-6px; height: 17px'  src='web.png'/> supp. material</a></span></span><a class='pub-ref-bibtex-link' onclick='javascript:document.getElementById("tani16duckietown").style.display="block";' href='javascript:void(0)'>bibtex</a><pre class='pub-ref-bibtex' id='tani16duckietown' style='display: none;'>
+  </pre>
+</cite>
+-->
