@@ -1,4 +1,4 @@
-# Assembling the Duckiebot (`DB17-wjd` TTIC)  {#assembling-duckiebot-db17-ttic status=beta}
+# Assembling the Duckiebot (`DB17-wjd`)  {#assembling-duckiebot-db17-ttic status=beta}
 
 Point of contact: Andrea F. Daniele
 
@@ -50,6 +50,10 @@ Open the Magician Chassis package ([](#fig:duckiebot_components)) and take out t
 - M3 nuts (4x)
 
 [](#fig:howto-mount-motors-parts) shows the components needed to complete this part of the tutorial.
+
+<figure id="duckiebot_components" figure-caption="Components in Duckiebot package.">
+     <img src="duckiebot_components.png" style='width: 30em'/>
+</figure>
 
 <div figure-id="fig:howto-mount-motors-parts" figure-caption="Components needed to mount the motors.">
      <img src="howto_mount_motors_parts.jpg" style='width: 30em'/>

@@ -9,7 +9,7 @@ Requires: An SD card of dimensions at least 16 GB.
 
 Requires: A computer with an internet connection, an SD card reader, and 16 GB of free space.
 
-Requires: An assembled Duckiebot in configuration `DB17`. This is the result of [](#assembling-duckiebot-c0).
+Requires: An assembled Duckiebot in configuration `DB17`. This is the result of [](#assembling-duckiebot-db17-ttic).
 
 Results: A Duckiebot that is configured correctly, that you can connect to with your laptop and hopefully also has internet access
 
@@ -52,7 +52,7 @@ there was some problem in downloading the image.
 Uncompress the file:
 
     $ xz -d -k --verbose duckiebot-RPI3-AD-2017-09-12.img.xz
-    
+
 
 This will create a file of 11 GB in size.
 

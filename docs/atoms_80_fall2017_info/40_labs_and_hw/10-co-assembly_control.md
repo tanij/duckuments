@@ -43,7 +43,7 @@ Slack Channel: [#help-assembly](https://duckietown.slack.com/archives/C70CQQFHC)
 
 You are ready to put things together now.
 
-See: [](#assembling-duckiebot-c0)
+See: [](#assembling-duckiebot-db17-ttic)
 
 See: [](#bumper-assembly)
 

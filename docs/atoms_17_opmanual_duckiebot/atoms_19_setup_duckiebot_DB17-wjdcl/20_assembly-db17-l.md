@@ -1,6 +1,6 @@
 # Assembling the Duckiebot (`DB17-lc`) {#assembling-duckiebot-c1 status=deprecated}
 
-Assigned: Shiying Li
+Assigned: Jacopo Tani
 
 <div class='requirements' markdown="1">
 
@@ -8,7 +8,7 @@ Requires: Duckiebot `DB17-lc` parts. The acquisition process is explained in [](
 
 Requires: Soldering `DB17-lc` parts. The soldering process is explained in [](#soldering-boards-c1).
 
-Requires: Having assembled the Duckiebot in configuration `DB17` (or any `DB17-wjd`). The assembly process is explained in [](#assembling-duckiebot-c0).
+Requires: Having assembled the Duckiebot in configuration `DB17` (or any `DB17-wjd`). The assembly process is explained in [](#assembling-duckiebot-db17-ttic).
 
 Requires: Time: about 30 minutes.
 
@@ -17,7 +17,8 @@ Results: An assembled Duckiebot in configuration `DB17-wjdlc`.
 </div>
 
 ## Assembly the Servo/PWM hat (`DB17-l1`)
-Recommend: If you have Bumpers or caster to assembly, it is recommend to have Bumpers and caster assembled before the PWM hat. The assembly process is explained in [](#bumper-assembly) and [](#caster-wheel-instruction).
+
+Recommend: If you have Bumpers or caster to assembly, it is recommend to have Bumpers and caster assembled before the PWM hat. The assembly process is explained in [](#assembling-duckiebot-db17-ttic).
 
 ### Locate the components for Servo/PWM hat
 
