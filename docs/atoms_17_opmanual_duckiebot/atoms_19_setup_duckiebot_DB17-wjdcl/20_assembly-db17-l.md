@@ -1,4 +1,4 @@
-# Assembling the Duckiebot (`DB17-lc`) {#assembling-duckiebot-c1 status=draft}
+# Assembling the Duckiebot (`DB17-lc`) {#assembling-duckiebot-c1 status=deprecated}
 
 Assigned: Shiying Li
 

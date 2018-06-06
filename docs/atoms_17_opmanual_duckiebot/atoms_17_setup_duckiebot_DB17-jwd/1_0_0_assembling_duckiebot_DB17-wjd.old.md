@@ -1,4 +1,4 @@
-# Assembling the Duckiebot (`DB17-jwd`)  {#assembling-duckiebot-c0 status=beta}
+# Assembling the Duckiebot (`DB17-jwd`)  {#assembling-duckiebot-c0 status=deprecated}
 
 Point of contact: Shiying Li
 
@@ -292,7 +292,7 @@ Note: In case with short camera cable, ensure that you doesn't break the cable w
      <img src="GPIO_header.jpg" style='width: 30em'/>
 </figure>
 
-TODO: insert pic with long camera cable 
+TODO: insert pic with long camera cable
 
 ### Connect the motor's wires to the terminal
 

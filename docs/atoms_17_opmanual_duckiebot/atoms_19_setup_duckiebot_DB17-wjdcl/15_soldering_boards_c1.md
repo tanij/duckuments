@@ -1,11 +1,10 @@
-
-# Soldering boards (`DB17-l`) {#soldering-boards-c1 status=draft}
+# Soldering boards (`DB17-l`) {#soldering-boards-c1 status=deprecated}
 
 Note: General rule in soldering
 
 * soldering the components according to the height of components - from lowest to highest
 
-Assigned: Shiying Li
+Assigned: Jacopo Tani
 
 <div class='requirements' markdown="1">
 

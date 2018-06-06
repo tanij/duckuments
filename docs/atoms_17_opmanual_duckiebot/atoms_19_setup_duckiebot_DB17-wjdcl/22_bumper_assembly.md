@@ -1,5 +1,8 @@
-# Bumper Assembly {#bumper-assembly status=draft}
+# Bumper Assembly {#bumper-assembly status=deprecated}
 
+Note: We are currently revising the Duckiebot configurations for the upcoming semester, when Duckietown 1.0 will be officially released. Stay tuned!
+
+TODO for Jacopo Tani: update configurations
 
 <div class='requirements' markdown="1">
 
@@ -20,8 +23,8 @@ The following should be included in your parts envelope (See image below for the
 * 1x front bumper (Camera side)
 * 1x rear bumper (the side of Caster/Omnidirectional wheel)
 * 2x rear bumper brace (the side of Caster/Omnidirectional wheel)
-* 8x M2.5x10 nylone or metall screws 
-* 8x M2.5 nuts 
+* 8x M2.5x10 nylone or metall screws
+* 8x M2.5 nuts
 
 
 The following is not included in your parts envelope but will be needed for assembly:
@@ -51,7 +54,7 @@ Peel protective layer off of all parts on all sides.
 </div>
 
 
-## Assembly Rear Spacers 
+## Assembly Rear Spacers
 
 ### Disassembly the spacers between the both chassis
 
@@ -60,7 +63,7 @@ The backside of duckiebot before assemblying the bumpers looks as [](#fig:before
     <img src="before_bumpers.jpg" style='width:30em; height:auto'/>
 </div>
 
-Now remove the spacers and the (short)metall screws from the standoffs (configuration 'DB17-wjd') and replace it with 4 M3x10 nylon screws for connecting the chassis and the bumper spacers. 
+Now remove the spacers and the (short)metall screws from the standoffs (configuration 'DB17-wjd') and replace it with 4 M3x10 nylon screws for connecting the chassis and the bumper spacers.
 
 <div figure-id="fig:screw_for_upgrade" figure-caption= "The spacers configuration for the bumpers, Left: old configuration, Right: new configuration">
     <img src="screwForUpgrade.jpg" style='width:30em; height:auto'/>
@@ -92,9 +95,9 @@ Carefully guide rear bumper on to rear bumper brace tabs. Ensure that the hole f
 
 Locate 4 M2.5 nylon/metall nuts and 4 M2.5*10 nylon screws. Place a nut in the wide part of the t-slot and thread a screw into the nut as shown in the following pictures. Note [Use care when assembling!](#care) If you are having trouble with the nuts falling out, take a small piece of transparent tape and place it over both sides of the t-slot with the nut inside. It won’t look as nice but it will be much easier to assemble.
 
-Better: Test the screws and the nuts once by screwing them together before you use it for the bumpers. It make the fllowing assembly process much easier. 
+Better: Test the screws and the nuts once by screwing them together before you use it for the bumpers. It make the fllowing assembly process much easier.
 
-Note: For ETH 2017, the screws and nuts using for this step are M2.5*10 nylon screws (white) and M2.5 nylon or metall nuts from the envelope. 
+Note: For ETH 2017, the screws and nuts using for this step are M2.5*10 nylon screws (white) and M2.5 nylon or metall nuts from the envelope.
 
 <div figure-id="fig:bumper_screw1" figure-caption = "Hold the nuts with the fingers">
     <img src="bumper_screw1.jpg" style='width:30em; height:auto'/>
@@ -140,5 +143,3 @@ past the camera screws.
 Gently tighten the nuts. The front bumper should now stay in position.
 
 Congrats! your bumper assembly is complete!
-
-

@@ -1,4 +1,5 @@
-# Acquiring the parts (`DB17-jwd`) {#acquiring-parts-c0 status=ready}
+# Operation manual - Duckiebot {#part:configurations-temp}
+
 
 Note: We are currently revising the Duckiebot configurations for the upcoming semester, when Duckietown 1.0 will be officially released. Stay tuned!
 

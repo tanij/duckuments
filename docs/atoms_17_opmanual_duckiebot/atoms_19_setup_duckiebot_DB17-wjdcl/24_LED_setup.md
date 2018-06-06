@@ -1,6 +1,9 @@
-# `DB17-l` setup {#leds-setup status=draft}
+# `DB17-l` setup {#leds-setup status=deprecated}
 
-Assigned: Shiying Li
+
+Note: We are currently revising the Duckiebot configurations for the upcoming semester, when Duckietown 1.0 will be officially released. Stay tuned!
+
+TODO for Jacopo Tani: update configurations
 
 <div class='requirements' markdown="1">
 
