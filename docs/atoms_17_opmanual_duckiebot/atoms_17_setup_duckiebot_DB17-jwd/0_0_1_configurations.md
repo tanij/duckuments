@@ -31,13 +31,11 @@ The elements of $\aset{O}$ are labels identifying optional hardware that aids in
 
 - `c`: a different **c**astor wheel to _replace_ the preexisting omni-directional wheel;
 
-<!--
 - `p`: **P**WM hat for convenient powering of the DC motor hat;
-
 
 - `l`: includes **L**EDs, LED hat, bumpers and the necessary mechanical bits to set the bumpers in place. Note that the installation of the bumpers induces the _replacement_ of a few `DB17` components;
 
-Note: During the Fall 2017 course, three Duckietown Engineering Co. branches (Zurich, Montreal, Chicago) are using these configuration naming conventions. Moreover, all institutions release hardware to their Engineers in training in two phases. We summarize the configuration releases [below](#duckiebot-releases-2017).
+Note: During the Fall 2017 course, three Duckietown Engineering Co. branches (Zurich, Montreal, Chicago) are using these configuration naming conventions. Moreover, all institutions release hardware to their Engineers in training in two phases.
 
 ## Configuration functionality
 
@@ -45,8 +43,6 @@ Note: During the Fall 2017 course, three Duckietown Engineering Co. branches (Zu
 
 This is the minimal configuration for a Duckiebot. It is the configuration of choice for tight budgets or when operation of a single Duckiebot is more of interest than fleet behaviors.
 
-
 - **Functions**: A `DB17` Duckiebot can navigate autonomously in a Duckietown, but cannot communicate with other Duckiebots.
-
 
 - **Components**: A "bare-bones" `DB17` configuration includes:

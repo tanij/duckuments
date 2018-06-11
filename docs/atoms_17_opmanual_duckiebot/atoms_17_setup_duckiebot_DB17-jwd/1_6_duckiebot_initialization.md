@@ -15,15 +15,11 @@ Results: A Duckiebot that is configured correctly, that you can connect to with 
 
 </div>
 
-
-
 ## Acquire and burn the image {#setup-duckiebot-burn-image}
 
 On the laptop, download the compressed image at this URL:
 
-> [https://www.dropbox.com/s/8utdpl5lgi2pumo/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1](https://www.dropbox.com/s/8utdpl5lgi2pumo/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1)
-
-
+ [https://www.dropbox.com/s/8utdpl5lgi2pumo/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1](https://www.dropbox.com/s/8utdpl5lgi2pumo/duckiebot-RPI3-AD-2017-09-12.img.xz?dl=1)
 
 The size is 1.7 GB.
 

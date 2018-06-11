@@ -1,13 +1,15 @@
 
-# Camera calibration and validation {#camera-calib-jan18 status=ready}
+# Camera calibration and validation {#camera-calib status=ready}
+
+<!--
+JT: I moved the old, deprecated camera calib to the /deprecated folder
+-->
 
 Here is an updated, more practical extrinsic calibration and validation procedure.
-
 
 ## Check out the experimental branch
 
 Check out the branch `andrea-better-camera-calib`.
-
 
 ## Place the robot on the pattern {#camera-calib-jan18-extrinsics-setup}
 

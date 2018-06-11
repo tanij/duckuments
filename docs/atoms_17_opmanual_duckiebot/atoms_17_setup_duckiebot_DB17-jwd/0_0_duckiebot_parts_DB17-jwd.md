@@ -25,7 +25,7 @@ Requires: Time: 15 days (average shipping for cheapest choice of components)
 
 Results: A kit of parts ready to be assembled in a `DB17` or `DB17-wjd` configuration.
 
-Next steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-c0) your `DB17` or `DB17-wjd` Duckiebot.
+Next steps: After receiving these components, you are ready to do some [soldering](#soldering-boards-c0) before [assembling](#assembling-duckiebot-db17-ttic) your `DB17` or `DB17-wjd` Duckiebot.
 
 </div>
 

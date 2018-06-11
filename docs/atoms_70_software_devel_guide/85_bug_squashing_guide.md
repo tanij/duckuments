@@ -92,7 +92,6 @@ We have a diagnostics program called `what-the-duck` that checks many things abo
 
 See: [](#what-the-duck)
 
-
 So, first of all, run `what-the-duck`. Then, fix the errors that `what-the-duck` shows you.
 
 This is the proper way to run `what-the-duck`:
@@ -119,10 +118,7 @@ Gold standard: Provide exact instructions on how to reproduce the error ("Check 
 
 Silver standard: Copy the relevant code to a Gist (gist.github.com) including the error stack trace. Because we have no way to reproduce the error, this starts a conversation which is basically guesswork. So you get half answers after a few hours.
 
-
-
 ## How to give help {#bug-squashing-giving-help}
-
 
 ### Step 1: Ask for the output of `what-the-duck`
 
@@ -133,6 +129,5 @@ Also, in general, errors in the environment *will* cause other problems later on
 ### Step 2: Consider whether there are enough details to provide an informed answer
 
 The worst thing you can do is guess work -- this causes confusion.
-
 
 I encourage the TAs to *not* answer any nontrivial question that is not at least at the silver standard. It is a waste of resources, it will likely not help, and it actually contributes to the confusion, with people starting to try random things until something works without understanding why things work, and ultimately creating a culture of superstitions.

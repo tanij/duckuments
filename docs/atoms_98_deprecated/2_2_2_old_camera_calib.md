@@ -1,6 +1,6 @@
-# Camera calibration {#camera-calib status=deprecated}
+# (Old) Camera calibration {#camera-calib-old status=deprecated}
 
-Note: This camera calibration procedure is outdated. See [](#camera-calib-jan18) for the updated procedure.
+Note: This camera calibration procedure is outdated. See [](#camera-calib) for the updated procedure.
 
 <div class='requirements' markdown='1'>
 
