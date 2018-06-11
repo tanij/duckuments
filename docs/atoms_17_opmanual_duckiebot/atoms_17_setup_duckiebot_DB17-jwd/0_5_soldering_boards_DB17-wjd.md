@@ -1,12 +1,5 @@
 # Soldering boards (`DB17`) {#soldering-boards-c0 status=deprecated}
 
-Assigned: Shiying Li
-
-<!--
-Shiying: how long does it take to solder the stuff described in this chapter? (I guessed 30 mins, change it with the real number)
-
--->
-
 <div class='requirements' markdown="1">
 
 Requires: Parts: Duckiebot `DB17` parts. The acquisition process is explained in [](#acquiring-parts-c0). The configurations are described in [](#duckiebot-configurations). In particular:

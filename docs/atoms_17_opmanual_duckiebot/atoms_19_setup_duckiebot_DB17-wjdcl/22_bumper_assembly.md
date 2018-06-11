@@ -26,12 +26,9 @@ The following should be included in your parts envelope (See image below for the
 * 8x M2.5x10 nylone or metall screws
 * 8x M2.5 nuts
 
-
 The following is not included in your parts envelope but will be needed for assembly:
 
 * Small screwdriver
-
-
 
 <div figure-id="fig:components-package" figure-caption="Components in Duckiebot package.">
     <img src="Bumpers.jpg" style='width:30em; height:auto'/>

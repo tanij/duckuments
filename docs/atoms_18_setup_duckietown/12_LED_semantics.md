@@ -1,5 +1,7 @@
 # Semantics of LEDS {#LED-semantics status=draft}
 
+TODO for Jacopo Tani: Find appropriate person to write this.
+
 Assigned: ???
 
 headlights: white, constant
