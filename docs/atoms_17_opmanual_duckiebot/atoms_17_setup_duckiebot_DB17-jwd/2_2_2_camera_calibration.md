@@ -59,8 +59,6 @@ You can run the following command to make sure that the camera calibration is re
 
 What this does is simulating what the robot should see, if the models were correct ([](#fig:validate_calibration_out1)).
 
-
-
 <div figure-id="fig:validate_calibration_out1">
     <img style='width:40%' src="2_2_2_camera/validate_calibration_out1.jpg"/>
     <figcaption>Result of <code>validate_calibration</code>.</figcaption>
