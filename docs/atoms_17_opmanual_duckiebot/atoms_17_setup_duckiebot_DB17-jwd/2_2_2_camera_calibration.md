@@ -1,4 +1,3 @@
-
 # Camera calibration and validation {#camera-calib status=ready}
 
 <!--
