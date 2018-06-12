@@ -5,6 +5,9 @@ TODO: add video here
 
 ## Implementation
 
+TODO for Andrea Censi: these links are broken
+
+
 - <a class="number_name" href="#led_detection"/>
 - <a class="number_name" href="#led_emitter"/>
 - <a class="number_name" href="#led_interpreter"/>

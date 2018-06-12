@@ -71,7 +71,7 @@ Step 2: Mount the USB Storage: To do this,y ou can use procedure is documented i
     duckiebot $ roscd calibration
     duckiebot $ bash mount_usb
 
-Step 3: Place the Duckiebot in front of the chessboard at a distance of slightly more than 1 meter in front of the checkerboard (~2 duckie tiles), as shown in the image ([](#fig:calibration_setup))..
+Step 3: Place the Duckiebot in front of the chessboard at a distance of slightly more than 1 meter in front of the checkerboard (~2 duckie tiles), as shown in the image ([](#fig:calibration_setup)).
 The heading has to be set iteratively to maximize the time the duckiebot sees the checkerboard.
 
 <div figure-id="fig:calibration_setup" figure-caption="The calibration setup">

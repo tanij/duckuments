@@ -470,6 +470,6 @@ You may want to subsequently shrink the image, for example if your friends have 
 See: The procedure of how to shrink an image is explained in [](#howto-shrink-image).
 
 
-## TODO: Git LFS
+##  Git LFS
 
-Note: We should install Git LFS on the Raspberry Pi, but so far AC did not have any luck. See [](#git-lfs-install).
+TODO for Andrea Censi: We should install Git LFS on the Raspberry Pi, but so far AC did not have any luck. See [](#git-lfs-install).

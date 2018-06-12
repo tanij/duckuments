@@ -25,7 +25,7 @@ Motto: UBI UNUM IBI OMNES <br/> (Where there is one, there is everybody)
 * TBD: does anything need to be synchronized?
 
 <div figure-id="fig:figure 1">
-    <img src="https://github.com/duckietown/duckuments/blob/devel-distribution-est-fleet-wireless-communication/docs/atoms_85_fall2017_projects/16_distrubuted_est/Duckietown_Project_Image.png" />
+    <img src="Duckietown_Project_Image.png" />
     <figcaption id='fig:figure 1:caption'>
         System Layout
     </figcaption>

@@ -232,9 +232,9 @@ The following are a list of rule objectives the Duckiebots are supposed to abide
 
  $$
  \Delta \objective_{LF} = \begin{cases} 0  & \text{if } d < d_{safety} \\
-     \beta d^2 & \text{if } d_{safety} \leq d \leq d_{max} \\
-   	\alpha & \text{if } d > d_{max} \text{ or if $d$ is not within field-of-view anymore}
-   	\end{cases}
+  \beta d^2 & \text{if } d_{safety} \leq d \leq d_{max} \\
+  \alpha & \text{if } d > d_{max} \text{ or if $d$ is not within field-of-view anymore}
+  \end{cases}
 $$
 
 

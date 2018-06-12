@@ -744,8 +744,6 @@ Q: The long camera cable is a bit annoying - I folded it and shoved it in betwee
 
 A: The shorter cable is even more annoying. We suggest wrapping the long camera cable between the chassis and the Raspberry Pi. With some strategic planning, you can use the zipties that keep the battery in place to hold the camera cable in place as well ([see figure below-to add]())
 
-TODO: add pretty cable handling pic
-
 Q: I found that the screwdriver that comes with the chassis kit is too fat to screw in the wires on the hat.
 
 A: It is possible you got one of the fatter screwdrivers. You will need to figure it out yourself (or ask a TA for help).

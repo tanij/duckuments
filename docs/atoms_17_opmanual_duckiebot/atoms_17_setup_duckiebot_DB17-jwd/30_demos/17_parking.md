@@ -1,6 +1,6 @@
 # Parking demo instructions {#parking-demo-instructions status=beta}
 
-TODO: JT image sizes, knowledge graph, 
+TODO: JT image sizes, knowledge graph,
 
 
 This is the description for the Duckietown parking demo.
@@ -34,7 +34,7 @@ First, we show a video of the expected behavior. It can be found
 Here, describe the assumptions about the Duckietown, including:
 
 * Layout (tiles types)
-* Instrastructure (traffic lights, wifi networks, ...) required
+* Infrastructure (traffic lights, wifi networks, ...) required
 * Weather (lights, ...)
 * It is assumed that the parking lot has six parking spaces as depicted in the figure below.
 
@@ -42,7 +42,7 @@ Here, describe the assumptions about the Duckietown, including:
 
     Do not write instructions here. The instructions should be somewhere in [the part about Duckietowns](#duckietowns). Here, merely point to them.
 
-![Duckietown parking lot](https://raw.githubusercontent.com/duckietown/Software/devel-parking/catkin_ws/src/50-misc-additional-functionality/parking/report/map_0_1.png "Duckietown parking lot")
+![Duckietown parking lot](map_0_1.png)
 
 ## Duckiebot setup notes {#demo-parking-duckiebot-setup}
 
@@ -156,4 +156,3 @@ We do not have a working demo (in the sense that the duckiebot actually parks it
     roslaunch parking master.launch veh:=myvehicle localization:=true apriltags:=true /camera/raw:=true /camera/raw/rect:=true LED:=false lane_following:=true
 
 Once a path is generated (it will tell you a path has been found via the terminal), press R1 on your controller to enter "parking mode".
-

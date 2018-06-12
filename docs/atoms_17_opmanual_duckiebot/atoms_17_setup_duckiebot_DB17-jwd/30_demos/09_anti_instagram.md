@@ -12,7 +12,13 @@ Requires: Lane-following demo has been successfully launched. [Lane-following de
 
 ## Video of expected results
 
-First, we show a [video](https://drive.google.com/open?id=1XDTNk8NgIlMEyC7R0vyqVm3TSj7Sowc8) of the expected behavior.
+First, we show a video of the expected behavior:
+
+<div figure-id="fig:demo_succeeded-anti-instagram">
+    <figcaption>Demo of the anti-instagram filter
+    </figcaption>
+    <dtvideo src='vimeo:274635646'/>
+</div>
 
 ## Duckietown setup notes {#demo-anti-instagram-duckietown-setup}
 
