@@ -1,5 +1,5 @@
 
-# Camera calibration and validation {#camera-calib-jan18 status=ready}
+# Camera calibration and validation {#camera-calib status=ready}
 
 Here is an updated, more practical extrinsic calibration and validation procedure.
 
