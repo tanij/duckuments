@@ -40,8 +40,6 @@ These are some advertisement videos we used.
 
 ## University-level classes in 2016 {status=beta}
 
-TODO for Jacopo Tani: add statistics collected.
-
 TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
 Later that year, the Duckietown platform was also used in these classes:
@@ -62,8 +60,6 @@ Later that year, the Duckietown platform was also used in these classes:
 </style>
 
 ## University-level classes in 2017
-
-TODO for Jacopo Tani: add statistics collected.
 
 TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
@@ -108,7 +104,7 @@ The classes are too many to list.
 
 ## Statistics {#duckietown-statistics}
 
-
+This section reports some aggregated statistics of the courses at graduate and undergraduate level that used the Duckietown platform in 2016-17, listed above.
 
 <div figure-id="fig:stats-grad-history">
    <img src="Duckietown-class-history-graduate-level.png" class='group-photo'/>
@@ -130,11 +126,11 @@ The classes are too many to list.
     <figcaption>Statistics of Duckietown alumni</figcaption>
     <figure>
         <figcaption>Gender</figcaption>
-        <img style='width:8em' src="Duckietown-univesity-alumni-gender-2017.png"/>
+        <img style='width:10em' src="Duckietown-univesity-alumni-gender-2017.png"/>
     </figure>
     <figure>  
         <figcaption>Role</figcaption>
-        <img style='width:8em' src="Duckietown-university-students-and-staff-2017.png"/>
+        <img style='width:10em' src="Duckietown-university-students-and-staff-2017.png"/>
     </figure>
 </figure>
 
@@ -142,10 +138,10 @@ The classes are too many to list.
     <figcaption>Backgrounds of students and staff</figcaption>
     <figure>
         <figcaption>Students</figcaption>
-        <img style='width:8em' src="Duckietown-students-backgrounds-2017.png"/>
+        <img style='width:18em' src="Duckietown-students-backgrounds-2017.png"/>
     </figure>
     <figure>  
         <figcaption>Staff</figcaption>
-        <img style='width:8em' src="Duckietown-staff-background-2017.png"/>
+        <img style='width:18em' src="Duckietown-staff-background-2017.png"/>
     </figure>
 </figure>

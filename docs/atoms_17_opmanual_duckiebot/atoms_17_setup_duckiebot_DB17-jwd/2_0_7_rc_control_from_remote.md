@@ -22,7 +22,7 @@ ROS nodes can be launched in two ways:
 Which is better when is a long discussion that will be done later.
 Here we set up the "remote launch".
 
-TODO: draw diagrams
+TODO for Andrea Censi: draw diagrams
 
 ## Download and setup `Software` repository on the laptop
 

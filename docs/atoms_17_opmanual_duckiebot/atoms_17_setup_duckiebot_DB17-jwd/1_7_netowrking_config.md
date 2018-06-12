@@ -14,11 +14,11 @@ Result: A Duckiebot that you can connect to and that is connected to the interne
 
 Note: this page is primarily for folks operating with the "two-network" configuration, `C0+w`. For a one adapter setup you will can skip directly to [](#duckiebot-internet-access), but you will have to connect to a network that you can ssh through.
 
-The basic idea is that we are going to use the "Edimax" thumbdrive adapter to create a dedicated wireless network that you can always connect to with your laptop. Then we are going to use the built-in Broadcom chip on the Pi to connect to the internet, and then the network will be bridged. 
+The basic idea is that we are going to use the "Edimax" thumbdrive adapter to create a dedicated wireless network that you can always connect to with your laptop. Then we are going to use the built-in Broadcom chip on the Pi to connect to the internet, and then the network will be bridged.
 
 ## (For `DB17-w`) Configure the robot-generated network
 
-This part should work every time with very low uncertainty. 
+This part should work every time with very low uncertainty.
 
 The Duckiebot in configuration `C0+w` can create a WiFi network.
 
@@ -62,7 +62,7 @@ Make the following changes:
 ![Newly upgraded]
 
 To ensure nobody piggybacks on our connection, which poses a security risk especially in a public environment, we will protect access to the 5 GHz WiFi through a password. To set a password you will need to log in the Duckiebot with the default "ubuntu" username and password and change your system files. In the `/etc/NetworkManager/system-connections/create-5ghz-network`, add:
-    
+
     [wifi-security]
     key-mgmt=wpa-psk
     psk=YOUR_OWN_WIFI_PASSWORD_NO_QUOTATION_MAKRS_NEEDED
@@ -70,7 +70,7 @@ To ensure nobody piggybacks on our connection, which poses a security risk espec
 
 and then reboot.
 
-At this point you should see a new network being created named "`![robot name]`", protected by the password you just set. 
+At this point you should see a new network being created named "`![robot name]`", protected by the password you just set.
 
 Comment: Make sure the password contains min. 8 character or combined with numbers. If no networks shows up after the configuration and no feedback from system, please check the content of the file again. The program, which activates the Edimax wifi adapter is very sensitive to its content.   
 
@@ -80,7 +80,7 @@ and to the internet, the Raspberry Pi will act as a bridge to the internet.
 -->
 
 <div class='only-zurich' markdown="1">
-Adding a password to your 5GHz connection is a mandatory policy in the Zurich branch. 
+Adding a password to your 5GHz connection is a mandatory policy in the Zurich branch.
 </div>
 
 ## Setting up wireless network configuration {#duckiebot-internet-access}
@@ -192,7 +192,7 @@ Set the permissions on the new file to 0600.
 
 ### Option 3 (For Univeristé de Montréal students only): Use `UdeM avec cryptage` {status=draft}
 
-TODO: someone replicate please - LP
+TODO for Liam Paull: someone replicate please - LP
 
 Note: your can use the `autoconnect-priority=XX` inside the `[connection]` block to establish a priority. If you want to connect to one network preferentially if two are available then give it a higher priority.
 
@@ -206,14 +206,14 @@ Save the following block as new file in `/etc/NetworkManager/system-connections/
     secondaries=
     timestamp=1502254646
     autoconnect-priority=100
-    
+
     [wifi]
     mac-address-blacklist=
     mac-address-randomization=0
     mode=infrastructure
     ssid=UdeM avec cryptage
     security=wifi-security
-    
+
     [wifi-security]
     key-mgmt=wpa-eap
 
@@ -246,10 +246,10 @@ First run the following to see what networks are available:
 You should see the network that you are trying to connect (`![SSID])`) to and you should know the password. To connect to it run:
 
     duckiebot $ sudo nmcli dev wifi con ![SSID] password ![PASSWORD]
-    
+
 ### Option 5: ETH Wifi {#wifi-ETH status=beta}
 
-The following instructions will lead you to connect your PI to the "eth" wifi network. 
+The following instructions will lead you to connect your PI to the "eth" wifi network.
 
 First, run the following on duckiebot
 
@@ -261,25 +261,25 @@ First, run the following on duckiebot
     enxb![xxxxxxxxxxx]  no wireless extensions.
 
     ![...]
-    
+
 Make note of the name `enxb![xxxxxxxxxxx]`. `![xxxxxxxxxxx]` should be a string that has 11 characters that is formed by numbers and lower case letters.
 
-Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches. 
+Second, edit the file `/etc/network/interfaces` which requires `sudo` so that it looks like the following, and make sure the `enxb![xxxxxxxxxxx]` matches.
 
 Pay special attention on the line "pre-up wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf".This is expected to be exactly one line instead of two but due to formatting issue it is shown as two lines.
 
-Also, make sure every characters match exactly with the provided ones. TAs will not help you to do spelling error check. 
+Also, make sure every characters match exactly with the provided ones. TAs will not help you to do spelling error check.
 
     # interfaces(5) file used by ifup(8) and ifdown(8) Include files from /etc/network/     interfaces.d:
     source-directory /etc/network/interfaces.d
-    
+
     # The loopback network interface
     auto lo
     auto enxb![xxxxxxxxxxx]
-    
-    # the wired network setting 
+
+    # the wired network setting
     iface enxb![xxxxxxxxxxx] inet dhcp
-    
+
     # the wireless network setting
     auto wlan0
     allow-hotplug wlan0
@@ -287,7 +287,7 @@ Also, make sure every characters match exactly with the provided ones. TAs will 
         pre-up wpa_supplicant -B -D wext -i wlan0 -c /etc/wpa_supplicant/wpa_supplicant.conf
         post-down killall -q wpa_supplicant
 
-Third, edit the file `/etc/wpa_supplicant/wpa_supplicant.conf` which requires `sudo` so that it looks like the following, and make sure you substitute [identity] and [password] content with your eth account information: 
+Third, edit the file `/etc/wpa_supplicant/wpa_supplicant.conf` which requires `sudo` so that it looks like the following, and make sure you substitute [identity] and [password] content with your eth account information:
 
     ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
     update_config=1
@@ -306,12 +306,12 @@ Third, edit the file `/etc/wpa_supplicant/wpa_supplicant.conf` which requires `s
         priority=1
     }
 
-Fourth, reboot your PI. 
+Fourth, reboot your PI.
 
     duckiebot $ sudo reboot
 
-Then everything shall be fine. The PI will connect to "eth" automatically everytime it starts. 
+Then everything shall be fine. The PI will connect to "eth" automatically everytime it starts.
 
-Note that, if something went wrong, your Duckiebot tries to connect to the network for 5.5mins at startup while it's blocking SSH connection to it completely ("Connection refused" error when connecting). If this is the case, please wait those 5.5mins until your Duckiebot lets you connect again and recheck your settings. 
+Note that, if something went wrong, your Duckiebot tries to connect to the network for 5.5mins at startup while it's blocking SSH connection to it completely ("Connection refused" error when connecting). If this is the case, please wait those 5.5mins until your Duckiebot lets you connect again and recheck your settings.
 
 TODO: Find a solution to this since it occurs very often

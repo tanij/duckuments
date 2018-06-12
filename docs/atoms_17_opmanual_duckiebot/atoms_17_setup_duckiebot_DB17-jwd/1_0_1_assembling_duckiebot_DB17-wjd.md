@@ -1,4 +1,4 @@
-# Assembling the Duckiebot (`DB17-wjd`)  {#assembling-duckiebot-db17-ttic status=beta}
+# Assembling the Duckiebot (`DB17-wjd`)  {#assembling-duckiebot-db17-ttic status=ready}
 
 Point of contact: Andrea F. Daniele
 
