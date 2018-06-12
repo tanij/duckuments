@@ -6,7 +6,7 @@ While the "Setup" parts are "imperative" (do this, do that); this is the
 "declarative" part, which explains what are the properties of a correct
 configuration (but it does not explain how to get there).
 
-The tool `what-the-duck` ([](#what-the-duck)) checks some of these conditions.
+The tool `what-the-duck` checks some of these conditions.
 If you make a change from the existing conditions, make sure that it gets
 implemented in `what-the-duck` by filing an issue.
 

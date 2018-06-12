@@ -89,7 +89,7 @@ Solution 2:
 
 Solution:
 
-* Run [what-the-duck](#what-the-duck) and follow instructions .
+* Run `what-the-duck` and follow instructions.
 
 ### Duckiebot drives not with joystick
 Solution:
