@@ -1,5 +1,5 @@
 
-# Camera calibration and validation {#camera-calib-jan18 status=ready}
+# Camera calibration and validation {#camera-calib status=ready}
 
 Here is an updated, more practical extrinsic calibration and validation procedure.
 
@@ -58,8 +58,6 @@ You can run the following command to make sure that the camera calibration is re
     duckiebot $ rosrun complete_image_pipeline validate_calibration
 
 What this does is simulating what the robot should see, if the models were correct ([](#fig:validate_calibration_out1)).
-
-
 
 <div figure-id="fig:validate_calibration_out1">
     <img style='width:40%' src="2_2_2_camera/validate_calibration_out1.jpg"/>

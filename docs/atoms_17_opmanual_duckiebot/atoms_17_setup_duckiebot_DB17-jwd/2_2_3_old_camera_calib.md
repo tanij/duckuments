@@ -1,6 +1,6 @@
-# Camera calibration {#camera-calib status=deprecated}
+# Camera calibration {#camera-calib-old status=draft}
 
-Note: This camera calibration procedure is outdated. See [](#camera-calib-jan18) for the updated procedure.
+Note: This camera calibration procedure is outdated. See [](#camera-calib) for the updated procedure.
 
 <div class='requirements' markdown='1'>
 
@@ -17,7 +17,6 @@ Results: Calibration for the robot camera.
 
 ### Setup
 
-
 Download and print a PDF of the calibration checkerboard
 ([A4 intrinsic](github:org=duckietown,repo=duckiefleet,path=calibrations/Calibration_pattern_A4_intrinsic.pdf), [A3 extrinsic](github:org=duckietown,repo=duckiefleet,path=calibrations/calibration_pattern_A3.pdf), [US Letter](github:org=duckietown,repo=Software,path=duckietown/config/baseline/calibration/camera_intrinsic/calibration_pattern.pdf)).
 Fix the checkerboard to a planar surface.
@@ -31,8 +30,7 @@ Note: the squares must have side equal to 0.031 m = 3.1 cm.
 
 ### Calibration
 
-Make sure your Duckiebot is on, and both your laptop and Duckiebot are
-connected to the duckietown network.
+Make sure your Duckiebot is on, and both your laptop and Duckiebot are connected to the duckietown network.
 
 #### Step 1
 

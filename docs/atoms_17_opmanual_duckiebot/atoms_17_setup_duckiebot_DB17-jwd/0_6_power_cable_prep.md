@@ -2,7 +2,7 @@
 
 In configuration `DB17` we will need a cable to power the DC motor HAT from the battery. The keen observer might have noticed that such a cable was not included in the [`DB17` Duckiebot parts](#acquiring-parts-c0) chapter. Here, we create this cable by splitting open any USB-A cable, identifying and stripping the power wires, and using them to power the DC motor HAT. If you are unsure about the definitions of the different Duckiebot configurations, read [](#duckiebot-configurations).
 
-It is important to note that these instructions are relevant only for assembling a `DB17-wjdc` configuration Duckiebot (or any subset of it). If you intend to build a `DB17-l` configuration Duckiebot, you can skip these instructions.
+Note: It is important to note that these instructions are relevant only for assembling a `DB17-wjdc` configuration Duckiebot (or any subset of it). If you intend to build a `DB17-l` configuration Duckiebot, you can skip these instructions.
 
 <div class='requirements' markdown="1">
 

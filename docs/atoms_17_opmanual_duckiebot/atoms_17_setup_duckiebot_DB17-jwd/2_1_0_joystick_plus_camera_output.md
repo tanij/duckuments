@@ -64,7 +64,6 @@ You will use the four windows as follows:
 
 TODO: Add figures
 
-
 ## First window: launch the joystick demo
 
 In the first window, launch the joystick remotely using the same procedure in [](#roslaunch-joystick).
