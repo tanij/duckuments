@@ -91,7 +91,9 @@ Finding a bug is a process of elimination of causes one-by-one, until you find t
 We have a diagnostics program called `what-the-duck` that checks many things about the environment.
 
 <!-- broken link
+
 See: [](#what-the-duck)
+
 -->
 
 So, first of all, run `what-the-duck`. Then, fix the errors that `what-the-duck` shows you.
