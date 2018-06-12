@@ -40,8 +40,6 @@ These are some advertisement videos we used.
 
 ## University-level classes in 2016 {status=beta}
 
-TODO for Jacopo Tani: add statistics collected.
-
 TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
 Later that year, the Duckietown platform was also used in these classes:
@@ -62,8 +60,6 @@ Later that year, the Duckietown platform was also used in these classes:
 </style>
 
 ## University-level classes in 2017
-
-TODO for Jacopo Tani: add statistics collected.
 
 TODO for Kirsten Bowser: if we use Wordpress for these statistics, link them here.
 
@@ -105,3 +101,46 @@ TODO for Andrea Daniele: add picture of 2017 TTIC class
 ## 2018 and beyond
 
 The classes are too many to list.
+
+## Statistics {#duckietown-statistics}
+
+<div figure-id="fig:stats-grad-history">
+   <img src="Duckietown-class-history-graduate-level.png" class='group-photo'/>
+   <figcaption>Number of students and staff for the Duckietown graduate level class </figcaption>
+</div>
+
+<div figure-id="fig:stats-duckiebots">
+   <img src="Duckiebots-fleet-size-2017.png" class='group-photo'/>
+   <figcaption>Duckiebot approximate cost and fleet size for graduate level classes</figcaption>
+</div>
+
+<div figure-id="fig:stats-alumni-university">
+   <img src="Duckietown-alumni-university-2017.png" class='group-photo'/>
+   <figcaption>Number of reported students and staff for graduate and undergraduate classes using the Duckietown platform. These figures do not include [Duckietown HS](#dt-hs) alumni (200 up to 2017)</figcaption>
+</div>
+
+
+<figure class="flow-subfigures">  
+    <figcaption>Statistics of Duckietown alumni</figcaption>
+    <figure>
+        <figcaption>Gender</figcaption>
+        <img style='width:8em' src="Duckietown-univesity-alumni-gender-2017.png"/>
+    </figure>
+    <figure>  
+        <figcaption>Role</figcaption>
+        <img style='width:8em' src="Duckietown-university-students-and-staff-2017.png"/>
+    </figure>
+</figure>
+
+
+<figure>  
+    <figcaption>Backgrounds of students and staff</figcaption>
+    <figure>
+        <figcaption>Students</figcaption>
+        <img style='width:8em' src="Duckietown-students-backgrounds-2017.png"/>
+    </figure>
+    <figure>  
+        <figcaption>Staff</figcaption>
+        <img style='width:8em' src="Duckietown-staff-background-2017.png"/>
+    </figure>
+</figure>

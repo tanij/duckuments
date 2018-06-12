@@ -1,4 +1,4 @@
-# Duckietown High School {status=beta}
+# Duckietown High School {#dt-hs status=beta}
 
 TODO for Mauro D'Angelo: Some of this info might be outdated.
 

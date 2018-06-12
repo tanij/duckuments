@@ -69,4 +69,4 @@ Then:
 
 - verify in the output that your camera was publishing very close to **30.0Hz** and verify that you joysick was publishing at a rate between **3Hz** and **6Hz**.
 
-TODO: More complex log verification methods.
+TODO for Andrea Censi: More complex log verification methods.

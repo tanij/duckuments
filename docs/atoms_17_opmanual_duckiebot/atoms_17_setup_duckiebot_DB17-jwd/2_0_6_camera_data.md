@@ -6,9 +6,7 @@
 Requires: You have configured the Duckiebot.
 The procedure is documented in [](#setup-duckiebot).
 
-Requires: You know the basics of ROS (launch files, `roslaunch`, topics, `rostopic`).
-
-TODO: put reference
+Requires: You know [the basics of ROS](#introduction_to_ros) (launch files, `roslaunch`, topics, `rostopic`).
 
 Results: You know that the camera works under ROS.
 
