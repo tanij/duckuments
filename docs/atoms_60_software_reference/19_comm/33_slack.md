@@ -1,9 +1,12 @@
 # Slack {#slack status=draft}
 
+Many of the Duckietown communities use Slack for private messaging.
+
 
 ## Installing the Slack app on Linux
 
-TODO: to write
+See [here](https://slack.com/downloads/linux)
+
 
 ## Disabling Slack email notifications {#disable-slack-emails}
 
