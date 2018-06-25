@@ -2,33 +2,27 @@ version: 2
 jobs:
     build:
         docker:
-        - image: andreacensi/duckietown-xenial-kinetic:20
+        - image: andreacensi/mcdp_books:duckuments@sha256:360b501d4cc3c0c9d7fb6053559267696f215eded259c5f81cfe04d4d191c785
           environment:
               COLUMNS: 160
-              NODE_PATH: /root/project/node_modules
+              NODE_PATH: /project/node_modules
               MPLBACKEND: agg
+              TERM: xterm-256color
 
         resource_class: large
 
         steps:
         - checkout
         - run:
-            name: NPM
+            name: Check out submodules
             command: |
-                curl -sL https://deb.nodesource.com/setup_6.x | bash
-                apt install -y nodejs node-less
-                npm install MathJax-node jsdom@9.3 less
+               git submodule sync --recursive
+               git submodule update --init --recursive
 
         - run:
-            name: fonts
+            name: virtualenv
             command: |
-                apt-get install -y sudo
-                make install-fonts
-
-        - run:
-            name: Setup MCDP
-            command: |
-                make install-ubuntu16
+                ln -s /project/deploy deploy
 
         - run:
             name: Check Programs
@@ -50,17 +44,23 @@ jobs:
             name: Compile all books
             command: |
                 echo "config colorize 0" > .compmake.rc
-                ONLY_FOR_REFS=1 make -j4 book-code_docs books
+                . deploy/bin/activate && ONLY_FOR_REFS=1 make -j4 book-code_docs books
 
         - run:
             name: Compile all books again to get cross references
             command: |
-                make -j4 book-code_docs books
+                make clean
+                . deploy/bin/activate && make -j4 book-code_docs books
 
         - run:
             name: Create index of webpage
             command: |
-              make summaries
+                make summaries
+
+        - run:
+            name: Link check
+            command: |
+                 . deploy/bin/activate && make linkcheck2 || true
 
         - run:
             when: always

@@ -47,7 +47,7 @@ If everything is looking good then push the `START` button on the joystick and y
 
 The robot operation should look like [this](https://photos.app.goo.gl/AirDLHRXUiImuX7x1)
 
-Follow the instructions [here](#record-log) to take a **minimal** log of at least 5 mins of uninterrupted robot autonomous function.
+Follow the instructions [here](+opmanual_duckiebot#record-log) to take a **minimal** log of at least 5 mins of uninterrupted robot autonomous function.
 
 
 <div class="only-montreal" markdown="1">
@@ -87,7 +87,7 @@ turn_forward:
 
 to make it more reliably traverse the intersections.
 
-Follow the instructions [here](#record-log) to take a **minimal**. You may use the `BACK` button to stop it from crashing and then return it to autonomous mode with the `START` button.
+Follow the instructions [here](+opmanual_duckiebot#record-log) to take a **minimal**. You may use the `BACK` button to stop it from crashing and then return it to autonomous mode with the `START` button.
 
 <div class="only-montreal" markdown="1">
 Upload [here](https://www.dropbox.com/request/eMEScDXEhB7KI1TqOGjg)

@@ -1,3 +1,52 @@
-[submodule "mcdp"]
-	path = mcdp
-	url = git@github.com:AndreaCensi/mcdp.git
+
+[submodule "docs-dockumentation"]
+	path = docs/docs-duckumentation
+	url = git@github.com:duckietown/docs-duckumentation.git
+
+[submodule "docs-AIDO"]
+	path = docs/docs-AIDO
+	url = git@github.com:duckietown/docs-AIDO.git
+
+[submodule "docs-opmanual_duckietown"]
+	path = docs/docs-opmanual_duckietown
+	url = git@github.com:duckietown/docs-opmanual_duckietown.git
+
+[submodule "docs-opmanual_duckiebot"]
+	path = docs/docs-opmanual_duckiebot
+	url = git@github.com:duckietown/docs-opmanual_duckiebot.git
+
+
+[submodule "resources"]
+	path = docs/resources
+	url = https://github.com/duckietown/docs-resources.git
+
+[submodule "doc-template"]
+	path = docs/doc-template
+	url = git@github.com:duckietown/docs-template.git
+[submodule "docs-duckietown_high_school"]
+	path = docs/docs-duckietown_high_school
+	url = git@github.com:duckietown/docs-duckietown_high_school.git
+[submodule "docs-exercises"]
+	path = docs/docs-exercises
+	url = git@github.com:duckietown/docs-exercises.git
+[submodule "docs-guide_for_instructors"]
+	path = docs/docs-guide_for_instructors
+	url = git@github.com:duckietown/docs-guide_for_instructors.git
+[submodule "docs-learning_materials"]
+	path = docs/docs-learning_materials
+	url = git@github.com:duckietown/docs-learning_materials.git
+[submodule "docs-preliminaries"]
+	path = docs/docs-preliminaries
+	url = git@github.com:duckietown/docs-preliminaries.git
+[submodule "docs-software_architecture"]
+	path = docs/docs-software_architecture
+	url = git@github.com:duckietown/docs-software_architecture.git
+[submodule "docs-software_devel"]
+	path = docs/docs-software_devel
+	url = git@github.com:duckietown/docs-software_devel.git
+[submodule "docs-software_reference"]
+	path = docs/docs-software_reference
+	url = git@github.com:duckietown/docs-software_reference.git
+[submodule "docs-the_duckietown_project"]
+	path = docs/docs-the_duckietown_project
+	url = git@github.com:duckietown/docs-the_duckietown_project.git

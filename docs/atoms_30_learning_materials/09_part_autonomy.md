@@ -1,3 +1,0 @@
-# Autonomy {#part:autonomy}
-
-

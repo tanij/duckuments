@@ -20,7 +20,7 @@ See: [](#git-policy-homeworks)
 
 ## Pick your Poison
 
-This homework is about filtering. Either replace the existing histogram lane filter with either an [Extended Kalman Filter](#exercise-filtering-ekf) **or** a [Particle Filter](#exercise-filtering-pf). If you do both you will get a bonus.
+This homework is about filtering. Either replace the existing histogram lane filter with either an [Extended Kalman Filter](+exercises#exercise-filtering-ekf) **or** a [Particle Filter](+exercises#exercise-filtering-pf). If you do both you will get a bonus.
 
 ## Setup instructions
 

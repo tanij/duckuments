@@ -38,7 +38,7 @@ In the documentation, this is referred to as `DUCKIETOWN_ROOT`.
 
 During the first part of the class, you will only read from this repository.
 
-### Duckiefleet 
+### Duckiefleet
 
 The [duckiefleet](http://github.com/duckietown/duckiefleet)
 repository contains the data specific to this instance of the class.
@@ -52,7 +52,7 @@ In the documentation, the location of this repo is referred to as `DUCKIEFLEET_R
 You will be asked to write to this repository, to update the robot DB
 and the people DB, and for doing exercises.
 
-### exercises-fall2017 
+### exercises-fall2017
 
 For homework submissions, we will use the following URL:
 
@@ -151,7 +151,7 @@ You should put your homework files in folder at:
 
     ![DUCKIEFLEET_HOMEWORK_ROOT]/homeworks/![XX_homework_name]/![YOUR_ROBOT_NAME]
 
-Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](#sec:ros-python-howto). For an example see `![DUCKIEFLEET_HOMEWORK_ROOT]/homeworks/01_data_processing/shamrock`.
+Some homeworks might not require ROS, they should go in a subfolder called `scripts`. ROS homeworks should go in packages which are generated using the process described here: [](+software_devel#ros-python-howto). For an example see `![DUCKIEFLEET_HOMEWORK_ROOT]/homeworks/01_data_processing/shamrock`.
 
 
 Note: To make your ROS packages findable by ROS you should add a symlink from your `![DUCKIEFLEET_HOMEWORK_ROOT]` to `duckietown/catkin_ws/src`.
@@ -191,7 +191,7 @@ We will ask to create a "Pull Request" from your private repo.
 
 
 
-### For U de M students who have already submitted homework to the previous duckiefleet-2017 repo 
+### For U de M students who have already submitted homework to the previous duckiefleet-2017 repo
 
 <div class='only-montreal' markdown="1">
 

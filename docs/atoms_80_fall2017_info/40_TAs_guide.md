@@ -34,7 +34,7 @@ Note that many of these are not sequential and can be done in parallel.
 
 Read about Duckietown's history; watch the Duckumentary.
 
-See: [](#duckietown-project)
+See: [](+the_duckietown_project#duckietown-project)
 
 ### Online accounts
 
@@ -54,13 +54,13 @@ Point of Contact: [Kirsten Bowser](mailto:akbowser@gmail.com)
 Install Ubuntu 16.04 on your laptop,
 and then install ROS, Atom, Liclipse, etc.
 
-See: [](#setup-laptop)
+See: [](+opmanual_duckiebot#setup-laptop)
 
 ### Duckuments
 
 Install the Duckuments system, so you can edit these instructions.
 
-See: [](#book:contribute).
+See: [](+duckumentation#contribute).
 
 Point of Contact: Andrea
 
@@ -79,7 +79,7 @@ Point of Contact: Liam?
 
 Understand the continuous integration system.
 
-See: [Documentation on continuous integration](#continuous-integration).
+See: [Documentation on continuous integration](+software_devel#continuous-integration).
 
 Point of Contact: Andrea
 
@@ -87,7 +87,7 @@ Point of Contact: Andrea
 
 Build your Duckiebot according to the instructions.
 
-See: [](#building-duckiebot-c0)
+See: [](+opmanual_duckiebot#building-duckiebot-c0)
 
 
 Point of Contact: Shiying (ETH)

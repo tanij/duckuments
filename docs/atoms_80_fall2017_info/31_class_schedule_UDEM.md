@@ -16,11 +16,11 @@ Slides:
 
 Book materials:
 
-* [](#duckietown-project)
+* [](+the_duckietown_project#duckietown-project)
 
-* [](#autonomous-vehicles)
+* [](+learning_materials#autonomous-vehicles)
 
-* [](#autonomy-overview)
+* [](+learning_materials#autonomy-overview)
 
 ## Friday Sept 8
 
@@ -87,15 +87,15 @@ Slides:
 
 Book Materials:
 
-* [Modern Robotic Systems](#modern-robotic-systems)
+* [Modern Robotic Systems](+learning_materials#modern-robotic-systems)
 
-* [System Architecture Basics](#system-architectures-basics)
+* [System Architecture Basics](+learning_materials#system-architectures-basics)
 
-* [Autonomy Architectures](#autonomy-architectures)
+* [Autonomy Architectures](+learning_materials#autonomy-architectures)
 
-* [Representations](#representations)
+* [Representations](+preliminaries#representations)
 
-* [Probability Basics](#probability_basics)
+* [Probability Basics](+preliminaries#probability_basics)
 
 Lab (11:30 - 12:30)
 
@@ -119,9 +119,9 @@ Slides:
 
 Book Materials:
 
-* [Introduction to ROS](#introduction_to_ros)
+* [Introduction to ROS](+software_reference#introduction_to_ros)
 
-* [Middlewares](#middleware)
+* [Middlewares](+learning_materieals#middleware)
 
 
 Lab (12:30 - 1:30)
@@ -186,11 +186,11 @@ Slides:
 
 Book Material:
 
-* [](#coordinate_systems)
+* [](+preliminaries#coordinate_systems)
 
-* [](#reference_frames)
+* [](+preliminaries#reference_frames)
 
-* [](#duckiebot-modeling)
+* [](+learning_materials#duckiebot-modeling)
 
 
 
@@ -204,13 +204,13 @@ Slides:
 
 Book Material:
 
-* [](#CV_basics)
+* [](+learning_materials#CV_basics)
 
-* [](#camera-geometry)
+* [](+learning_materials#camera-geometry)
 
-* [](#camera-calibration)
+* [](+learning_materials#camera-calibration)
 
-* [](#image-filtering)
+* [](+learning_materials#image-filtering)
 
 
 Lab (11:30 - 12:30) in AA 2333
@@ -225,9 +225,9 @@ Slides:
 
 Book Material:
 
-* [](#image-filtering)
+* [](+learning_materials#image-filtering)
 
-* [](#line_detection)
+* [](+learning_materials#line_detection)
 
 
 Lab (12:30 - 1:30) in AA 2333
@@ -328,7 +328,7 @@ Class 11:30-12:30
 
  - Motion Planning. [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pdf), [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pptx)
 
-[Checkoff Navigation](#checkoff_navigation) initiated. Deadline Nov 15 @ 11pm. 
+[Checkoff Navigation](+class_fall_2017#checkoff_navigation) initiated. Deadline Nov 15 @ 11pm. 
 
 ## Thursday Nov. 9
 

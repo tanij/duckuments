@@ -4,7 +4,7 @@
 
 Requires: [](#checkoff_take_a_log)
 
-Requires: [](#introduction_to_ros)
+Requires: [](+software_reference#introduction_to_ros)
 
 Result: Ability to perform basic operations on images
 
@@ -28,20 +28,20 @@ for instructions on how the homework should be submitted.
 
 ## Exercise: Basic image operations
 
-Complete [](#exercise-specifications)
+Complete [](+exercises#exercise-specifications)
 
 ## Exercise: Log decimation
 
-Complete [](#exercise-bag-in-out)
+Complete [](+exercises#exercise-bag-in-out)
 
 ## Exercise: Instagram filters
 
-Complete [](#exercise-instagram)
+Complete [](+exercises#exercise-instagram)
 
 ## Exercise: Live Instagram
 
-Complete [](#exercise-instagram-live)
+Complete [](+exercises#exercise-instagram-live)
 
 Call your package `dt-instagram-live_![robot name]` and call your node `dt-instagram-live_![robot name]`
 
-When you are done, take a 5min log (See [](#take-a-log))in Duckietown (2333 in Montreal) and upload [here](https://www.dropbox.com/request/0bESmFHuGHGNVBnce3XI)
+When you are done, take a 5min log (See [](+opmanual_duckiebot#take-a-log))in Duckietown (2333 in Montreal) and upload [here](https://www.dropbox.com/request/0bESmFHuGHGNVBnce3XI)

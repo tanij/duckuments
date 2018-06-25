@@ -2,9 +2,9 @@
 
 <div class='requirements' markdown='1'>
 
-Requires: [](#introduction_to_ros)
+Requires: [](+software_reference#introduction_to_ros)
 
-Requires: [](#camera-calib)
+Requires: [](+opmanual_duckiebot#camera-calib)
 
 Result: Ability to project fake things from an image back into the world
 
@@ -35,7 +35,7 @@ See: [](#git-policy-homeworks)
 
 ## Exercise: Augmented Reality
 
-Complete [](#exercise-augmented-reality).
+Complete [](+exercises#exercise-augmented-reality).
 
 <div class='only-zurich' markdown="1">
     Please hold on for Github instructions.

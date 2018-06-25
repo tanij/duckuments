@@ -39,8 +39,8 @@ The goal for the instructions is that anybody is able to follow them.
 Last year, we managed to have two 15-year-old students
 reproduce the Duckiebot from instructions.
 
-See: How to edit the documentation is explained in [](#book:contribute).
-In particular, the notation on how to insert a comment is explained in [](#notes-and-questions).
+See: How to edit the documentation is explained in [](+duckumentation#contribute).
+
 
 Note that because we use Git, we can always keep track of changes, and there is no risk of causing damage.
 
@@ -71,12 +71,12 @@ fixed and the addendum is deleted.
 
 ### Case: You find the instructions unclear and you need clarification
 
-Action: Ask for clarification on the appropriate Slack channel. For a list of slack channels that could be helpful see [](#slack_channels). Once the ambiguity is clarified to your satisfaction, either you or the appropriate staff member should update the documentation if appropriate. For instructions on this see [](#book:contribute).
+Action: Ask for clarification on the appropriate Slack channel. For a list of slack channels that could be helpful see [](#slack_channels). Once the ambiguity is clarified to your satisfaction, either you or the appropriate staff member should update the documentation if appropriate. For instructions on this see [](+duckumentation#contribute).
 
 ### Case: You understand the instructions but you are blocked for some reason
 
 Action: This is more serious than the previous.
-Open an issue [on the `duckiefleet-fall2017` github page](https://github.com/duckietown/duckiefleet-fall2017/issues). Once the issue is resolved, either you or the appropriate staff member should update the documentation if appropriate. For instructions on this see [](#book:contribute).
+Open an issue [on the `duckiefleet-fall2017` github page](https://github.com/duckietown/duckiefleet-fall2017/issues). Once the issue is resolved, either you or the appropriate staff member should update the documentation if appropriate. For instructions on this see [](+duckumentation#contribute).
 
 
 ### Case: You are having a technical issue related to building the documentation
