@@ -9,7 +9,13 @@ src=$2
 echo src = ${src}
 echo short = ${short}
 
-branch=`git -C ${src} rev-parse --abbrev-ref HEAD`
+
+if [ "$CI" = "" ]
+then
+   branch=`git -C ${src} rev-parse --abbrev-ref HEAD`
+else
+   branch=${CIRCLE_BRANCH}
+fi
 
 #toplevel=`git -C ${src} rev-parse --show-toplevel`
 #repo=`basename ${toplevel}`
@@ -17,7 +23,7 @@ branch=`git -C ${src} rev-parse --abbrev-ref HEAD`
 org=`git config --get remote.origin.url | cut -f2 -d":"  | cut -f1 -d/ | tr '[:upper:]' '[:lower:]'`
 
 repo=duckuments
-base=http://docs-branches.duckietown.org/${org}/${repo}/branch/${branch}
+base=https://docs-branches.duckietown.org/${org}/${repo}/branch/${branch}
 permalink_prefix=${base}/${short}/out
 
 #cross=${base}/all_crossref.html
@@ -96,6 +102,8 @@ ${IMAGE}"
 resources="docs/resources/common:docs/resources/templates/duckiebook1:${dist}"
 
 
+#--likebtn 5ae54e0d6fd08bb24f3a7fa1 \
+
 ${docker_run} mcdp-render-manual \
     --src "${src}" \
     --bookshort "${short}" \
@@ -104,7 +112,6 @@ ${docker_run} mcdp-render-manual \
     --stylesheet_pdf v_manual_blurb_ready \
     --wordpress_integration \
     --output_crossref "${dist}/${short}/crossref.html" \
-    --likebtn 5ae54e0d6fd08bb24f3a7fa1 \
     -o "out/${short}" \
     --permalink_prefix ${permalink_prefix} \
     ${options1} \

@@ -196,5 +196,7 @@ linkcheck1:
 	docker run --rm -it -u $(id -u):$(id -g) -v "$(PWD)":/mnt linkchecker/linkchecker --check-extern $(shell zsh -c "ls -1 duckuments-dist/**/out/index.html")
 
 linkcheck2:
-
-	linkchecker  --allow-root --check-extern $(shell zsh -c "ls -1 duckuments-dist/**/out/*.html") | tee duckuments-dist/linkchecker.txt
+	chmod go+rwX /root
+	chmod -R go+rwX /root/project
+	chmod -R go+rwX duckuments-dist
+	linkchecker --check-extern $(shell zsh -c "ls -1 duckuments-dist/**/out/*.html") | tee duckuments-dist/linkchecker.txt

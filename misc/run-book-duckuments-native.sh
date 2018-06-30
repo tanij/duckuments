@@ -6,20 +6,20 @@
 short=$1
 src=$2
 
-#if [ "$CI" = "" ]
-#then
-#   branch=`git -C ${src} rev-parse --abbrev-ref HEAD`
-#else
-#   branch=${CIRCLE_BRANCH}
-#fi
+if [ "$CI" = "" ]
+then
+   branch=`git -C ${src} rev-parse --abbrev-ref HEAD`
+else
+   branch=${CIRCLE_BRANCH}
+fi
 
-branch=`git -C ${src} rev-parse --abbrev-ref HEAD`
+#branch=`git -C ${src} rev-parse --abbrev-ref HEAD`
 #toplevel=`git -C ${src} rev-parse --show-toplevel`
 #repo=`basename ${toplevel}`
 org=`git config --get remote.origin.url | cut -f2 -d":"  | cut -f1 -d/ | tr '[:upper:]' '[:lower:]'`
 
 repo=duckuments
-base=http://docs-branches.duckietown.org/${org}/${repo}/branch/${branch}
+base=https://docs-branches.duckietown.org/${org}/${repo}/branch/${branch}
 echo base: ${base}
 
 
@@ -73,6 +73,7 @@ mkdir -p ${dist}
 NP=${PWD}/node_modules:${NODE_PATH}
 
 #source deploy/bin/activate
+#--likebtn 5ae54e0d6fd08bb24f3a7fa1 \
 
 DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --src ${src} \
@@ -83,7 +84,6 @@ DISABLE_CONTRACTS=1 NODE_PATH=${NP}  mcdp-render-manual \
     --symbols docs/symbols.tex \
     --wordpress_integration \
     --output_crossref ${dist}/${short}/crossref.html \
-    --likebtn 5ae54e0d6fd08bb24f3a7fa1 \
     -o out/${short} \
     --permalink_prefix ${permalink_prefix} \
     ${options1} \
