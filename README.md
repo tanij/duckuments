@@ -5,4 +5,5 @@ For installation instructions, see [the chapter "Contributing to the documentati
 in the current version of the Duckiebook][duckiebook].
 
 
-[duckiebook]:  http://docs.duckietown.org/duckumentation/out/
+[duckiebook]:  https://docs.duckietown.org/duckumentation/out/
+
