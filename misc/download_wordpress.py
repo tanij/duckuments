@@ -2,6 +2,7 @@
 import sys
 import traceback
 
+from dt_constants import AutoadminConstants
 from mcdp_docs import logger
 
 try:
@@ -25,7 +26,7 @@ try:
     for ID, user_login, display_name in cursor.fetchall():
         display_name = display_name.strip()
         id2user[ID] = user_login
-        user_url = 'https://www2.duckietown.org/community/pm_profile?uid=%s' % ID
+        user_url = AutoadminConstants.BASE_SITE + '/community/pm_profile?uid=%s' % ID
         users[user_login] = dict(name=display_name, user_url=user_url)
     #
     # print yaml.dump(id2user)
@@ -46,7 +47,7 @@ try:
         else:
             author = id2user[post_author]
 
-        url = 'http://www2.duckietown.org/?p=%s' % id_
+        url = AutoadminConstants.BASE_SITE + '/?p=%s' % id_
         id2post_name[id_] = post_name
         post_name2post[post_name] = dict(date=post_date, type=post_type,
                                          title=post_title, url=url, author=author, tags=[])
