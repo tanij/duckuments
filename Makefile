@@ -87,7 +87,8 @@ builds:
 	python -m mcdp_docs.sync_from_circle duckietown duckuments builds builds/duckuments.html
 
 db.related.yaml:
-	. deploy/bin/activate && misc/download_wordpress.py > $@
+	echo
+#	. deploy/bin/activate && misc/download_wordpress.py > $@
 
 checks: check-programs db.related.yaml
 
