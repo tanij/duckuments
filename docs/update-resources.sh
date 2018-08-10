@@ -30,7 +30,7 @@ targets="
 docs-AIDO
 docs-duckietown_high_school
 docs-exercises
-docs-guide_for_instructors\
+docs-guide_for_instructors
 docs-learning_materials
 docs-opmanual_duckiebot
 docs-opmanual_duckietown
