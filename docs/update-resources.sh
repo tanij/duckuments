@@ -26,24 +26,9 @@ set -x
 
 template=doc-template
 
-targets="
-docs-AIDO
-docs-duckietown_high_school
-docs-exercises
-docs-guide_for_instructors
-docs-learning_materials
-docs-opmanual_duckiebot
-docs-opmanual_duckietown
-docs-preliminaries
-docs-software_architecture
-docs-software_devel
-docs-software_reference
-docs-the_duckietown_project"
+targets=(docs-AIDO docs-duckietown_high_school docs-exercises docs-guide_for_instructors docs-learning_materials docs-opmanual_duckiebot docs-opmanual_duckietown docs-preliminaries docs-software_architecture docs-software_devel docs-software_reference docs-the_duckietown_project)
 
-
-#docs-duckumentation
-
-for a in "$(targets)"; do
+for a in $targets; do
 #    git -C "$a" remote set-url origin  git@github.com:duckietown/$NAME.git
     echo
     echo $a
