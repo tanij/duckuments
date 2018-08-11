@@ -26,7 +26,9 @@ set -x
 
 template=doc-template
 
-for a in docs-*; do
+targets=(docs-AIDO docs-duckietown_high_school docs-exercises docs-guide_for_instructors docs-learning_materials docs-opmanual_duckiebot docs-opmanual_duckietown docs-preliminaries docs-software_architecture docs-software_devel docs-software_reference docs-the_duckietown_project)
+
+for a in $targets; do
 #    git -C "$a" remote set-url origin  git@github.com:duckietown/$NAME.git
     echo
     echo $a
@@ -40,10 +42,6 @@ for a in docs-*; do
     git -C "$a" add .circleci README.md .gitignore .gitattributes book
 
 #    git -C "$a" pull
-    git -C "$a" commit -am "no message"
+    git -C "$a" commit -am "Updating boilerplate from \`doc-template\`."
     # git -C "$a" push
 done
-
-
-#NAME=docs-opmanual_duckiebot
-#git submodule add --name $NAME git@github.com:duckietown/$NAME.git $NAME
