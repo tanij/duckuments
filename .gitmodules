@@ -16,10 +16,6 @@
 	url = git@github.com:duckietown/docs-opmanual_duckiebot.git
 
 
-[submodule "resources"]
-	path = docs/resources
-	url = https://github.com/duckietown/docs-resources.git
-
 [submodule "doc-template"]
 	path = docs/doc-template
 	url = git@github.com:duckietown/docs-template.git
@@ -50,3 +46,6 @@
 [submodule "docs-the_duckietown_project"]
 	path = docs/docs-the_duckietown_project
 	url = git@github.com:duckietown/docs-the_duckietown_project.git
+[submodule "resource2http"]
+	path = docs/resources
+	url = https://github.com/AndreaCensi/docs-resources2.git
