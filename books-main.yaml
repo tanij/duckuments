@@ -1,0 +1,180 @@
+groups:
+  !!omap
+  - base:
+      title: Information about the project
+
+      abstract: |
+          This is general information about the project
+          and how to contribute to it.
+
+      books: !!omap
+
+          - the_duckietown_project:
+              repo: duckietown/docs-the_duckietown_project
+              title: The Duckietown Project
+              abstract: |
+                  Learn about the history and current status.
+
+          - AIDO:
+              repo: duckietown/docs-AIDO
+              title: The AI Driving Olympics
+              abstract: |
+                  Learn about the 2018 competition at NIPS.
+
+          - guide_for_instructors:
+              repo: duckietown/docs-guide_for_instructors
+              title: Guide for instructors
+
+          - duckumentation:
+              repo: duckietown/docs-duckumentation
+              title: Contributing to the documentation
+
+
+  - tech:
+      title: Operation manuals
+
+      abstract: |
+
+          These are the operation manuals.
+
+      books: !!omap
+
+          - opmanual_duckiebot:
+              repo: duckietown/docs-opmanual_duckiebot
+              title: Duckiebot manual
+
+          - opmanual_duckietown:
+              repo: duckietown/docs-opmanual_duckietown
+              title: Duckietown manual
+
+          - software_reference:
+              repo: duckietown/docs-software_reference
+              title: Reference for useful commands
+
+  - SW:
+      title: Software development
+
+      books: !!omap
+          - software_architecture:
+              repo: duckietown/docs-software_architecture
+              title: Duckietown software architecture
+
+          - software_devel:
+              repo: duckietown/docs-software_devel
+              title: Software development in Duckietown
+
+          - code_docs:
+              title: Packages documentation
+
+
+  - theory:
+      title: Class materials
+
+      books: !!omap
+
+          - learning_materials:
+              repo: duckietown/docs-learning_materials
+              title: Learning materials
+
+          - exercises:
+              repo: duckietown/docs-exercises
+              title: Exercises
+
+          - preliminaries:
+              repo: duckietown/docs-preliminaries
+              title: Preliminaries
+
+
+  - fall2017:
+      title: Past editions
+      books: !!omap
+
+          - class_fall2017:
+              title: Fall 2017
+
+          - class_fall2017_projects:
+              title: Fall 2017 projects
+
+  - misc:
+      title: Miscellanea
+
+      abstract: |
+          Other content
+
+      books: !!omap
+          - drafts:
+              title: Drafts
+
+          - deprecated:
+              title: Deprecated
+
+header: |
+
+  <?php header1() ?>
+
+  <style>
+  h1 {
+  margin-left: 3em;
+  margin-top: 2em;
+  }
+  section {
+  padding-left: 3em;
+  font-family: Georgia;
+  }
+
+  table {
+  margin-bottom: 3em;
+  }
+
+  td.repo {
+  font-family: monospace;
+  }
+
+  tr.group {
+   font-weight: bold;
+   font-size: larger;
+  }
+  tr.group td {
+    padding-top: 1em;
+  }
+
+  tr:not(.group) td:first-child {
+      padding-left: 1em;
+  }
+
+  td  a {
+  text-decoration: none;
+  }
+
+    .branch-indicator {
+        font-family: monospace;
+        margin-left: 2em;
+    }
+
+  .success { color: green; }
+  .queued { color: blue; }
+  .canceled { color: gray; }
+  .failed { color: red; }
+  .no_tests { color: red; }
+  .timedout { color: red; }
+  .completed_no_output { color: red; }
+
+  </style>
+
+  <h1>Duckietown library</h1>
+
+footer: |
+
+
+head: |
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+#
+# 'success': 'Success',
+#     'queued': 'Queued',
+#     'canceled': 'Canceled',
+#     'failed': 'Failed',
+#     'no_tests': 'No tests',
+#     'timedout': 'Timed out',
+#     'completed_no_output': 'No artefacts',

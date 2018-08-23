@@ -1,0 +1,100 @@
+groups:
+  !!omap
+  - brown:
+      title: Brown - Fall 2018
+
+      abstract: |
+          
+
+      books: !!omap
+
+          - doc-sky:
+              repo: duckietown/docs-brown
+              title: Brown Fall 2018
+              abstract: |
+                  
+
+          - opmanual_sky:
+              repo: duckietown/docs-opmanual_sky
+              title: Operation manual
+
+  - base:
+      title: General Duckietown info
+      abstract: |
+        
+      books: !!omap
+          - duckumentation:
+              repo: duckietown/docs-duckumentation
+              title: Contributing to the documentation
+
+
+header: |
+
+  <?php header1() ?>
+
+  <style>
+  h1 {
+  margin-left: 3em;
+  margin-top: 2em;
+  }
+  section {
+  padding-left: 3em;
+  font-family: Georgia;
+  }
+
+  table {
+  margin-bottom: 3em;
+  }
+
+  td.repo {
+  font-family: monospace;
+  }
+
+  tr.group {
+   font-weight: bold;
+   font-size: larger;
+  }
+  tr.group td {
+    padding-top: 1em;
+  }
+
+  tr:not(.group) td:first-child {
+      padding-left: 1em;
+  }
+
+  td  a {
+  text-decoration: none;
+  }
+
+    .branch-indicator {
+        font-family: monospace;
+        margin-left: 2em;
+    }
+
+  .success { color: green; }
+  .queued { color: blue; }
+  .canceled { color: gray; }
+  .failed { color: red; }
+  .no_tests { color: red; }
+  .timedout { color: red; }
+  .completed_no_output { color: red; }
+
+  </style>
+
+  <h1>Duckietown library</h1>
+
+footer: |
+
+
+head: |
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+
+
+#
+# 'success': 'Success',
+#     'queued': 'Queued',
+#     'canceled': 'Canceled',
+#     'failed': 'Failed',
+#     'no_tests': 'No tests',
+#     'timedout': 'Timed out',
+#     'completed_no_output': 'No artefacts',
