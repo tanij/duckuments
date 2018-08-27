@@ -40,7 +40,7 @@ for a in docs-*; do
     git -C "$a" add .circleci README.md .gitignore .gitattributes book
 
 #    git -C "$a" pull
-    git -C "$a" commit -am "no message"
+    git -C "$a" commit -am "updating boilerplate"
     # git -C "$a" push
 done
 
