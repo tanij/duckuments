@@ -47,9 +47,9 @@ groups:
               repo: duckietown/docs-opmanual_duckietown
               title: Duckietown manual
           
-            #- robotarium:
-            #  repo: duckietown/robotariusm
-            #  title: Robotarium 
+          - robotarium:
+              repo: duckietown/robotariusm
+              title: Robotarium 
 
           - software_reference:
               repo: duckietown/docs-software_reference
