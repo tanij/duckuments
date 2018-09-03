@@ -48,7 +48,7 @@ groups:
               title: Duckietown manual
           
           - robotarium:
-              repo: duckietown/robotariusm
+              repo: duckietown/docs-robotarium
               title: Robotarium 
 
           - software_reference:
@@ -93,10 +93,12 @@ groups:
       title: Past editions
       books: !!omap
 
-          - class_fall2017:
-              title: Fall 2017
+          - fall2017_info:
+              repo: duckietown/docs-fall2017_info
+              title: Fall 2017 
 
-          - class_fall2017_projects:
+          - fall2017_projects:
+              repo: duckietown/docs-fall2017_projects
               title: Fall 2017 projects
 
   - misc:
