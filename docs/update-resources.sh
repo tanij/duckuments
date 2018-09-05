@@ -26,7 +26,7 @@ set -x
 
 template=doc-template
 
-targets=(docs-AIDO docs-duckietown_high_school docs-exercises docs-guide_for_instructors docs-learning_materials docs-opmanual_duckiebot docs-opmanual_duckietown docs-preliminaries docs-software_architecture docs-software_devel docs-software_reference docs-the_duckietown_project)
+targets=(docs-fall2017_info docs-fall2017_projects docs-AIDO docs-duckietown_high_school docs-exercises docs-guide_for_instructors docs-learning_materials docs-opmanual_duckiebot docs-opmanual_duckietown docs-preliminaries docs-software_architecture docs-software_devel docs-software_reference docs-the_duckietown_project)
 
 for a in $targets; do
 #    git -C "$a" remote set-url origin  git@github.com:duckietown/$NAME.git
@@ -37,11 +37,9 @@ for a in $targets; do
     cp ${template}/.gitignore $a/
     cp ${template}/README.md $a/
     cp ${template}/Makefile $a/
+    mkdir -p $a/.circleci
     cp ${template}/.circleci/config.yml $a/.circleci/
 
-    git -C "$a" add .circleci README.md .gitignore .gitattributes book
-
-#    git -C "$a" pull
-    git -C "$a" commit -am "Updating boilerplate from \`doc-template\`."
-    # git -C "$a" push
+    #git -C "$a" add .circleci README.md .gitignore .gitattributes book
+    #git -C "$a" commit -am "Updating boilerplate from \`doc-template\`."
 done

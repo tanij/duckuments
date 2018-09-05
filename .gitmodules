@@ -58,3 +58,9 @@
 [submodule "docs-opmanual_sky"]
 	path = docs/docs-opmanual_sky
 	url = https://github.com/AndreaCensi/docs-opmanual_sky.git
+[submodule "docs/docs-fall2017_info"]
+	path = docs/docs-fall2017_info
+	url = git@github.com:duckietown/docs-fall2017_info.git
+[submodule "docs/docs-fall2017_projects"]
+	path = docs/docs-fall2017_projects
+	url = git@github.com:duckietown/docs-fall2017_projects.git

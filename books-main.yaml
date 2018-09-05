@@ -1,92 +1,92 @@
 groups:
   !!omap
-  - base:
-      title: Information about the project
+  # - base:
+  #     title: Information about the project
 
-      abstract: |
-          This is general information about the project
-          and how to contribute to it.
+  #     abstract: |
+  #         This is general information about the project
+  #         and how to contribute to it.
 
-      books: !!omap
+  #     books: !!omap
 
-          - the_duckietown_project:
-              repo: duckietown/docs-the_duckietown_project
-              title: The Duckietown Project
-              abstract: |
-                  Learn about the history and current status.
+  #         - the_duckietown_project:
+  #             repo: duckietown/docs-the_duckietown_project
+  #             title: The Duckietown Project
+  #             abstract: |
+  #                 Learn about the history and current status.
 
-          - AIDO:
-              repo: duckietown/docs-AIDO
-              title: The AI Driving Olympics
-              abstract: |
-                  Learn about the 2018 competition at NIPS.
+  #         - AIDO:
+  #             repo: duckietown/docs-AIDO
+  #             title: The AI Driving Olympics
+  #             abstract: |
+  #                 Learn about the 2018 competition at NIPS.
 
-          - guide_for_instructors:
-              repo: duckietown/docs-guide_for_instructors
-              title: Guide for instructors
+  #         - guide_for_instructors:
+  #             repo: duckietown/docs-guide_for_instructors
+  #             title: Guide for instructors
 
-          - duckumentation:
-              repo: duckietown/docs-duckumentation
-              title: Contributing to the documentation
+  #         - duckumentation:
+  #             repo: duckietown/docs-duckumentation
+  #             title: Contributing to the documentation
 
 
-  - tech:
-      title: Operation manuals
+  # - tech:
+  #     title: Operation manuals
 
-      abstract: |
+  #     abstract: |
 
-          These are the operation manuals.
+  #         These are the operation manuals.
 
-      books: !!omap
+  #     books: !!omap
 
-          - opmanual_duckiebot:
-              repo: duckietown/docs-opmanual_duckiebot
-              title: Duckiebot manual
+  #         - opmanual_duckiebot:
+  #             repo: duckietown/docs-opmanual_duckiebot
+  #             title: Duckiebot manual
 
-          - opmanual_duckietown:
-              repo: duckietown/docs-opmanual_duckietown
-              title: Duckietown manual
+  #         - opmanual_duckietown:
+  #             repo: duckietown/docs-opmanual_duckietown
+  #             title: Duckietown manual
           
-          - robotarium:
-              repo: duckietown/docs-robotarium
-              title: Robotarium 
+  #         - robotarium:
+  #             repo: duckietown/docs-robotarium
+  #             title: Robotarium 
 
-          - software_reference:
-              repo: duckietown/docs-software_reference
-              title: Reference for useful commands
+  #         - software_reference:
+  #             repo: duckietown/docs-software_reference
+  #             title: Reference for useful commands
 
-  - SW:
-      title: Software development
+  # - SW:
+  #     title: Software development
 
-      books: !!omap
-          - software_architecture:
-              repo: duckietown/docs-software_architecture
-              title: Duckietown software architecture
+  #     books: !!omap
+  #         - software_architecture:
+  #             repo: duckietown/docs-software_architecture
+  #             title: Duckietown software architecture
 
-          - software_devel:
-              repo: duckietown/docs-software_devel
-              title: Software development in Duckietown
+  #         - software_devel:
+  #             repo: duckietown/docs-software_devel
+  #             title: Software development in Duckietown
 
-          - code_docs:
-              title: Packages documentation
+  #         - code_docs:
+  #             title: Packages documentation
 
 
-  - theory:
-      title: Class materials
+  # - theory:
+  #     title: Class materials
 
-      books: !!omap
+  #     books: !!omap
 
-          - learning_materials:
-              repo: duckietown/docs-learning_materials
-              title: Learning materials
+  #         - learning_materials:
+  #             repo: duckietown/docs-learning_materials
+  #             title: Learning materials
 
-          - exercises:
-              repo: duckietown/docs-exercises
-              title: Exercises
+  #         - exercises:
+  #             repo: duckietown/docs-exercises
+  #             title: Exercises
 
-          - preliminaries:
-              repo: duckietown/docs-preliminaries
-              title: Preliminaries
+  #         - preliminaries:
+  #             repo: duckietown/docs-preliminaries
+  #             title: Preliminaries
 
 
   - fall2017:
