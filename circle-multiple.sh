@@ -11,8 +11,13 @@ source deploy/bin/activate
 limit=15
 
 book1=books-main.yaml
-out1=/mnt/builds-fork/books2
-python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit}
+out1=/mnt/builds-fork/docs-stable.duckietown.org/DT18
+branches=master18:master
+python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
+
+out1=/mnt/builds-fork/docs-stable.duckietown.org/DT17
+branches=master17:master
+python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
 
 #book2=books-brown.yaml
 #out2=/mnt/builds-fork/books-brown
