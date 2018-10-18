@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Duckietown at Brown"
+AuthUserFile /mnt/builds-fork/books-brown/.htpasswd
+Require valid-user
+

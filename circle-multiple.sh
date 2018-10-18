@@ -15,6 +15,7 @@ out1=/mnt/builds-fork/docs-stable.duckietown.org/DT18
 branches=master18:master
 python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
 
+book1=books-DT17.yaml
 out1=/mnt/builds-fork/docs-stable.duckietown.org/DT17
 branches=master17:master
 python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
