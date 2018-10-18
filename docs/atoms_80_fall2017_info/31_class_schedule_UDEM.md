@@ -328,7 +328,7 @@ Class 11:30-12:30
 
  - Motion Planning. [(pdf)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pdf), [(pptx)](https://github.com/duckietown/lectures/blob/master/2_given/2017-11-08-udem-motion_planning.pptx)
 
-[Checkoff Navigation](+class_fall_2017#checkoff_navigation) initiated. Deadline Nov 15 @ 11pm. 
+[Checkoff Navigation](+fall2017_info#checkoff_navigation) initiated. Deadline Nov 15 @ 11pm. 
 
 ## Thursday Nov. 9
 
