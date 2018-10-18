@@ -1,118 +1,382 @@
+groups:
+  !!omap
+  - base:
+      title: Information about the project
 
-input: out/fall2017/data/master.html
+      abstract: |
+          This is general information about the project
+          and how to contribute to it.
 
+      books: !!omap
 
-recipe:
-- toc # magic word for toc
+          - the_duckietown_project:
+              repo: duckietown/docs-the_duckietown_project
+              title: The Duckietown Project
+              abstract: |
+                  Learn about the history and current status.
 
-- add: fall-2017
-  except:
-  - checkoff_assembly_configuration
-  - checkoff_take_a_log
-  - homework-data-processing-udem
-  - homework-data-processing-ttic
-  - checkoff_calibration
-  - zurich-data-processing-exercises
-  - homework-augmented-reality
-  - checkoff_navigation
-  - homework-lane-filtering
-
-# This syntax is invalid YAML
-# - add: fall-2017
-#   except: checkoff_assembly_configuration
-#   except: checkoff_take_a_log
-#   except: homework-data-processing
-
-# You cannot include the same unit twice - indexing
-# gets all confused. In this case, checkoff_assembly_configuration is already
-# part of "fall-2017" above.
-- make-part: homeworks
-  title: Fall 2017 Checkoffs and Homeworks
-  contents:
-  - add: checkoff_assembly_configuration
-  - add: checkoff_take_a_log
-  - add: homework-data-processing-udem
-  - add: homework-data-processing-ttic
-  - add: homework-augmented-reality
-  - add: checkoff_calibration
-  - add: zurich-data-processing-exercises
-  - add: checkoff_navigation
-  - add: homework-lane-filtering
+          - duckumentation:
+              repo: duckietown/docs-duckumentation
+              title: Contributing to the documentation
 
 
-- add: duckietown-project
-- add: contribute
+  - tech:
+      title: Operation manuals
 
-- make-part: exercises
-  title: Exercises
-  contents:
-  - add: exercise-specifications
-  - add: exercise-bag-analysis
-  - add: exercise-bag-in-out
-  - add: exercise-bag-images
-  - add: exercise-instagram
-  - add: exercise-bag-mirror
-  - add: exercise-instagram-live
-  - add: exercise-augmented-reality
-  - add: exercise-filtering-ekf
-  - add: exercise-filtering-pf
+      abstract: |
 
-- make-part: theory-background
-  title: Theory Background
-  contents:
-  - add: probability_basics
-  - add: linear_algebra
+          These are the operation manuals.
+
+      books: !!omap
+
+          - opmanual_duckiebot:
+              repo: duckietown/docs-opmanual_duckiebot
+              title: Duckiebot manual
+
+          - opmanual_duckietown:
+              repo: duckietown/docs-opmanual_duckietown
+              title: Duckietown manual
+
+          - software_reference:
+              repo: duckietown/docs-software_reference
+              title: Reference for useful commands
+
+  - SW:
+      title: Software development
+
+      books: !!omap
+          - software_architecture:
+              repo: duckietown/docs-software_architecture
+              title: Duckietown software architecture
+
+          - software_devel:
+              repo: duckietown/docs-software_devel
+              title: Software development in Duckietown
+
+          - code_docs:
+              title: Packages documentation
 
 
-- make-part: intro-to-autonomy
-  title: Introduction to autonomy
-  contents:
-  - add: autonomous-vehicles
-  - add: autonomy-overview
-  - add: modern-robotic-systems
-  - add: autonomy-architectures
-  - add: representations
-  - add: duckiebot-modeling
-  - add: CV_basics
-  - add: camera-geometry
-  - add: camera-calibration
-  - add: image-filtering
+  - theory:
+      title: Class materials
 
-- make-part: reference
-  title: Reference Material
-  contents:
-  - add: configuration-management
-  - add: introduction_to_ros
-  - add: pytorch-install
+      books: !!omap
 
-# Add the entire part
-- add: building-duckiebot-c0
-  except: # except wheel-calibration
-  - duckiebot-ubuntu-image
-  - wheel-calibration
-  - soldering-boards-c0
-  # - acquiring-parts-c0
+          - learning_materials:
+              repo: duckietown/docs-learning_materials
+              title: Learning materials
 
-- add: building-duckiebot-c1
+          - exercises:
+              repo: duckietown/docs-exercises
+              title: Exercises
 
-- make-part: appendix
-  title: Appendix
-  contents:
-  - add: bibliography
-  - add: last-modified
+          - preliminaries:
+              repo: duckietown/docs-preliminaries
+              title: Preliminaries
 
-- add: fall-2017-projects
 
-purl_prefix: http://purl.org/dt/fall2017/
+  - fall2017:
+      title: Current edition
+      books: !!omap
 
-# Removes the sections that have status equal to draft
-remove_status: [draft]
-# remove_status: [] # don't remove anything
-# remove_status: [draft, beta] # remove draft and beta
+          - fall2017_info:
+              repo: duckietown/docs-fall2017_info
+              title: Fall 2017
 
-# if show_removed is true, the removed sections names are kept in the output
-# otherwise they disappear completely
-# show_removed: true
-show_removed: true
+          - fall2017_projects:
+              repo: duckietown/docs-fall2017_projects
+              title: Fall 2017 projects
 
-output: out/fall2017/data/duckiebook.html
+  - misc:
+      title: Miscellanea
+
+      abstract: |
+          Other content
+
+      books: !!omap
+          - drafts:
+              title: Drafts
+
+          - deprecated:
+              title: Deprecated
+
+header: |
+
+
+
+
+  <style>
+  td { padding: 0; margin: 0; }
+  td {
+  vertical-align: top;
+  padding-left: 1em;
+  padding-right: 1em;
+  }
+  h1 {
+  margin-left: 3em;
+  margin-top: 2em;
+  }
+  section {
+  padding-left: 3em;
+  font-family: Georgia;
+  }
+
+  #maintable {
+  margin-bottom: 3em;
+  }
+
+  td.repo {
+  font-family: monospace;
+  }
+
+  tr.group {
+   font-weight: bold;
+   font-size: larger;
+  }
+  tr.group > td {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  tr:not(.group) td {
+      margin-left: 1em;
+  }
+
+  td  a {
+  text-decoration: none;
+  }
+
+    .branch-indicator {
+        font-family: monospace;
+        margin-left: 2em;
+    }
+
+  .success { color: green; }
+  .queued { color: blue; }
+  .canceled { color: gray; }
+  .failed { color: red; }
+  .no_tests { color: red; }
+  .timedout { color: red; }
+  .completed_no_output { color: red; }
+
+  </style>
+
+  <h1>Duckietown library</h1>
+
+footer: |
+
+
+head: |
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <script>
+        /**
+       * timesince is a live-updating implementation of Django's timesince filter
+       * in jQuery.
+       *
+       * This will automatically keep the timestamps updated as the page
+       * is opened, instead of showing the time as it was when the page was rendered.
+       * This is a better user experience, and also helps with caching (both
+       * browser and server-side).
+       *
+       * This is based both on Django's timesince filter
+       * (http://www.djangoproject.com/), and parts of Ryan McGeary's timeago
+       * jQuery plugin (http://timeago.yarp.com/).
+       *
+       * See https://github.com/chipx86/jquery-timesince for the latest.
+       *
+       * @name timesince
+       * @version 0.2
+       * @requires jQuery v1.2.3+
+       * @author Christian Hammond
+       * @license MIT License - http://www.opensource.org/licenses/mit-license.php
+       *
+       * Copyright (c) 2012, Christian Hammond (chipx86@chipx86.com)
+       * Copyright (c) 2013, Beanbag, Inc.
+       */
+      (function(factory) {
+          if (typeof define === 'function' && define.amd) {
+              // AMD. Register as anonymous module.
+              define(['jquery'], factory);
+          } else {
+              // Browser globals.
+              factory(jQuery);
+          }
+      }(function($) {
+          $.timesince = function(timestamp) {
+              if (timestamp instanceof Date) {
+                  return timeSince(timestamp);
+              } else if (typeof timestamp === 'string') {
+                  return timeSince($.timesince.parse(timestamp));
+              } else if (typeof timestamp === 'number') {
+                  return timeSince(new Date(timestamp));
+              } else {
+                  // It's an element.
+                  return timeSince($.timesince.datetime($(timestamp)));
+              }
+          };
+
+          $.extend($.timesince, {
+              options: {
+                refreshMs: 5000, // 1 minute
+                strings: {
+                    prefixAgo: null,
+                    prefixFromNow: null,
+                    suffixAgo: "",
+                    suffixFromNow: "",
+                    minute: "m",
+                    minutes: "m",
+                    second: "s",
+                    seconds: "s",
+                    hour: "h",
+                    hours: "h",
+                    day: "day",
+                    days: "days",
+                    week: "week",
+                    weeks: "weeks",
+                    month: "month",
+                    months: "months",
+                    year: "year",
+                    years: "years"
+                }
+            },
+            chunks: [
+                [60 * 60 * 24 * 365, "year", "years"],
+                [60 * 60 * 24 * 30, "month", "months"],
+                [60 * 60 * 24 * 7, "week", "weeks"],
+                [60 * 60 * 24, "day", "days"],
+                [60 * 60, "hour", "hours"],
+                [60, "minute", "minutes"],
+                [1, "second", "seconds"],
+            ],
+
+              timeSince: function(deltaMs) {
+                  var strings = this.options.strings,
+                      seconds = Math.abs(deltaMs) / 1000,
+                      prefix,
+                      suffix,
+                      i;
+
+                  if (deltaMs < 0) {
+                      prefix = strings.prefixFromNow;
+                      suffix = strings.suffixFromNow;
+                  } else {
+                      prefix = strings.prefixAgo;
+                      suffix = strings.suffixAgo;
+                  }
+
+                  prefix = (prefix ? prefix + " " : "");
+                  suffix = (suffix ? " " + suffix : "");
+
+                  if (seconds < 60) {
+                      return prefix + "0 " + strings.minutes + suffix;
+                  }
+
+                  for (i = 0; i < this.chunks.length; i++) {
+                      var chunk = this.chunks[i],
+                          chunkSecs = chunk[0],
+                          count = Math.floor(seconds / chunkSecs);
+
+                      if (count != 0) {
+                          var s = prefix + this.getChunkText(chunk, count);
+
+                          if (i + 1 < this.chunks.length) {
+                              // Get the second item.
+                              var chunk2 = this.chunks[i + 1],
+                                  count2 = Math.floor(
+                                      (seconds - (chunkSecs * count)) / chunk2[0]);
+
+                              if (count2 != 0) {
+                                  s += ", " + this.getChunkText(chunk2, count2);
+                              }
+                          }
+
+                          return s + suffix;
+                      }
+                  }
+
+                  // We shouldn't have reached here.
+                  return ''
+              },
+              getChunkText: function(chunk, n) {
+                  var type = (n === 1 ? chunk[1] : chunk[2]);
+
+                  return n + " " + this.options.strings[type];
+              },
+              parse: function(iso8601) {
+                  var s = $.trim(iso8601);
+                  s = s.replace(/\.\d\d\d+/,""); // remove milliseconds
+                  s = s.replace(/-/,"/").replace(/-/,"/");
+                  s = s.replace(/T/," ").replace(/Z/," UTC");
+                  s = s.replace(/([\+\-]\d\d)\:?(\d\d)/," $1$2"); // -04:00 -> -0400
+                  return new Date(s);
+              },
+              datetime: function(el) {
+                  var iso8601 = this.isTime(el)
+                                ? el.attr("datetime")
+                                : el.attr("title");
+                  return this.parse(iso8601);
+              },
+              isTime: function(el) {
+                  // jQuery's `is()` doesn't play well with HTML5 in IE
+                  return el[0].tagName.toLowerCase() === "time";
+              }
+          });
+
+          $.fn.timesince = function(options) {
+              var self = this,
+                  timerCnx,
+                  refreshMs;
+
+              options = $.extend(options, $.timesince.options);
+              refreshMs = options.refreshMs;
+
+              if (refreshMs > 0) {
+                  timerCnx = setInterval(function() {
+                      self.each(function() {
+                          refresh($(this), timerCnx);
+                      });
+                  }, refreshMs);
+              }
+
+              return this.each(function() {
+                  var el = $(this),
+                      text = $.trim(el.text());
+
+                  el.data('timesince', {
+                      datetime: $.timesince.datetime(el)
+                  });
+
+                  if (text.length > 0 && (!$.timesince.isTime(el) ||
+                                          !el.attr("title"))) {
+                      el.attr("title", text);
+                  }
+
+                  refresh(el);
+              });
+          };
+
+          function refresh(el, timerCnx) {
+              var data = el.data('timesince');
+
+              if (data) {
+                  el.text($.timesince.timeSince(
+                      new Date().getTime() - data.datetime.getTime()));
+              } else {
+                  clearInterval(timerCnx);
+              }
+
+              return el;
+          }
+
+          // IE6 doesn't understand the <time> tag, so create it.
+          document.createElement("time");
+      }));</script>
+
+      <script>
+      $(document).ready(function() {
+          $("time.timesince").timesince();
+          $("span.timesince").timesince();
+      });
+      </script>
