@@ -8,9 +8,12 @@ source tokens.sh
 
 source deploy/bin/activate
 
-limit=15
+limit=25
 
 
 book2=books-brown.yaml
 out2=/mnt/builds-fork/books-brown
-python -m mcdp_docs.sync_from_circle_multiple --books ${book2} --base ${out2} --limit ${limit}
+
+D="docker run -it --env CIRCLE_TOKEN --env GITHUB_TOKEN -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
+
+$D python -m mcdp_docs.sync_from_circle_multiple --books ${book2} --base ${out2} --limit ${limit}
