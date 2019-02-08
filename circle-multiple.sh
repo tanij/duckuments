@@ -8,20 +8,14 @@ source tokens.sh
 
 source deploy/bin/activate
 
-<<<<<<< HEAD
-limit=25
-=======
 limit=35
->>>>>>> 5fe0faa8f762fc22749b0351cbdaa30df55039d6
 
 book1=books-main.yaml
 out1=/mnt/builds-fork/docs-stable.duckietown.org/DT18
 branches=master18:master
-<<<<<<< HEAD
-D="docker run -it --env CIRCLE_TOKEN --env GITHUB_TOKEN -v /mnt/builds-fork:/mnt/builds-fork -v $PWD:$PWD -w $PWD andreacensi/mcdp:1902-estetic"
-=======
-D="docker run -it --env CIRCLE_TOKEN --env GITHUB_TOKEN -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
->>>>>>> 5fe0faa8f762fc22749b0351cbdaa30df55039d6
+
+D="docker run -it --env CIRCLE_TOKEN --env GITHUB_TOKEN -v /mnt/builds-fork:/mnt/builds-fork -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
+
 
 $D python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
 
