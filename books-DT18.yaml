@@ -9,11 +9,11 @@ groups:
 
       books: !!omap
 
-          # - the_duckietown_project:
-          #     repo: duckietown/docs-the_duckietown_project
-          #     title: The Duckietown Project
-          #     abstract: |
-          #         Learn about the history and current status.
+          - the_duckietown_project:
+              repo: duckietown/docs-the_duckietown_project
+              title: The Duckietown Project
+              abstract: |
+                  Learn about the history and current status.
 
           - AIDO:
               repo: duckietown/docs-AIDO
@@ -21,98 +21,98 @@ groups:
               abstract: |
                   Learn about the 2018 competition at NIPS.
 
-          # - guide_for_instructors:
-          #     repo: duckietown/docs-guide_for_instructors
-          #     title: Guide for instructors
+          - guide_for_instructors:
+              repo: duckietown/docs-guide_for_instructors
+              title: Guide for instructors
 
-          # - duckumentation:
-          #     repo: duckietown/docs-duckumentation
-          #     title: Contributing to the documentation
+          - duckumentation:
+              repo: duckietown/docs-duckumentation
+              title: Contributing to the documentation
 
 
-  # - tech:
-  #     title: Operation manuals
+  - tech:
+      title: Operation manuals
 
-  #     abstract: |
+      abstract: |
 
-  #         These are the operation manuals.
+          These are the operation manuals.
 
-  #     books: !!omap
+      books: !!omap
 
-  #         - opmanual_duckiebot:
-  #             repo: duckietown/docs-opmanual_duckiebot
-  #             title: Duckiebot manual
+          - opmanual_duckiebot:
+              repo: duckietown/docs-opmanual_duckiebot
+              title: Duckiebot manual
 
-  #         - opmanual_duckietown:
-  #             repo: duckietown/docs-opmanual_duckietown
-  #             title: Duckietown manual
+          - opmanual_duckietown:
+              repo: duckietown/docs-opmanual_duckietown
+              title: Duckietown manual
           
-  #         - robotarium:
-  #             repo: duckietown/docs-robotarium
-  #             title: Robotarium 
+          - robotarium:
+              repo: duckietown/docs-robotarium
+              title: Robotarium 
 
-  #         - software_reference:
-  #             repo: duckietown/docs-software_reference
-  #             title: Reference for useful commands
+          - software_reference:
+              repo: duckietown/docs-software_reference
+              title: Reference for useful commands
 
-  # - SW:
-  #     title: Software development
+  - SW:
+      title: Software development
 
-  #     books: !!omap
-  #         - software_architecture:
-  #             repo: duckietown/docs-software_architecture
-  #             title: Duckietown software architecture
+      books: !!omap
+          - software_architecture:
+              repo: duckietown/docs-software_architecture
+              title: Duckietown software architecture
 
-  #         - software_devel:
-  #             repo: duckietown/docs-software_devel
-  #             title: Software development in Duckietown
+          - software_devel:
+              repo: duckietown/docs-software_devel
+              title: Software development in Duckietown
 
-  #         - code_docs:
-  #             title: Packages documentation
-
-
-  # - theory:
-  #     title: Class materials
-
-  #     books: !!omap
-
-  #         - learning_materials:
-  #             repo: duckietown/docs-learning_materials
-  #             title: Learning materials
-
-  #         - exercises:
-  #             repo: duckietown/docs-exercises
-  #             title: Exercises
-
-  #         - preliminaries:
-  #             repo: duckietown/docs-preliminaries
-  #             title: Preliminaries
+          - code_docs:
+              title: Packages documentation
 
 
-  # - fall2017:
-  #     title: Past editions
-  #     books: !!omap
+  - theory:
+      title: Class materials
 
-  #         - fall2017_info:
-  #             repo: duckietown/docs-fall2017_info
-  #             title: Fall 2017 
+      books: !!omap
 
-  #         - fall2017_projects:
-  #             repo: duckietown/docs-fall2017_projects
-  #             title: Fall 2017 projects
+          - learning_materials:
+              repo: duckietown/docs-learning_materials
+              title: Learning materials
 
-  # - misc:
-  #     title: Miscellanea
+          - exercises:
+              repo: duckietown/docs-exercises
+              title: Exercises
 
-  #     abstract: |
-  #         Other content
+          - preliminaries:
+              repo: duckietown/docs-preliminaries
+              title: Preliminaries
 
-  #     books: !!omap
-  #         - drafts:
-  #             title: Drafts
 
-  #         - deprecated:
-  #             title: Deprecated
+  - fall2017:
+      title: Past editions
+      books: !!omap
+
+          - fall2017_info:
+              repo: duckietown/docs-fall2017_info
+              title: Fall 2017 
+
+          - fall2017_projects:
+              repo: duckietown/docs-fall2017_projects
+              title: Fall 2017 projects
+
+  - misc:
+      title: Miscellanea
+
+      abstract: |
+          Other content
+
+      books: !!omap
+          - drafts:
+              title: Drafts
+
+          - deprecated:
+              title: Deprecated
 
 header: |
 
