@@ -89,17 +89,17 @@ groups:
               title: Preliminaries
 
 
-  - fall2017:
-      title: Past editions
-      books: !!omap
+  # - fall2017:
+  #     title: Past editions
+  #     books: !!omap
 
-          - fall2017_info:
-              repo: duckietown/docs-fall2017_info
-              title: Fall 2017 
+  #         - fall2017_info:
+  #             repo: duckietown/docs-fall2017_info
+  #             title: Fall 2017 
 
-          - fall2017_projects:
-              repo: duckietown/docs-fall2017_projects
-              title: Fall 2017 projects
+  #         - fall2017_projects:
+  #             repo: duckietown/docs-fall2017_projects
+  #             title: Fall 2017 projects
 
   - misc:
       title: Miscellanea
