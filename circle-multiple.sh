@@ -15,17 +15,17 @@ D="docker run --rm --env CIRCLE_TOKEN --env GITHUB_TOKEN -v /mnt/builds-fork:/mn
 
 book1=books-DT18.yaml
 out1=/mnt/builds-fork/docs-stable.duckietown.org/DT18
-branches=master18:master17:master
+branches=master18 
 $D python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
 
 book1=books-DT17.yaml
 out1=/mnt/builds-fork/docs-stable.duckietown.org/DT17
-branches=master17:master
+branches=master17 
 $D python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
 
 book1=books-DT19.yaml
 out1=/mnt/builds-fork/docs-stable.duckietown.org/DT19
-branches=master19:master18:master17:master
+branches=master19 
 $D python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
 #book2=books-brown.yaml
 #out2=/mnt/builds-fork/books-brown
