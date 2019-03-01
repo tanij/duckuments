@@ -10,13 +10,16 @@ source deploy/bin/activate
 
 limit=35
 
+D="docker run --rm --env CIRCLE_TOKEN --env GITHUB_TOKEN -v /mnt/builds-fork:/mnt/builds-fork -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
+
+book1=books-main.yaml
+out1=/mnt/builds-fork/docs-stable.duckietown.org/DT19
+branches=master19
+$D python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
+
 book1=books-main.yaml
 out1=/mnt/builds-fork/docs-stable.duckietown.org/DT18
-branches=master18:master
-
-D="docker run -it --env CIRCLE_TOKEN --env GITHUB_TOKEN -v /mnt/builds-fork:/mnt/builds-fork -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
-
-
+branches=master18
 $D python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
 
 book1=books-DT17.yaml
