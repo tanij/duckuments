@@ -15,6 +15,12 @@ root=/mnt/builds-fork
 D="docker run --rm --env CIRCLE_TOKEN --env GITHUB_TOKEN -v $root:$root  -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
 
 
+#book1=books-daffy.yaml
+#out1=$root/docs-stable.duckietown.org/daffy
+#branches=daffy 
+#$D python -m mcdp_docs.sync_from_circle_multiple --books ${book1} --base ${out1} --limit ${limit} --preferred-branches ${branches}
+
+book1=books-DT17.yaml
 book1=books-DT18.yaml
 out1=$root/docs-stable.duckietown.org/DT18
 branches=master18 
