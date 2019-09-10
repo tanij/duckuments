@@ -12,7 +12,7 @@ limit=35
 
 root=/mnt/builds-fork
 #root=/docs-root
-D="docker run --rm --env CIRCLE_TOKEN --env GITHUB_TOKEN -v $root:$root  -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
+D="docker run --rm --env CIRCLE_TOKEN --env GITHUB_TOKEN -v $root:$root  -v $PWD:$PWD -w $PWD andreacensi/mcdp:daffy"
 
 
 book1=books-daffy.yaml
