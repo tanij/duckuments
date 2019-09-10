@@ -1,4 +1,4 @@
-groups:
+cgroups:
   !!omap
   - manuals:
       title: Operation manuals
@@ -48,7 +48,7 @@ groups:
 
         - course-duckiesky:
             repo: duckietown/docs-brown
-            title: Learning-based robotics architectures
+            title: Duckietown Sky
 
         - course-extra:
             repo: duckietown/course-extra
