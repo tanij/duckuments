@@ -4,59 +4,75 @@ groups:
       title: Operation manuals
 
       abstract: |
-        These are the guides for getting things done
+        These are the operation manuals, which contain
+        step-by-step instructions for getting things done.
 
       books: !!omap
 
         - opmanual_duckiebot:
             repo: duckietown/docs-opmanual_duckiebot
-            title: Duckiebot manual
+            title: The Duckiebot manual
+            abstract: Learn how to assemble and operate a Duckiebot.
 
         - opmanual_duckietown:
             repo: duckietown/docs-opmanual_duckietown
-            title: Duckietown manual
+            title: The Duckietown mayor handbook
+            abstract: Learn how to assemble and operate a Duckietown.
 
         - opmanual_autolab:
             repo: duckietown/docs-opmanual_autolab
-            title: Autolab operation manual
+            title: The Autolab operation manual
+            abstract: Learn how to assemble and operate an Autolab.
 
         - opmanual_sky:
             repo: duckietown/docs-opmanual_sky
-            title: Duckie Sky operation manual
+            title: The DuckieDrone Sky operation manual
+            abstract: Learn how to assemble and operate a DuckieDrone.
 
         - duckumentation:
             repo: duckietown/docs-duckumentation
             title: Contributing to the documentation
+            abstract: Learn how to contribute to the documentation.
 
 
   - courses:
       title: Duckietown courses
+      abstract: |
+          These are the graduate-level classes using Duckietown.
 
       books: !!omap
 
-        - course-RH:
-            repo: duckietown/course-CRA
+        - duckietown-robotics-development:
+            repo: duckietown/course-RH
             title: Hands-on robotics development with Duckietown
+            abstract: Learn the basics of robotics development with Duckietown.
 
-        - course-CRA:
+        - duckietown-classical-robotics:
             repo: duckietown/course-CRA
             title: Classical robotics architectures
+            abstract: Learn about classical robotics architectures using Duckietown.
 
-        - course-LRA:
+        - duckietown-learning-robotics:
             repo: duckietown/course-LRA
             title: Learning-based robotics architectures
+            abstract: Learn about learning-based robotics architectures using Duckietown.
 
-        - course-duckiesky:
+        - doc-sky:
             repo: duckietown/docs-brown
             title: Duckietown Sky
+            abstract: Learn how to fly a drone using Duckietown.
+            tags: ['hidden']
 
         - course-extra:
             repo: duckietown/course-extra
             title: Extra learning modules
+            abstract: This is where we stage the parts that are not ready yet.
+            tags: ['hidden']
 
 
   - research:
       title: Research with Duckietown
+
 
       books: !!omap
         - AIDO:
@@ -67,8 +83,13 @@ header: |
 
 
 
-
   <style>
+  h4.book-title {
+    margin-top: 1em;
+  }
+  tr.book td:first-child {
+  padding-left: 4em;
+  }
   td { padding: 0; margin: 0; }
   td {
   vertical-align: top;
@@ -93,8 +114,8 @@ header: |
   }
 
   tr.group {
-   font-weight: bold;
-   font-size: larger;
+   /*font-weight: bold;*/
+   /*font-size: larger;*/
   }
   tr.group > td {
     padding-top: 1em;
@@ -124,7 +145,7 @@ header: |
 
   </style>
 
-  <h1>Duckietown library</h1>
+  <h1>The Duckietown library</h1>
 
 footer: |
 
