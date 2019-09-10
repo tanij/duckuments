@@ -1,4 +1,4 @@
-cgroups:
+groups:
   !!omap
   - manuals:
       title: Operation manuals
