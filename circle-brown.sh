@@ -12,9 +12,11 @@ limit=25
 
 
 book2=books-brown.yaml
-out2=/mnt/builds-fork/books-brown
+root=/mnt/builds-fork
+#root=/docs-root
+out2=$root/docs-brown.duckietown.org/books-brown
 
-D="docker run --rm --env CIRCLE_TOKEN --env GITHUB_TOKEN -v /mnt/builds-fork:/mnt/builds-fork -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
+D="docker run --rm --env CIRCLE_TOKEN --env GITHUB_TOKEN -v $root:$root -v $PWD:$PWD -w $PWD andreacensi/mcdp:docs-pull"
 
 
 $D python -m mcdp_docs.sync_from_circle_multiple --books ${book2} --base ${out2} --limit ${limit}

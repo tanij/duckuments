@@ -47,9 +47,9 @@ groups:
               repo: duckietown/docs-opmanual_duckietown
               title: Duckietown manual
           
-          - robotarium:
-              repo: duckietown/docs-robotarium
-              title: Robotarium 
+          - opmanual_autolab:
+              repo: duckietown/docs-opmanual_autolab
+              title: Autolab operation manual
 
           - software_reference:
               repo: duckietown/docs-software_reference
