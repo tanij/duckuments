@@ -13,26 +13,31 @@ groups:
             repo: duckietown/docs-opmanual_duckiebot
             title: The Duckiebot manual
             abstract: Learn how to assemble and operate a Duckiebot.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - opmanual_duckietown:
             repo: duckietown/docs-opmanual_duckietown
             title: The Duckietown mayor handbook
             abstract: Learn how to assemble and operate a Duckietown.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - opmanual_autolab:
             repo: duckietown/docs-opmanual_autolab
             title: The Autolab operation manual
             abstract: Learn how to assemble and operate an Autolab.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - opmanual_sky:
             repo: duckietown/docs-opmanual_sky
             title: The DuckieDrone Sky operation manual
             abstract: Learn how to assemble and operate a DuckieDrone.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - duckumentation:
             repo: duckietown/docs-duckumentation
             title: Contributing to the documentation
             abstract: Learn how to contribute to the documentation.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
 
   - courses:
@@ -46,48 +51,64 @@ groups:
             repo: duckietown/course-RH
             title: Hands-on robotics development with Duckietown
             abstract: Learn the basics of robotics development with Duckietown.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - duckietown-classical-robotics:
             repo: duckietown/course-CRA
             title: Classical robotics architectures
             abstract: Learn about classical robotics architectures using Duckietown.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - duckietown-learning-robotics:
             repo: duckietown/course-LRA
             title: Learning-based robotics architectures
             abstract: Learn about learning-based robotics architectures using Duckietown.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - doc-sky:
             repo: duckietown/docs-brown
             title: Duckietown Sky
             abstract: Learn how to fly a drone using Duckietown.
             tags: ['hidden']
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
         - course-extra:
             repo: duckietown/course-extra
             title: Extra learning modules
             abstract: This is where we stage the parts that are not ready yet.
             tags: ['hidden']
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
 
   - research:
       title: Research with Duckietown
 
-
+      abstract: Research-level initiatives using Duckietown.
       books: !!omap
         - AIDO:
             repo: duckietown/docs-AIDO
             title: The AI Driving Olympics
+            abstract: How to participate in the AI Driving Olympics.
+            icon: https://dummyimage.com/128/a080a1/000000.jpg&text=missing
 
 header: |
 
 
 
   <style>
-  h4.book-title {
-    margin-top: 1em;
+  div.book-group {
+
+      display: block;
+      float: left;
+      margin-right: 2em;
+  }
+  img.book-icon {
+  width: 8em;
+  height: 8em;
+  border: solid 1px red;
   }
   tr.book td:first-child {
+     padding-bottom: 1em;
   padding-left: 4em;
   }
   td { padding: 0; margin: 0; }
