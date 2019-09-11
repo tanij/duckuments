@@ -4,12 +4,12 @@
 
 Requires: [](#checkoff_assembly_configuration)
 
-Requires: That you have correctly cloned and followed the git procedure outline in [](#fall2017-git)
+Requires: That you have correctly cloned and followed the git procedure outline in [](#fall2017-git).
 
-Requires: That you have correctly setup your environment variables according to [](#env-variables)
+Requires: That you have correctly setup your environment variables according to [](+software_devel#env-variables).
 
 
-Result: You robot calibrations (wheels and camera (x2)) are merged  to git through a PR
+Result: You robot calibrations (wheels and camera (x2)) are merged  to git through a PR.
 
 </div>
 
@@ -40,11 +40,11 @@ Don't forget that master is now protected in duckiefleet. So make a new branch r
 
 ## Kinematic calibration
 
-Follow the procedure in [](#wheel-calibration). Once you have successfully passed the automated test, take a screen shot and post it to the slack channel [#checkoffs](https://duckietown.slack.com/archives/C7HH51Q4S) and we will all congratulate you.
+Follow the procedure in [](+opmanual_duckiebot#wheel-calibration). Once you have successfully passed the automated test, take a screen shot and post it to the slack channel [#checkoffs](https://duckietown.slack.com/archives/C7HH51Q4S) and we will all congratulate you.
 
 ## Camera calibration
 
-Follow the procedure in [](#camera-calib) to do you intrinsic **and** extrinsic calibrations. 
+Follow the procedure in [](+opmanual_duckiebot#camera-calib) to do you intrinsic **and** extrinsic calibrations. 
 
 
 ## Visually verify the calibration is good in Duckietown

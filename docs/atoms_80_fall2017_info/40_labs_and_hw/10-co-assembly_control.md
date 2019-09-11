@@ -16,9 +16,9 @@ If you are missing something, contact your local responsible and ask for help on
 
 These sections describe the parts that are in your box.
 
-See: [](#acquiring-parts-c0)
+See: [](+opmanual_duckiebot#acquiring-parts-c0)
 
-See: [](#acquiring-parts-c1)
+See: [](+opmanual_duckiebot#acquiring-parts-c1)
 
 
 <div class="only-zurich" markdown="1">
@@ -29,9 +29,9 @@ You don't need to buy anything - you have all the parts that you need.
 
 Depending on how kind your instructors/TAs are, you may have to solder your boards.
 
-See: [](#soldering-boards-c0)
+See: [](+opmanual_duckiebot#soldering-boards-c0)
 
-See: [](#soldering-boards-c1)
+See: [](+opmanual_duckiebot#soldering-boards-c1)
 
 <div class="only-zurich" markdown="1">
 You don't need to solder anything.
@@ -43,18 +43,18 @@ Slack Channel: [#help-assembly](https://duckietown.slack.com/archives/C70CQQFHC)
 
 You are ready to put things together now.
 
-See: [](#assembling-duckiebot-db17-ttic)
+See: [](+opmanual_duckiebot#assembling-duckiebot-db17-ttic)
 
-See: [](#bumper-assembly)
+See: [](+opmanual_duckiebot#bumper-assembly)
 
-See: [](#assembling-duckiebot-c1)
+See: [](+opmanual_duckiebot#assembling-duckiebot-c1)
 
 
 ## Optional: Reproduce the SD Card Image
 
 If you are very inexperienced with Linux/Unix/networking etc, then you may find it a valuable experience to reproduce the SD card image to "see how the sausage is made".
 
-See: [](#duckiebot-ubuntu-image)
+See: [](+opmanual_duckiebot#duckiebot-ubuntu-image)
 
 <div class="only-zurich" markdown="1">
 You probably don't want to see how the sausage is made.
@@ -69,9 +69,9 @@ The only officially supported OS is Ubuntu 16.04. If you are not running this OS
 
 Related parts of the book are:
 
-See: [](#how-to-partition) if you want to make a partition
+See: [](+opmanual_duckiebot#how-to-partition) if you want to make a partition
 
-See: [](#setup-laptop)
+See: [](+opmanual_duckiebot#setup-laptop)
 
 
 ## Make your robot move
@@ -82,11 +82,11 @@ Now you need to clone the software repo and run things to make your robot move.
 
 First initialize the robot:
 
-See: [](#setup-duckiebot)
+See: [](+opmanual_duckiebot#setup-duckiebot)
 
 Then get it to move!
 
-See: [](#rc-control)
+See: [](+opmanual_duckiebot#rc-control))
 
 
 

@@ -8,4 +8,4 @@ The map to be used in the Fall 2017 class is shown in [](#fig:2017-map).
 </div>
 
 
-The editable keynote file is in this directory of the duckuments repo. The ids on the signs correspond to the Apriltag IDs. For more details see [](#signage).
+The editable keynote file is in this directory of the duckuments repo. The ids on the signs correspond to the Apriltag IDs. For more details see [](+opmanual_duckietown#signage).

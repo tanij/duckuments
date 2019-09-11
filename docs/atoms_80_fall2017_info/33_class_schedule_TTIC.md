@@ -8,10 +8,10 @@ The following is a list of the current checkoffs, along with the date and time w
 
 &nbsp;
 
-* **Friday October 6, 5pm CT**: [](#part:checkoff_assembly_configuration)
-* **Wednesday October 18, 11:59pm CT**: [](#part:checkoff_take_a_log)
-* **Sunday October 22, 11:59pm CT**: [](#part:checkoff_calibration)
-* **Wednesday November 15, 11:59pm CT**: [](#part:checkoff_navigation)
+* **Friday October 6, 5pm CT**: [](#checkoff_assembly_configuration)
+* **Wednesday October 18, 11:59pm CT**: [](#checkoff_take_a_log)
+* **Sunday October 22, 11:59pm CT**: [](#checkoff_calibration)
+* **Wednesday November 15, 11:59pm CT**: [](#checkoff_navigation)
 
 
 ## Problem Sets:
@@ -26,9 +26,9 @@ Note: Please keep track of how much time you spend on each problem set. We will 
 
 &nbsp;
 
-* **Friday October 13, 11:59pm CT**: [](#part:homework-data-processing-ttic)
-* **Friday October 27, 11:59pm CT**: [](#part:homework-augmented-reality)
-* **Friday November 17, 11:59pm CT**: [](#part:homework-lane-filtering)
+* **Friday October 13, 11:59pm CT**: [](#homework-data-processing-ttic)
+* **Friday October 27, 11:59pm CT**: [](#homework-augmented-reality)
+* **Friday November 17, 11:59pm CT**: [](#homework-lane-filtering)
 
 
 
@@ -42,9 +42,9 @@ Note: Please keep track of how much time you spend on each problem set. We will 
 
 ### Reading Material
 
-* [](#duckietown-project)
+* [](+the_duckietown_project#duckietown-project)
 
-* [](#autonomy-overview)
+* [](+learning_materials#autonomy-overview)
 
 
 ### Feedback Form
@@ -102,18 +102,18 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Reading Material
 
-* [](#part:autonomous-vehicles)
+* [](+learning_materials#autonomous-vehicles)
 
-* [](#autonomy-overview)
+* [](+learning_materials#autonomy-overview)
 
-* [](#part:modern-robotic-systems)
+* [](+learning_materials#modern-robotic-systems)
 
-* [](#part:system-architectures-basics)
+* [](+learning_materials#system-architectures-basics)
 
 
 ### Assignments
 
-* [](#part:checkoff_assembly_configuration) is due by Friday 5pm CT. Note: The page provides the URL where you should upload your video(s).
+* [](#checkoff_assembly_configuration) is due by Friday 5pm CT. Note: The page provides the URL where you should upload your video(s).
 
 ### Feedback Form
 
@@ -136,11 +136,11 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Reading Material
 
-* [](#part:representations)
+* [](+preliminaries#representations)
 
-* [](#part:networking)
+* [](+learning_materials#networking)
 
-* [](#part:system-architectures-basics)
+* [](+learning_materials#system-architectures-basics)
 
 
 ### Feedback Form
@@ -155,14 +155,14 @@ Please help us making the experience better by [providing feedback (can be anony
 
 **Important**: Before starting these tutorials, make sure that you completed the following:
 
-See: [](#setup-laptop)
+See: [](+opmanual_duckiebot#setup-laptop)
 
 Before coming to class, please read through the following tutorials:
 
 * [https://tinyurl.com/ROS101-Intro](https://tinyurl.com/ROS101-Intro)
 * [http://wiki.ros.org/ROS/Tutorials#Beginner_Level](http://wiki.ros.org/ROS/Tutorials#Beginner_Level)
 Complete all the tutorials in Section 1.1 Beginner Level.
-There is no need to install ROS as the tutorial instructs, because you already installed as part of the [setup process](#setup-laptop).
+There is no need to install ROS as the tutorial instructs, because you already installed as part of the [setup process](+opmanual_duckiebot#setup-laptop).
 Sections 11 and 14 of this tutorial will ask you to implement simple ROS nodes using C++. You can skip them since Sections 12 and 15 are basically the same but using Python.
 
 ### Lecture Content
@@ -173,7 +173,7 @@ Sections 11 and 14 of this tutorial will ask you to implement simple ROS nodes u
 
 ### Reading Material
 
-* [](#duckiebot-modeling)
+* [](+learning_materials#duckiebot-modeling)
 
 
 ### Feedback Form
@@ -194,8 +194,8 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ### Reading Material
 
-* [](#CV_basics)
-* [](#camera-geometry)
+* [](+learning_materials#CV_basics)
+* [](+learning_materials#camera-geometry)
 * Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 1 and 2 (available [online](http://szeliski.org/Book/))
 * David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 1 and 2
 
@@ -209,7 +209,7 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ## Monday, October 16: Camera Calibration and Image Filtering
 
-Note: [The second checkoff](#part:checkoff_take_a_log) is due by 11:59pm CT Wednesday.
+Note: [The second checkoff](#checkoff_take_a_log) is due by 11:59pm CT Wednesday.
 
 ### Lecture Content
 
@@ -221,9 +221,9 @@ Note: [The second checkoff](#part:checkoff_take_a_log) is due by 11:59pm CT Wedn
 
 ### Reading Material
 
-* [](#CV_basics)
-* [](#camera-calibration)
-* [](#image-filtering)
+* [](+learning_materials#CV_basics)
+* [](+opmanual_duckiebot#camera-calibration)
+* [](+learning_materials#image-filtering)
 * Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 6 (available [online](http://szeliski.org/Book/))
 * David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 5.3 and 7
 
@@ -236,7 +236,7 @@ Please help us making the experience better by [providing feedback (can be anony
 
 ## Wednesday, October 18: Edge Detection and Lane Detection
 
-Note: [The third checkoff](#part:checkoff_calibration) is due by 11:59pm CT Sunday. Note that camera calibration is necessary for the next problem set, which will be posted soon.
+Note: [The third checkoff](#checkoff_calibration) is due by 11:59pm CT Sunday. Note that camera calibration is necessary for the next problem set, which will be posted soon.
 
 ### Lecture Content
 
@@ -251,7 +251,7 @@ Note: [The third checkoff](#part:checkoff_calibration) is due by 11:59pm CT Sund
 
 ### Reading Material
 
-* [](#line_detection)
+* [](+learning_materials#line_detection)
 * Richard Szeliski, *Computer Vision: Algorithms and Applications*, Chapters 3 and 4 (available [online](http://szeliski.org/Book/))
 * David A. Forsyth and Jean Ponce, *Computer Vision: A Modern Approach*, Chapters 7 and 8
 

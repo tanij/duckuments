@@ -9,7 +9,7 @@ A couple of announcements:
 
 3. The "lab" time tomorrow consists in an empty room for you to use as you wish, for example to assemble the robots together. In particular, it's on the same floor of the Duckietown room and the IDSC lab.
 
-4. The instructions for assembling the Duckiebots are [here](#building-duckiebot-c0). Note that we did for you step I-2 (buying the parts) and I-3 (soldering the boards); and I-6 is optional.
+4. The instructions for assembling the Duckiebots are [here](+opmanual_duckiebot#building-duckiebot-c0). Note that we did for you step I-2 (buying the parts) and I-3 (soldering the boards); and I-6 is optional.
 
 5. We are happy if we see everybody reaching I-13 by the Monday after next. I encourage you to start sooner than later.
 
@@ -104,7 +104,7 @@ Please take a video of the robot as it drives with joystick control, as describe
 
 ### Camera calibration {#Zurich-camera-calibration}
 
-[Go forth and calibrate the camera!](#camera-calib) And get help in `#help-camera-calib`.
+[Go forth and calibrate the camera!](+opmanual_duckiebot#camera-calib) And get help in `#help-camera-calib`.
 
 
 ### Wheel calibration {#Zurich-wheel-calibration status=draft}
@@ -242,7 +242,7 @@ A few references for planning of Andrea Censi:
 ## Nov 27 (Mon) Inermediate design Report {#Zurich-2017-11-27}
 
 
-- First Lecture: The intermediate Design report is introduced here[template-int-report](#template-int-report). It is due on Monday 4th of December. 
+- First Lecture: The intermediate Design report is introduced [here](+class_2017_projects#template-int-report). It is due on Monday 4th of December. 
 
 - Second Lecture was left for project discussion and interaction.
 

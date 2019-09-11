@@ -27,18 +27,18 @@ These are the slides we showed:
 
 ### Feedback form
 
-Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n)
+Please help us making the experience better by [providing feedback (can be anonymous)](https://tinyurl.com/y77pbv7n).
 
 
 ### Pointers to reading materials
 
 Read about Duckietown's history and watch the Duckumentary.
 
-See: [](#duckietown-project)
+See: [](+the_duckietown_project#duckietown-project)
 
 Start learning about Git and Github.
 
-See: [](#git-reference)
+See: [](+software_devel#git-reference)
 
 Montreal, Chicago? What's happening?
 
@@ -177,9 +177,9 @@ We sent the final list to the Department; so hopefully in a couple of days the s
 
 The "lab" time on Friday consists in an empty room for you to use as you wish, for example to assembe the robots together. In particular, it's on the same floor of the Duckietown room and the IDSC lab.
 
-The instructions for assembling the Duckiebots are [here](#building-duckiebot-c0). Note that you
+The instructions for assembling the Duckiebots are [here](+opmanual_duckiebot#building-duckiebot-c0). Note that you
 don't have to do the parts that we did for you: buying the parts, soldering the boards, and reproducing the image.
 
 Expected progress: We are happy if we see everybody reaching up to
-[](#rc-cam-launched-remotely) by Monday October 9. You are encouraged to start very early;
+[](+opmanual_duckiebot#rc-cam-launched-remotely) by Monday October 9. You are encouraged to start very early;
 it's likely that you will not receive much help on Sunday October 8...

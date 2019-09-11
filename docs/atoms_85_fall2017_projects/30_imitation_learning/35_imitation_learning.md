@@ -1,16 +1,17 @@
 # Imitation Learning {#part:imitation-learning}
 
-# Imitation Learning {#imitation_learning status=beta}
+
+# Imitation Learning Demo {#imitation-learning-demo status=beta}
 
 This is the description of imitation learning project demo.
 
 <div class='requirements' markdown="1">
 
-Requires: Wheels calibration completed.[wheel calibration](#wheel-calibration)
+Requires: Wheels calibration completed.[wheel calibration](+opmanual_duckiebot#wheel-calibration)
 
-Requires: Camera calibration completed.[Camera calibration](#camera-calib)
+Requires: Camera calibration completed.[Camera calibration](+opmanual_duckiebot#camera-calib)
 
-Requires: Joystick demo has been successfully launched.[Joystick demo](#rc-control)
+Requires: Joystick demo has been successfully launched.[Joystick demo](+opmanual_duckiebot#rc-control))
 
 Requires: Movidius Neural Compute Stick.
 

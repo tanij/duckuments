@@ -2,7 +2,7 @@
 
 <div class='requirements' markdown='1'>
 
-Requires: [](#introduction_to_ros)
+Requires: [](+software_reference#introduction_to_ros)
 
 Result: Ability to perform basic operations on images
 
@@ -57,31 +57,31 @@ We suggest the following:
 
 ## Exercise: Basic image operations
 
-See: [](#exercise-specifications)
+See: [](+exercises#exercise-specifications)
 
 ### Exercise: Log analysis
 
-See: [](#exercise-bag-analysis)
+See: [](+exercises#exercise-bag-analysis)
 
 ### Exercise: Log decimation
 
-See: [](#exercise-bag-in-out)
+See: [](+exercises#exercise-bag-in-out)
 
 ### Exercise: Video thumbnails
 
-See: [](#exercise-bag-images)
+See: [](+exercises#exercise-bag-images)
 
 ### Exercise: Instagram filters
 
-See: [](#exercise-instagram)
+See: [](+exercises#exercise-instagram)
 
 ### Exercise: Log Instagram [recommended for everybody]
 
-See: [](#exercise-bag-mirror)
+See: [](+exercises#exercise-bag-mirror)
 
 ### Exercise: Live Instagram [recommended for everybody]
 
-See: [](#exercise-instagram-live)
+See: [](+exercises#exercise-instagram-live)
 
 Call your package `dt-instagram-live_![robot name]` and call your node `dt-instagram-live_![robot name]`.
 

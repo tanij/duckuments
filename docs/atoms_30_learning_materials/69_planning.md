@@ -1,3 +1,0 @@
-# Planning  {#part:planning}
-
-

@@ -25,7 +25,7 @@ Zurich deadline: Oct 20, 17:00
 
 We will log to the USB drive that you were given.
 
-See: [](#mounting-usb)
+See: [](+software_reference#mounting-usb)
 
 ## Take a Log
 
@@ -45,11 +45,11 @@ For Chicago, we are still building the town, so feel free to do this at home or 
 </div>
 
 
-See: [](#take-a-log) for detailed instructions.
+See: [](+opmanual_duckiebot#take-a-log) for detailed instructions.
 
 ## Verify your log
 
-See: [](#verify-a-log) for detailed instructions.
+See: [](+opmanual_duckiebot#verify-a-log) for detailed instructions.
 
 
 ## Upload the log

@@ -73,3 +73,6 @@ pri-sync
 builds
 db.related.yaml
 .idea
+docker/make_index.py.tmp_copy
+builds-fork
+tokens.sh

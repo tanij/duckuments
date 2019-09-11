@@ -1,17 +1,44 @@
 
+allbooks=book-duckumentation \
+	 book-the_duckietown_project \
+	 book-opmanual_duckiebot \
+	 book-opmanual_duckietown \
+	 book-software_reference \
+	 book-software_devel \
+	 book-software_architecture \
+	 book-class_fall2017 \
+	 book-class_fall2017_projects \
+	 book-learning_materials \
+	 book-exercises \
+	 book-drafts \
+	 book-guide_for_instructors \
+	 book-deprecated \
+	 book-preliminaries \
+	 book-AIDO \
+	 book-duckietown_high_school
+
+
 
 tex-symbols=docs/symbols.tex
 duckietown-software=duckietown
-RUNBOOK=misc/run-book.sh
+
+ifdef CI
+RUNBOOK=misc/run-book-duckuments-native.sh
+else
+RUNBOOK=misc/run-book-duckuments-docker.sh
+endif
 
 all:
+	echo $(allbooks)
+	mkdir -p duckuments-dist
 	# make update-software
 	ONLY_FOR_REFS=1 make books
+	make clean
 	make books
 	make summaries
 
 summaries:
-	. deploy/bin/activate && python misc/make_index.py \
+	. deploy/bin/activate && python -m mcdp_docs.make_index docs/resources/books.yaml \
 		duckuments-dist/index.html \
 		duckuments-dist/all_crossref.html \
 		duckuments-dist/errors_and_warnings.pickle
@@ -23,46 +50,45 @@ realclean: clean
 
 .PHONY: builds install update-software
 
-dependencies-ubuntu16:
-	sudo apt install -y \
-		libxml2-dev \
-		libxslt1-dev \
-		libffi6\
-		libffi-dev\
-		python-dev\
-		python-numpy\
-		python-matplotlib\
-		virtualenv\
-		bibtex2html\
-		pdftk\
-		imagemagick\
-		python-dev\
-		libmysqlclient-dev
+#dependencies-ubuntu16:
+#	sudo apt install -y \
+#		libxml2-dev \
+#		libxslt1-dev \
+#		libffi6\
+#		libffi-dev\
+#		python-dev\
+#		python-numpy\
+#		python-matplotlib\
+#		virtualenv\
+#		bibtex2html\
+#		pdftk\
+#		imagemagick\
+#		python-dev\
+#		libmysqlclient-dev
 
-install-ubuntu16:
-	git submodule init
-	virtualenv --system-site-packages --no-site-packages deploy
-	$(MAKE) install-fonts
-	$(MAKE) update-software
+#install-ubuntu16:
+#	git submodule init
+#	virtualenv --system-site-packages --no-site-packages deploy
+#	$(MAKE) install-fonts
+#	$(MAKE) update-software
 
-install-fonts:
-	sudo cp -R misc/fonts /usr/share/fonts/my-fonts
-	sudo fc-cache -f -v
+#install-fonts:
+#	sudo cp -R misc/fonts /usr/share/fonts/my-fonts
+#	sudo fc-cache -f -v
 
-
-update-software:
-	git submodule sync --recursive
-	git submodule update --init --recursive
-	. deploy/bin/activate && pip install -r mcdp/requirements.txt && pip install numpy matplotlib MySQL-python
-
-	. deploy/bin/activate && cd mcdp && python setup.py develop
+#
+#update-software:
+#	git submodule sync --recursive
+#	git submodule update --init --recursive
+#	. deploy/bin/activate && pip install numpy matplotlib MySQL-python
 
 builds:
 	cp misc/jquery* builds/
 	python -m mcdp_docs.sync_from_circle duckietown duckuments builds builds/duckuments.html
 
 db.related.yaml:
-	. deploy/bin/activate && misc/download_wordpress.py > $@
+	echo
+#	. deploy/bin/activate && misc/download_wordpress.py > $@
 
 checks: check-programs db.related.yaml
 
@@ -131,75 +157,25 @@ process-svg:
 	python -m mcdp_docs.process_svg docs/ $(generated_figs) $(tex-symbols)
 
 
-books: \
-	book-duckumentation \
-	book-the_duckietown_project \
-	book-opmanual_duckiebot \
-	book-opmanual_duckietown \
-	book-software_carpentry \
-	book-software_devel \
-	book-software_architecture \
-	book-class_fall2017 \
-	book-class_fall2017_projects \
-	book-learning_materials \
-	book-exercises \
-	book-drafts \
-	book-guide_for_instructors \
-	book-deprecated \
-	book-preliminaries \
-	book-AI_driving_olympics \
-	book-duckietown_high_school
+books:$(allbooks)
+#	$(MAKE)
 
-book-guide_for_instructors: checks
-	. deploy/bin/activate && $(RUNBOOK) guide_for_instructors docs/atoms_12_guide_for_instructors
+#.PHONY: $(allbooks)
 
 book-deprecated: checks
 	$(RUNBOOK) deprecated docs/atoms_98_deprecated
 
-book-duckietown_high_school:
-	$(RUNBOOK) duckietown_high_school docs/atoms_11_duckietown_high_school
-
-book-AI_driving_olympics:
-	$(RUNBOOK) AI_driving_olympics docs/atoms_16_driving_olympics
-
 book-code_docs: check-duckietown-software checks
-	$(RUNBOOK) code_docs duckietown/catkin_ws/src/
-
-book-class_fall2017: checks
-	$(RUNBOOK) class_fall2017 docs/atoms_80_fall2017_info
+	$(RUNBOOK) code_docs duckietown/catkin_ws/src
 
 book-drafts: checks
 	$(RUNBOOK) drafts docs/atoms_99_drafts
 
-book-preliminaries: checks
-	$(RUNBOOK) preliminaries docs/atoms_29_preliminaries
+book-%: checks
+	$(RUNBOOK) $* docs/docs-$*/book/$*
 
-book-learning_materials: checks
-	$(RUNBOOK) learning_materials docs/atoms_30_learning_materials
-
-book-exercises: checks
-	$(RUNBOOK) exercises docs/atoms_40_exercises
-
-book-duckumentation: checks
-	$(RUNBOOK) duckumentation docs/atoms_15_duckumentation
-
-book-the_duckietown_project: checks
-	$(RUNBOOK) the_duckietown_project docs/atoms_10_the_duckietown_project
-
-book-opmanual_duckiebot: checks
-	$(RUNBOOK) opmanual_duckiebot docs/atoms_17_opmanual_duckiebot
-
-book-opmanual_duckietown: checks
-	$(RUNBOOK) opmanual_duckietown docs/atoms_18_setup_duckietown
-
-book-software_carpentry: checks
-	$(RUNBOOK) software_carpentry docs/atoms_60_software_reference
-
-book-software_devel: checks
-	$(RUNBOOK) software_devel docs/atoms_70_software_devel_guide
-
-book-software_architecture: checks
-	$(RUNBOOK) software_architecture docs/atoms_80_duckietown_software
+book-class_fall2017: checks
+	$(RUNBOOK) class_fall2017 docs/atoms_80_fall2017_info
 
 book-class_fall2017_projects: checks
 	$(RUNBOOK) class_fall2017_projects docs/atoms_85_fall2017_projects
@@ -215,3 +191,13 @@ clean-tmp:
 
 package-artifacts:
 	bash misc/package-art.sh out/package.tgz
+
+
+linkcheck1:
+	docker run --rm -it -u $(id -u):$(id -g) -v "$(PWD)":/mnt linkchecker/linkchecker --check-extern $(shell zsh -c "ls -1 duckuments-dist/**/out/index.html")
+
+linkcheck2:
+	chmod go+rwX /root
+	chmod -R go+rwX /root/project
+	chmod -R go+rwX duckuments-dist
+	linkchecker --check-extern $(shell zsh -c "ls -1 duckuments-dist/**/out/*.html") | tee duckuments-dist/linkchecker.txt
